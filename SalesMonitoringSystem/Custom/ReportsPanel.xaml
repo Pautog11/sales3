@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="ReportsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SalesMonitoringSystem"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             xmlns:hc="https://handyorg.github.io/handycontrol">
+    <Grid Background="{StaticResource ApplicationLight}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <hc:FlexPanel Grid.Row="0"
+                      JustifyContent="SpaceBetween"
+                      Margin="10 5 10 0">
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 0 10 0">
+                <TextBlock Text="TOTAL REVENUE:"
+                            VerticalAlignment="Center"
+                            Grid.Column="0"
+                            FontWeight="Medium"
+                            Margin="0 0 8 0"/>
+                <TextBlock Text="0"
+                            VerticalAlignment="Center"
+                            Grid.Column="0"
+                            FontWeight="ExtraBold"
+                            x:Name="TextBoxRevenue"/>
+            </StackPanel>
+            <Grid Width="400">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="150"/>
+                    
+                </Grid.ColumnDefinitions>
+                <DatePicker SelectedDate="{x:Static system:DateTime.Now}"
+                            Width="100"
+                            Height="30"
+                            Name="DatePickerFirstDate"
+                            hc:BorderElement.CornerRadius="0"
+                            Grid.Column="0"/>
+                <TextBlock Text="TO"
+                           TextAlignment="Center"
+                           FontSize="15"
+                           Height="30"
+                           Width="30"
+                           Grid.Column="1"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                <DatePicker SelectedDate="{x:Static system:DateTime.Now}"
+                            Width="100"
+                            Height="30"
+                            Name="DatePickerSecondDate"
+                            hc:BorderElement.CornerRadius="0"
+                            Grid.Column="2"/>
+                <hc:ComboBox Name="ComboBoxFilter"
+                             hc:BorderElement.CornerRadius="0"
+                             Height="30"
+                             Width="130"
+                             HorizontalAlignment="Center"
+                             Grid.Column="4" SelectedIndex="0"/>
+            </Grid>
+        </hc:FlexPanel>
+        <DataGrid RowStyle="{DynamicResource CustomDataGridRowStyle}"
+                  ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+                  CellStyle="{DynamicResource CustomDataGridCellStyle}"
+                  x:Name="ReportsDataGridView"
+                  hc:Empty.ShowEmpty="True"
+                  Padding="0"
+                  IsReadOnly="True"
+                  CanUserResizeColumns="False"
+                  AutoGenerateColumns="False"
+                  Grid.Row="1"
+                  Margin="10 0 10 10" RowHeight="30">
+            <DataGrid.Columns>
+                <DataGridTextColumn FontSize="13"
+                                    Header="NUMBER OF RECORDS"
+                                    Width="*"
+                                    Binding="{Binding NUMBER_RECORDS}"/>
+                <DataGridTextColumn FontSize="13"
+                                    Header="TOTAL REVENUE"
+                                    Width="*"
+                                    Binding="{Binding TOTAL_REVENUE}"/>
+                <DataGridTextColumn FontSize="13"
+                                    Header="START DATE"
+                                    Width="*"
+                                    Binding="{Binding START_DATE}"/>
+                <DataGridTextColumn FontSize="13"
+                                    Header="END DATE"
+                                    Width="*"
+                                    Binding="{Binding END_DATE}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

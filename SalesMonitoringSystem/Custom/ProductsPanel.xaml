@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="ProductsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SalesMonitoringSystem"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             Background="{StaticResource ApplicationLight}"
+             xmlns:hc="https://handyorg.github.io/handycontrol">
+    <Grid Background="{StaticResource ApplicationLight}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Height="45"
+                  Grid.Row="0"
+                  Margin="5 0">
+                <hc:FlexPanel JustifyContent="SpaceBetween"
+                              Margin="5 10 5 0">
+                    <hc:SearchBar x:Name="ProductSearch"
+                                  IsRealTime="True"
+                                  hc:InfoElement.Placeholder="Search Product"
+                                  Width="280"
+                                  Height="30"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Left"
+                                  Style="{StaticResource SearchBarExtend}"/>
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <hc:Pagination Name="Pagination"
+                                       MaxPageCount="10"
+                                       PageIndex="1"
+                                       MaxPageInterval="3"
+                                       DataCountPerPage="15"
+                                       VerticalAlignment="Center"
+                                       hc:BorderElement.CornerRadius="0"
+                                       Margin="0 0 10 0"/>
+                        <Button x:Name="AddButton" Foreground="#fff" FontSize="9"
+                                hc:BorderElement.CornerRadius="0"
+                                Content="Add"
+                                hc:IconElement.Geometry="{StaticResource ic_add}"
+                                hc:IconElement.Height="12"
+                                hc:IconElement.Width="12"
+                                Height="28"
+                                Width="120"
+                                Padding="0"
+                                BorderThickness="0"
+                                Background="{StaticResource ApplicationPrimaryDark}"
+                                VerticalAlignment="Center"/>
+                    </StackPanel>
+                </hc:FlexPanel>
+            </Grid>
+            <DataGrid x:Name="ProductDataGridView"
+                      RowStyle="{DynamicResource CustomDataGridRowStyle}"
+                      ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+                      CellStyle="{DynamicResource CustomDataGridCellStyle}"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      AutoGenerateColumns="False"
+                      Grid.Row="1"
+                      Margin="10 5 10 10"
+                      hc:Empty.ShowEmpty="True"
+                      Padding="0" RowHeight="30">
+                <DataGrid.Columns>
+                    <DataGridTextColumn FontSize="13"
+                                    Header="ID"
+                                    Binding="{Binding ID}"
+                                    Width="60"/>
+                    <DataGridTextColumn FontSize="13"
+                                    Header="PRODUCT NAME"
+                                    Binding="{Binding PRODUCT_NAME}"
+                                    Width="*"/>
+                    <DataGridTextColumn FontSize="13"
+                                    Header="CATEGORY"
+                                    Binding="{Binding CATEGORY}"
+                                    Width="*"/>
+                    <DataGridTextColumn FontSize="13"
+                                    Header="PRICE"
+                                    Binding="{Binding PRICE}"
+                                    Width="*"/>
+                    <DataGridTextColumn FontSize="13"
+                                    Header="COST PRICE"
+                                    Binding="{Binding COST_PRICE}"
+                                    Width="*"/>
+                    <DataGridTextColumn FontSize="13"
+                                    Header="DATE ADDED"
+                                    Binding="{Binding DATE_ADDED}"
+                                    Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

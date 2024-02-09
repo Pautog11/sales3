@@ -1,0 +1,526 @@
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\sgsmsdb.mdf
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\sgsmsdb_log.ldf
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe.config
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.pdb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\HandyControl.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\LiveCharts.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\Spire.XLS.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Buffers.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Memory.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\HandyControl.pdb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\HandyControl.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\LiveCharts.pdb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\LiveCharts.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.pdb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\Spire.XLS.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Buffers.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Memory.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.AssemblyReference.cache
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Resources\colors\ColorResource.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Resources\imgs\ImageResource.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Resources\strings\StringResource.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Resources\styles\StyleResource.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Forms\Login.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Application.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_Content.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\GeneratedInternalTypeHelper.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.cache
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.lref
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Application.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Forms\Login.baml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.g.resources
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.Resources.resources
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.GenerateResource.cache
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CoreCompileInputs.cache
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CopyComplete
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.g.vb
+D:\SCHOOL FILES\SalesMonitoringSystem\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\sgsmsdb.mdf
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\sgsmsdb_log.ldf
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe.config
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\HandyControl.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Buffers.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Memory.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\HandyControl.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\HandyControl.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Buffers.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Memory.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.AssemblyReference.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\colors\ColorResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\imgs\ImageResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\strings\StringResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\styles\StyleResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Login.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Application.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_Content.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\GeneratedInternalTypeHelper.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.lref
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Application.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Login.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.g.resources
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.Resources.resources
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.GenerateResource.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CopyComplete
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\sgsmsdb.mdf
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\sgsmsdb_log.ldf
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe.config
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\HandyControl.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Buffers.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Memory.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\HandyControl.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\HandyControl.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Buffers.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Memory.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.AssemblyReference.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\colors\ColorResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\imgs\ImageResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\strings\StringResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Resources\styles\StyleResource.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Login.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Application.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_Content.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\GeneratedInternalTypeHelper.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.lref
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Application.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\Login.baml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.g.resources
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.Resources.resources
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.GenerateResource.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CopyComplete
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\AdminAcc.g.vb
+C:\Users\Christian\OneDrive\Desktop\salesmonitoring-main\SalesMonitoringSystem\obj\Debug\Forms\AdminAcc.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\sgsmsdb.mdf
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\sgsmsdb_log.ldf
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe.config
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.pdb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\HandyControl.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Buffers.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Memory.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\HandyControl.pdb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\HandyControl.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.pdb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Buffers.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Memory.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.AssemblyReference.cache
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\colors\ColorResource.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\imgs\ImageResource.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\strings\StringResource.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\styles\StyleResource.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\AdminAcc.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Login.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Application.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_Content.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\GeneratedInternalTypeHelper.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.cache
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.lref
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Application.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\AdminAcc.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Login.baml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.g.resources
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.Resources.resources
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.GenerateResource.cache
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CopyComplete
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.g.vb
+C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.AssemblyReference.cache
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\colors\ColorResource.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\imgs\ImageResource.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\strings\StringResource.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Resources\styles\StyleResource.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AccountsPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\AdminAcc.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Login.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Application.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_Content.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\GeneratedInternalTypeHelper.g.vb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.cache
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.lref
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\sgsmsdb.mdf
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\sgsmsdb_log.ldf
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe.config
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.pdb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\HandyControl.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Buffers.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Memory.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\HandyControl.pdb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\HandyControl.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.pdb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\Spire.XLS.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Buffers.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Memory.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Application.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\AccountDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\CategoriesPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\DeliveryPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\InventoryPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\MaintenancePanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ProductsPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\ReportsPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\SuppliersPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Custom\TransactionsPanel.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\CategoryDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryCartDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\DeliveryDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\InventoryDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\ProductDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SubCategoryDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\SupplierDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionProductDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\TransactionsListDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Dialogs\WelcomeDialog.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\AdminAcc.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Dashboard.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\Forms\Login.baml
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.g.resources
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.Resources.resources
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.GenerateResource.cache
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Pautog\Desktop\New folder\potaenasales-main\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.vbproj.CopyComplete

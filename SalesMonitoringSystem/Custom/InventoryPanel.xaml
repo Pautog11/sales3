@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="InventoryPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SalesMonitoringSystem"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{StaticResource ApplicationLight}">
+        <hc:TabControl Grid.Row="2"
+                       ShowCloseButton="False"
+                       IsDraggable="False"
+                       IsTabFillEnabled="True"
+                       Grid.RowSpan="2">
+            <hc:TabItem Header="Inventory Transactions">
+                <Grid Background="{StaticResource ApplicationLight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <hc:FlexPanel Grid.Row="0"
+                                  JustifyContent="SpaceBetween"
+                                  Margin="15 0">
+                        <hc:SearchBar x:Name="SearchInventoryTransactions"
+                                      IsRealTime="True"
+                                      hc:InfoElement.Placeholder="Search Item"
+                                      Width="280"
+                                      Height="30"
+                                      VerticalAlignment="Center"
+                                      Style="{StaticResource SearchBarExtend}"/>
+                        <hc:Pagination Name="PaginationTransactions"
+                           MaxPageCount="10"
+                           PageIndex="1"
+                           MaxPageInterval="3"
+                           DataCountPerPage="15"
+                           VerticalAlignment="Center"
+                           hc:BorderElement.CornerRadius="0"/>
+                    </hc:FlexPanel>
+                    <DataGrid RowStyle="{DynamicResource CustomDataGridRowStyle}"
+                              ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+                              CellStyle="{DynamicResource CustomDataGridCellStyle}"
+                              hc:Empty.ShowEmpty="True"
+                              Padding="0"
+                              IsReadOnly="True"
+                              CanUserResizeColumns="False"
+                              AutoGenerateColumns="False"
+                              Grid.Row="1"
+                              Margin="15 8 15 10"
+                              Name="InventoryTransactionsDataGrid"
+                              Background="{StaticResource ApplicationLight}" RowHeight="30">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn FontSize="13"
+                                                Header="REFERENCE NO"
+                                                Binding="{Binding REF_NO}"
+                                                Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                                Header="SUPPLIER"
+                                                Binding="{Binding SUPPLIER_NAME}"
+                                                Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                                Header="STOCK IN"
+                                                Binding="{Binding STOCK_IN}"
+                                                Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                                Header="ORDERED"
+                                                Binding="{Binding DATE_ORDERED}"
+                                                Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                                Header="RECIEVED"
+                                                Binding="{Binding DATE_RECIEVED}"
+                                                Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </hc:TabItem>
+            <hc:TabItem Header="Inventory Record">
+                <Grid Background="{StaticResource ApplicationLight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <hc:FlexPanel Grid.Row="0"
+                                  JustifyContent="SpaceBetween"
+                                  Margin="15 0">
+                        <hc:SearchBar x:Name="SearchInventoryRecords"
+                                      IsRealTime="True"
+                                      hc:InfoElement.Placeholder="Search Product"
+                                      Width="280"
+                                      Height="30"
+                                      VerticalAlignment="Center"
+                                      Style="{StaticResource SearchBarExtend}"/>
+                        <hc:Pagination Name="PaginationRecords"
+                           MaxPageCount="10"
+                           PageIndex="1"
+                           MaxPageInterval="3"
+                           DataCountPerPage="15"
+                           VerticalAlignment="Center"
+                           hc:BorderElement.CornerRadius="0"/>
+                    </hc:FlexPanel>
+                    <DataGrid RowStyle="{DynamicResource CustomDataGridRowStyle}"
+                              ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+                              CellStyle="{DynamicResource CustomDataGridCellStyle}"
+                              hc:Empty.ShowEmpty="True"
+                              Padding="0"
+                              IsReadOnly="True"
+                              CanUserResizeColumns="False"
+                              AutoGenerateColumns="False"
+                              Grid.Row="1"
+                              Margin="15 8 15 10"
+                              Name="InventoryRecordsDataGrid" RowHeight="30">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn FontSize="13"
+                                        Header="PRODUCT"
+                                        Binding="{Binding PRODUCT_NAME}"
+                                        Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                        Header="PRODUCT PRICE"
+                                        Binding="{Binding PRODUCT_PRICE}"
+                                        Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                        Header="REMAINING STOCKS"
+                                        Binding="{Binding STOCK_IN}"
+                                        Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </hc:TabItem>
+        </hc:TabControl>
+    </Grid>
+</UserControl>
