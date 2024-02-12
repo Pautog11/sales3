@@ -2949,23 +2949,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pautog\\.nuget\\packages\\": {},
+    "C:\\Users\\Christian\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pautog\\Desktop\\New folder\\potaenasales-main\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+      "projectUniqueName": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
       "projectName": "SalesMonitoringSystemUnitTest",
-      "projectPath": "C:\\Users\\Pautog\\Desktop\\New folder\\potaenasales-main\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
-      "packagesPath": "C:\\Users\\Pautog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pautog\\Desktop\\New folder\\potaenasales-main\\SalesMonitoringSystemUnitTest\\obj\\",
+      "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+      "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pautog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2980,8 +2980,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Pautog\\Desktop\\New folder\\potaenasales-main\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj": {
-              "projectPath": "C:\\Users\\Pautog\\Desktop\\New folder\\potaenasales-main\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj"
+            "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj": {
+              "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj"
             }
           }
         }
@@ -3045,20 +3045,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Data.SqlClient' 4.8.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "libraryId": "System.Data.SqlClient",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

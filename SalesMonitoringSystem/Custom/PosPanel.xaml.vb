@@ -6,7 +6,7 @@ Public Class PosPanel
     Public Sub New()
         InitializeComponent()
 
-        Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Pautog\Desktop\potaenasales-main\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
+        Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
         Using connection As New SqlConnection(connectionString)
             connection.Open()
 
@@ -49,10 +49,7 @@ Public Class PosPanel
                             stackPanel.Children.Add(image)
                         Else
                             ' Load a default image if no image data is found
-                            Dim imagePath As String = "C:\Users\Pautog\Downloads\img.png"
-                            'Dim imagePath As String = "practise\img.png"
-                            'Dim imagePath As String = Path.Combine(Environment.CurrentDirectory, "\practise\img.png")
-                            'Dim imagePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "practise\img.png")
+                            Dim imagePath As String = "C:\Users\Christian\Downloads\img.png"
 
                             Dim bitmapImage As New BitmapImage()
                             bitmapImage.BeginInit()
@@ -98,14 +95,8 @@ Public Class PosPanel
 
     'Private clickCounts As New Dictionary(Of Button, Integer)()
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-        '<StackPanel Orientation = "Horizontal" FlowDirection="LeftToRight">
-        '    <WrapPanel x : Name = "panel" Orientation="Horizontal" Height="203" Width="501">
-        '        <Button Margin = "3" Click="Button_Click" Content="Button 1"/>
-        '        <Button Margin = "3" Click="Button_Click" Content="Button 1"/>
-        '    </WrapPanel>
-        '</StackPanel>
 
-        Dim data As New SqlConnection
+        'Dim data As New SqlConnection
         'MessageBox.Show("Button clicked: " & (CType(sender, Button)).Content)
 
         Dim clickedButton As Button = TryCast(sender, Button)
@@ -121,7 +112,8 @@ Public Class PosPanel
                 ' Access the text blocks inside the stack panel
 
                 Dim nameTextBlock As TextBlock = TryCast(stackPanel.Children(1), TextBlock)
-                Dim priceTextBlock As TextBlock = TryCast(stackPanel.Children(stackPanel.Children.Count - 2), TextBlock)
+                Dim priceTextBlock As TextBlock = TryCast(stackPanel.Children(stackPanel.Children.Count - 1), TextBlock)
+                'Dim Quantextblock As New Integer
 
                 '''''''''''''''''''''''''''
                 'Dim nameTextBlock As TextBlock = TryCast(stackPanel.Children(1), TextBlock)
@@ -134,8 +126,12 @@ Public Class PosPanel
 
                     ''
                     Dim l1, l2 As String
+                    Dim l3 As Integer = 1
+
                     l1 = $"{nameTextBlock.Text}"
                     l2 = $"{priceTextBlock.Text}"
+                    'l3 = Quantextblock
+
 
                     Dim panelKo As New StackPanel With {
                       .Orientation = Orientation.Vertical,
@@ -148,16 +144,28 @@ Public Class PosPanel
                     Dim fuck1 As New TextBlock With {
                         .Text = l2
                     }
-                    'Dim fuck2 As New TextBlock With {
-                    '    .Text = label3.Text
-                    '}
+                    Dim fuck2 As New TextBlock With {
+                        .Text = l3
+                    }
                     Dim isexist = False
+                    'For idx As Integer = 0 To log.Children.Count - 1
+                    '    Dim stack As StackPanel = log.Children(idx)
+                    '    Dim nameText = TryCast(stack.Children(0), TextBlock)
+                    '    If nameText.Text = l1 Then
+                    '        MsgBox("Meron Na!")
+                    '        isexist = True
+                    '        Exit For
+                    '    End If
+                    'Next
                     For idx As Integer = 0 To log.Children.Count - 1
                         Dim stack As StackPanel = log.Children(idx)
                         Dim nameText = TryCast(stack.Children(0), TextBlock)
                         If nameText.Text = l1 Then
-                            MsgBox("Meron Na!")
                             isexist = True
+                            l3 += 1
+                            fuck2.Text = l3.ToString()
+                            MsgBox("Meron Na!")
+                            Return
                             Exit For
                         End If
                     Next
@@ -165,6 +173,7 @@ Public Class PosPanel
                     If Not isexist Then
                         panelKo.Children.Add(fuck)
                         panelKo.Children.Add(fuck1)
+                        panelKo.Children.Add(fuck2)
 
                         log.Children.Add(panelKo)
                     End If
@@ -178,33 +187,38 @@ Public Class PosPanel
                     'label2.Text = $"{priceTextBlock.Text}"
 
 
-                    '''
-
-                    ''''
-                    ' seperating the integer from string
-                    Dim randomString As String = priceTextBlock.Text
-
-                    ' Use a regular expression to extract the number
-                    Dim match As Match = Regex.Match(randomString, "[\d,\.]+")
-
-                    ' Check if a match was found
-                    If match.Success Then
-                        ' Remove commas and convert the matched value to a double
-                        Dim numberString As String = match.Value.Replace(",", "")
-                        Dim extractedNumber As Double
-
-                        ' Try to parse the number
-                        If Double.TryParse(numberString, extractedNumber) Then
-
-                            'label3.Text = extractedNumber
-
-                        End If
-
-                        'label3.Text = priceTextBlock.Text
 
 
 
-                    End If
+
+
+
+
+                    '''''
+                    '' seperating the integer from string
+                    'Dim randomString As String = priceTextBlock.Text
+
+                    '' Use a regular expression to extract the number
+                    'Dim match As Match = Regex.Match(randomString, "[\d,\.]+")
+
+                    '' Check if a match was found
+                    'If match.Success Then
+                    '    ' Remove commas and convert the matched value to a double
+                    '    Dim numberString As String = match.Value.Replace(",", "")
+                    '    Dim extractedNumber As Double
+
+                    '    ' Try to parse the number
+                    '    If Double.TryParse(numberString, extractedNumber) Then
+
+                    '        'label3.Text = extractedNumber
+
+                    '    End If
+
+                    '    'label3.Text = priceTextBlock.Text
+
+
+
+                    'End If
                 End If
 
             End If
