@@ -19,4 +19,6 @@
     <system:String x:Key="en_name_second">Medical &amp; Diagnostic Clinic</system:String>
     <system:String x:Key="en_name_third">Sales Monitoring System</system:String>
     <!--#endregion-->
+    
+
 </ResourceDictionary>

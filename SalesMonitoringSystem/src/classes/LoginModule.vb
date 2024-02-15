@@ -7,6 +7,7 @@ Public Class LoginModule
     Private _dataSet As DataTable
     Private _sqlAdapter As SqlDataAdapter
 
+
     Public Function LoginAccount(username As String, password As String) As Object()
         _sqlCommand = New SqlCommand("SELECT id, password, role_id FROM tblusers WHERE username = @username", _sqlConnection)
         _sqlCommand.Parameters.AddWithValue("@username", username)

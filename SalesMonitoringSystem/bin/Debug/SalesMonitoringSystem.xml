@@ -64,12 +64,32 @@ AuditTrailPanel
 InitializeComponent
 </summary>
 </member>
+<member name="T:SalesMonitoringSystem.Pos">
+<summary>
+Pos
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.Pos.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:SalesMonitoringSystem.PosPanel">
 <summary>
 PosPanel
 </summary>
 </member>
 <member name="M:SalesMonitoringSystem.PosPanel.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.ProductCard">
+<summary>
+ProductCard
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.ProductCard.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>
@@ -161,6 +181,16 @@ TransactionsListDialog
 InitializeComponent
 </summary>
 </member>
+<member name="T:SalesMonitoringSystem.UserControl1">
+<summary>
+UserControl1
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.UserControl1.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:SalesMonitoringSystem.WelcomeDialog">
 <summary>
 WelcomeDialog
@@ -177,6 +207,16 @@ AdminAcc
 </summary>
 </member>
 <member name="M:SalesMonitoringSystem.AdminAcc.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.InsertImage">
+<summary>
+InsertImage
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.InsertImage.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>

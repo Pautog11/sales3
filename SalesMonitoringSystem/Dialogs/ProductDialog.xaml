@@ -129,7 +129,7 @@
                                 Background="{StaticResource ApplicationPrimaryDark}" Click="Button_Click"/>
                 </Grid>
             </StackPanel>
-            
+
         </StackPanel>
         <hc:SimplePanel Grid.Row="2">
             <hc:FlexPanel JustifyContent="FlexEnd">

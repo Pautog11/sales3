@@ -422,7 +422,7 @@
                     </Button>
                 <!--</StackPanel> -->
                 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-                <Button Name="pos"
+                <Button Name="poss"
                             Style="{x:Null}"
                             Height="50"
                             Background="{x:Null}"
@@ -444,11 +444,12 @@
                                            Width="28"
                                            Height="28"
                                            VerticalAlignment="Top"
-                                           HorizontalAlignment="Center"/>
+                                           HorizontalAlignment="Center"
+                                           />
                         <!-- STRING -->
                         <TextBlock Text="POS"
                                        FontSize="8"
-                                       TextAlignment="Center"/>
+                                       TextAlignment="Center" Height="10" VerticalAlignment="Bottom"/>
                     </hc:FlexPanel>
                 </Button>
                 </StackPanel>
@@ -715,11 +716,11 @@
                 <local:ReportsPanel/>
             </Grid>
             <!-- xxxx cosio  pos -->
-            <Grid x:Name="PosPanel"
+            <Grid x:Name="Pos"
                   Grid.Column="1"
                   Visibility="Collapsed"
                   Margin="15 10">
-                <local:PosPanel/>
+                <local:Pos/>
             </Grid>
             <!--#endregion-->
         </Grid>

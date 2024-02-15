@@ -1,12 +1,15 @@
 ﻿Imports System.Data
+Imports System.Drawing.Text
 Imports System.Windows.Forms
 Imports HandyControl.Controls
+Imports HandyControl.Tools.Extension
 Imports SalesMonitoringSystem.sgsmsdb
 
 Public Class ProductDialog
     Private _tableAdapter As New sgsmsdbTableAdapters.viewtblcategoriesTableAdapter
     Private _subject As IObservablePanel
     Private _data As viewtblproductsRow = Nothing
+    'Dim a As New InsertImage
     Public Sub New(
         Optional subject As IObservablePanel = Nothing,
         Optional data As viewtblproductsRow = Nothing
@@ -96,16 +99,30 @@ Public Class ProductDialog
     End Sub
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-        Dim openFileDialog1 As New OpenFileDialog()
+        'Dim openFileDialog1 As New OpenFileDialog()
 
-        ' Set the file dialog properties
-        openFileDialog1.InitialDirectory = "C:\" ' Set initial directory
-        openFileDialog1.Filter = "All files (*.png)|*.png|All files (*.jpg)|*.jpg" ' Set filter options
+        '' Set the file dialog properties
+        'openFileDialog1.InitialDirectory = "C:\" ' Set initial directory
+        'openFileDialog1.Filter = "All files (*.png)|*.png|All files (*.jpg)|*.jpg" ' Set filter options
 
-        ' Show the file dialog and check if the user selected a file
-        If openFileDialog1.ShowDialog() = DialogResult.OK Then
-            ' Get the selected file name and display it in a text box
-            PictureBox.Text = openFileDialog1.FileName
-        End If
+        '' Show the file dialog and check if the user selected a file
+        'If openFileDialog1.ShowDialog() = DialogResult.OK Then
+        '    ' Get the selected file name and display it in a text box
+        '    PictureBox.Text = openFileDialog1.FileName
+        'End If
+
+        'Me.Visibility = Visibility.Collapsed
+        'Dim a As New InsertImage
+        'a.Show()
+        'Me.Visibility = Visibility.Collapsed
+
+
+        'Dim insert As InsertPic
+        'insert.Show()
+        'Dialog.Show(New UserControl1())
+
+        'Dialog.Show(New UserControl1(subject:=_subject))
+        'Dim panel As New UserControl1
+        'panel.Show
     End Sub
 End Class

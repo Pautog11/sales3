@@ -127,8 +127,14 @@
     <Compile Include="Custom\AuditTrailPanel.xaml.vb">
       <DependentUpon>AuditTrailPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Custom\Pos.xaml.vb">
+      <DependentUpon>Pos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Custom\PosPanel.xaml.vb">
       <DependentUpon>PosPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\ProductCard.xaml.vb">
+      <DependentUpon>ProductCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom\StackNotificationControl.xaml.vb">
       <DependentUpon>StackNotificationControl.xaml</DependentUpon>
@@ -154,11 +160,17 @@
     <Compile Include="Dialogs\TransactionsListDialog.xaml.vb">
       <DependentUpon>TransactionsListDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\UserControl1.xaml.vb">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\WelcomeDialog.xaml.vb">
       <DependentUpon>WelcomeDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminAcc.xaml.vb">
       <DependentUpon>AdminAcc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InsertImage.xaml.vb">
+      <DependentUpon>InsertImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.xaml.vb">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -203,7 +215,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Custom\Pos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom\PosPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Custom\ProductCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -299,6 +319,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dialogs\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dialogs\WelcomeDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -364,6 +388,10 @@
       <DependentUpon>Dashboard.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Forms\InsertImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

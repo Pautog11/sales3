@@ -631,3 +631,11 @@ C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Sales
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Forms\InsertImage.g.vb
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Forms\InsertImage.baml
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Dialogs\UserControl1.g.vb
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Dialogs\UserControl1.baml
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\Pos.g.vb
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\ProductCard.g.vb
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\Pos.baml
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\ProductCard.baml
