@@ -440,7 +440,7 @@
                                     JustifyContent="Center"
                                     AlignContent="Center">
                         <hc:ImageBlock Name="null"
-                                           Source="{StaticResource ic_pos}"
+                                           Source="{StaticResource ic_pos2}"
                                            Width="28"
                                            Height="28"
                                            VerticalAlignment="Top"

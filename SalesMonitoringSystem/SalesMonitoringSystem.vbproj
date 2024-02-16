@@ -508,6 +508,7 @@
     <Resource Include="Resources\imgs\icon.ico" />
     <Resource Include="Resources\imgs\ic_salesreport.png" />
     <Resource Include="Resources\imgs\ic_pos.png" />
+    <Resource Include="Resources\imgs\ic_pos2.png" />
     <Content Include="sgsmsdb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
