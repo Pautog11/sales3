@@ -84,16 +84,6 @@ PosPanel
 InitializeComponent
 </summary>
 </member>
-<member name="T:SalesMonitoringSystem.ProductCard">
-<summary>
-ProductCard
-</summary>
-</member>
-<member name="M:SalesMonitoringSystem.ProductCard.InitializeComponent">
-<summary>
-InitializeComponent
-</summary>
-</member>
 <member name="T:SalesMonitoringSystem.StackNotificationControl">
 <summary>
 StackNotificationControl
@@ -177,16 +167,6 @@ TransactionsListDialog
 </summary>
 </member>
 <member name="M:SalesMonitoringSystem.TransactionsListDialog.InitializeComponent">
-<summary>
-InitializeComponent
-</summary>
-</member>
-<member name="T:SalesMonitoringSystem.UserControl1">
-<summary>
-UserControl1
-</summary>
-</member>
-<member name="M:SalesMonitoringSystem.UserControl1.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>
@@ -803,6 +783,16 @@ InitializeComponent
  </summary>
 </member>
 <member name="M:SalesMonitoringSystem.Dashboard.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.ProductCard">
+<summary>
+ProductCard
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.ProductCard.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>

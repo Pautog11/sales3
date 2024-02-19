@@ -160,9 +160,6 @@
     <Compile Include="Dialogs\TransactionsListDialog.xaml.vb">
       <DependentUpon>TransactionsListDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\UserControl1.xaml.vb">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\WelcomeDialog.xaml.vb">
       <DependentUpon>WelcomeDialog.xaml</DependentUpon>
     </Compile>
@@ -316,10 +313,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\TransactionsListDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dialogs\UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -48,7 +48,7 @@
                                     Width="*"/>
                 <DataGridTextColumn FontSize="13"
                                     Header="ACTION"
-                                    Binding="{Binding ACTION}"
+                                    Binding ="{Binding ACTION}"
                                     Width="*"/>
                 <DataGridTextColumn FontSize="13"
                                     Header="FIELD"
