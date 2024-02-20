@@ -12,25 +12,25 @@
         <Border CornerRadius="4,4,0,0" 
                 Width="160" 
                 Height="160"
-                x:Name="image">
+                >
             <TextBlock TextWrapping="Wrap" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center" 
-                       Text="test" 
-                       />
+                       Text="{Binding Image}"
+                       x:Name="Image"/>
         </Border>
         <!--Card Footer part-->
         <hc:Card.Footer>
             <StackPanel Margin="10" Width="160">
                 <!--Card First-level content-->
                 <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
-                                       Text="Title"
+                                       Text="{Binding Title}"
                                        HorizontalAlignment="Left"
-                                       x:Name="Title"
+                                       
                                        />
                 <!--Card Secondary content-->
                 <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 
-                                       Text="Description" Margin="0,6,0,0"
+                                       Text="{Binding Description}" Margin="0,6,0,0"
                                        HorizontalAlignment="Left"
                                        x:Name="Description"/>
             </StackPanel>

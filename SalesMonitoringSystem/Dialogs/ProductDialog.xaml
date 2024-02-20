@@ -101,34 +101,28 @@
                          Height="40" InputScope="Number"/>
             </StackPanel>
 
-            <!--/////////////////////////////////>-->
-            <StackPanel Margin="0 15 0 0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="120"/>
-                    </Grid.ColumnDefinitions>
-
-                    <hc:TextBox Name="PictureBox"
-                                Grid.Column="0"
-                                Text="{Binding PRODUCT_IMAGE}"
-                                HorizontalAlignment="Stretch"
-                                hc:BorderElement.CornerRadius="0"
-                                hc:InfoElement.Placeholder="PictureBox"
-                                Margin="0,0,10,0"
-                                Height="40"/>
-
-                    <Button Grid.Column="1"
-                           hc:BorderElement.CornerRadius="0"
-                                Name="BrowseButton"
-                                Content="Browse"
-                                Foreground="#fff"
-                                FontSize="16"
-                                Height="40"
-                                Width="140"
-                                Background="{StaticResource ApplicationPrimaryDark}" Click="Button_Click"/>
+            <Grid Margin="0 15 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image x:Name="selectedImage" HorizontalAlignment="Left" VerticalAlignment="Center" Stretch="Uniform" Height="83" Width="308" Margin="49,0,0,0"/>
                 </Grid>
-            </StackPanel>
+                <Grid Grid.Column="1">
+                    <Button Content="Select Image" 
+                            Click="SelectImageButton_Click" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Top"
+                            FontSize="16"
+                            Foreground="#fff"
+                            hc:BorderElement.CornerRadius="0"
+                            Margin="0,30,0,0"
+                            Height="40"
+                            Width="140"
+                            Background = "{StaticResource ApplicationPrimaryDark}"/>
+                </Grid>
+            </Grid>
 
         </StackPanel>
         <hc:SimplePanel Grid.Row="2">

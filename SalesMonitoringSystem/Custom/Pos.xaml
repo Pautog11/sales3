@@ -48,7 +48,7 @@
                 <hc:ScrollViewer IsInertiaEnabled="True">
                     <WrapPanel Orientation="Horizontal" 
                                x:Name="Wrappanelxd">
-                        <local:ProductCard/>
+                        <!--<local:ProductCard/>-->
                     </WrapPanel>
                 </hc:ScrollViewer>
 
