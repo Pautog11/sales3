@@ -1,5 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Drawing
+Imports System.IO
 Imports HandyControl.Controls
 
 Public Class BaseProduct
@@ -7,6 +9,7 @@ Public Class BaseProduct
     Implements ICommandPanel
 
     Private ReadOnly _data As Dictionary(Of String, String)
+    Private img As System.Drawing.Image
     'Private ReadOnly data1 As Dictionary(Of Array, Array)
     'Private _data1 As Object
 
@@ -16,6 +19,15 @@ Public Class BaseProduct
     'Public Sub New(data21 As Dictionary(Of Array, Array))
     '    data1 = data21
     'End Sub
+
+    Public Property Image() As System.Drawing.Image
+        Set(value As System.Drawing.Image)
+            img = value
+        End Set
+        Get
+            Return img
+        End Get
+    End Property
 
     Public Sub Delete() Implements ICommandPanel.Delete
         Try
@@ -61,8 +73,10 @@ Public Class BaseProduct
             _sqlCommand.Parameters.AddWithValue("@product_price", _data.Item("product_price"))
             _sqlCommand.Parameters.AddWithValue("@product_cost", _data.Item("product_cost"))
             _sqlCommand.Parameters.AddWithValue("@user_id", My.Settings.userID)
+            Dim converter As New ImageConverter
+            Dim byteArr As Byte() = converter.ConvertTo(img, GetType(Byte()))
             '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item().SqlDbType = SqlDbType.Image)
-            _sqlCommand.Parameters.AddWithValue("@product_image", _data) ' Assuming _data is a byte array representing the image
+            _sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image ' Assuming _data is a byte array representing the image
             '
             '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item("product_image")).SqlDbType = SqlDbType.Image ' Assuming _data is a byte array representing the image
             '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item("product_image")) ' Assuming _data is a byte array representing the image

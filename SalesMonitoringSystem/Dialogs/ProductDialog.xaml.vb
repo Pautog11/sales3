@@ -17,7 +17,7 @@ Public Class ProductDialog
     Private _tableAdapter As New sgsmsdbTableAdapters.viewtblcategoriesTableAdapter
     Private _subject As IObservablePanel
     Private _data As viewtblproductsRow = Nothing, _data1 As viewtblproductsRow = Nothing
-    Public imagePath As String
+    Public imagePathD As String
     'Public imageSource As BitmapImage
     'Dim a As New InsertImage
     Public Sub New(
@@ -117,6 +117,8 @@ Public Class ProductDialog
 
 
             Dim imageSource As BitmapImage = CType(selectedImage.Source, BitmapImage)
+            Dim imgTOIMG As Image = Image.FromFile(imagePathD)
+
 
             '' Convert the image source to bytes
             'Dim encoder As New JpegBitmapEncoder()
@@ -152,7 +154,9 @@ Public Class ProductDialog
             '    }
 
             '/////////////////////////////////////////////////////
-            baseCommand = New BaseProduct(data)
+            baseCommand = New BaseProduct(data) With {
+                .Image = imgTOIMG
+            }
             'baseCommand = New BaseProduct(data1)
             If BaseProduct.Exists(res(0)(1)) <= 0 AndAlso _data Is Nothing Then
                 invoker = New AddCommand(baseCommand)
@@ -225,6 +229,7 @@ Public Class ProductDialog
 
         If openFileDialog.ShowDialog() = True Then
             Dim imagePath As String = openFileDialog.FileName
+            imagePathD = imagePath
             Dim imageSource As New BitmapImage(New Uri(imagePath))
             Growl.Info("dsjjd")
             ' Set the source of the Image control to display the selected image
