@@ -39,6 +39,25 @@ Public Class Pos
             Wrappanelxd.Children.Add(productCard)
         Next
     End Sub
+
+
+    'Public Event Click As RoutedEventHandler
+
+    'Public Sub New(ByVal cardModel As CardModel)
+    '    ' This call is required by the designer.
+    '    InitializeComponent()
+
+    '    ' Set the DataContext to the CardModel
+    '    Me.DataContext = cardModel
+
+    '    ' Add an event handler to the UserControl's MouseLeftButtonDown event
+    '    AddHandler Me.MouseLeftButtonDown, AddressOf ProductCard_MouseLeftButtonDown
+    'End Sub
+
+    'Private Sub ProductCard_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs)
+    '    ' Raise the Click event of the ProductCard when it is clicked
+    '    RaiseEvent Click(Me, e)
+    'End Sub
 End Class
 
 Public Class CardModel

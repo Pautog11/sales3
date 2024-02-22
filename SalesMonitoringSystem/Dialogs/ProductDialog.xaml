@@ -107,7 +107,13 @@
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <Image x:Name="selectedImage" HorizontalAlignment="Left" VerticalAlignment="Center" Stretch="Uniform" Height="83" Width="308" Margin="49,0,0,0"/>
+                    <Image x:Name="selectedImage" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Center" 
+                           Stretch="Uniform" 
+                           Height="83" 
+                           Width="308" 
+                           Margin="49,0,0,0"/>
                 </Grid>
                 <Grid Grid.Column="1">
                     <Button Content="Select Image" 

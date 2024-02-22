@@ -7,9 +7,15 @@ Public Class BaseProduct
     Implements ICommandPanel
 
     Private ReadOnly _data As Dictionary(Of String, String)
+    'Private ReadOnly data1 As Dictionary(Of Array, Array)
+    'Private _data1 As Object
+
     Public Sub New(data As Dictionary(Of String, String))
         _data = data
     End Sub
+    'Public Sub New(data21 As Dictionary(Of Array, Array))
+    '    data1 = data21
+    'End Sub
 
     Public Sub Delete() Implements ICommandPanel.Delete
         Try
@@ -57,6 +63,25 @@ Public Class BaseProduct
             _sqlCommand.Parameters.AddWithValue("@user_id", My.Settings.userID)
             '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item().SqlDbType = SqlDbType.Image)
             _sqlCommand.Parameters.AddWithValue("@product_image", _data) ' Assuming _data is a byte array representing the image
+            '
+            '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item("product_image")).SqlDbType = SqlDbType.Image ' Assuming _data is a byte array representing the image
+            '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item("product_image")) ' Assuming _data is a byte array representing the image
+            'Dim data1 As String
+
+
+            'Dim imageData As Byte() = GetImageData()
+
+            'Command.Parameters.Add("@ImageData", SqlDbType.VarBinary, -1).Value = imageData
+            '_sqlCommand.Parameters.Add("@product_image", SqlDbType.VarBinary, -1).Value = "product_image"
+            'If data1.ContainsKey("product_image") AndAlso TypeOf data1("product_image") Is Byte() Then
+            '    Dim imageBytes As Byte() = DirectCast(data1("product_image"), Byte())
+
+            '    ' Add the image bytes as parameter
+            '    _sqlCommand.Parameters.Add("@product_image", SqlDbType.Image).Value = imageBytes
+            'Else
+            '    MessageBox.Show("Error: 'product_image' data is not valid.")
+            'End If
+
 
             If _sqlCommand.ExecuteNonQuery() > 0 Then
                 Growl.Success("Product has been added successfully!")

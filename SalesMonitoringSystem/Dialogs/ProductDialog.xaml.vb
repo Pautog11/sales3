@@ -10,27 +10,35 @@ Imports HandyControl.Tools
 Imports System.Data.SqlClient
 Imports Microsoft.Win32
 Imports HandyControl
-
+Imports System.Security.Cryptography.X509Certificates
+Imports System.Text
 
 Public Class ProductDialog
     Private _tableAdapter As New sgsmsdbTableAdapters.viewtblcategoriesTableAdapter
     Private _subject As IObservablePanel
-    Private _data As viewtblproductsRow = Nothing
+    Private _data As viewtblproductsRow = Nothing, _data1 As viewtblproductsRow = Nothing
+    Public imagePath As String
+    'Public imageSource As BitmapImage
     'Dim a As New InsertImage
     Public Sub New(
         Optional subject As IObservablePanel = Nothing,
-        Optional data As viewtblproductsRow = Nothing
+        Optional data As viewtblproductsRow = Nothing,
+        Optional data1 As viewtblproductsRow = Nothing
     )
         InitializeComponent()
 
         _data = data
+        _data1 = data1
+        '_data = data1
         _subject = subject
-        DataContext = data
+        DataContext = data  'data1
+        DataContext = data1
         If _data IsNot Nothing Then
             SaveButton.Content = "UPDATE"
         Else
             DeleteButton.Visibility = Visibility.Collapsed
         End If
+
     End Sub
 
     Private Sub ProductDialog_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
@@ -61,28 +69,72 @@ Public Class ProductDialog
                 Growl.Info("Please select a category.")
                 Return
             End If
+
+
+            'ddddddddddddddddddddddddddddddddddddddddddddd
+
             ' ----------------------cosio -----------------
-            If ProductPriceTextBox.Text < ProductCostTextBox.Text Then
-                Growl.Info("Should not lessthan from the cost price")
-                Return ' ----------------cosio -----------
-            End If
+            'If ProductPriceTextBox.Text < ProductCostTextBox.Text Then
+            '    Growl.Info("Should not lessthan from the cost price")
+            '    Return ' ----------------cosio -----------
+            'End If
+
+
+
+
             'Dim selectedImage As Image = ImageSelector.SelectedImage
             'Dim selectedImage As ImageSource = ImageSelector.image123
             'Dim image As String = ConvertImageToBase64(selectedImage)
 
             'Dim imagesource As New BitmapImage
 
-            Dim imageStream As New MemoryStream()
+            'Dim imageStream As New MemoryStream()
 
             ' Convert the image data from the Image control to a byte array
-            Dim encoder As New JpegBitmapEncoder()
-            encoder.Frames.Add(BitmapFrame.Create(selectedImage.Source))
-            encoder.Save(imageStream)
-            Dim imageData As Byte() = imageStream.ToArray()
-            Dim base64String As String = Convert.ToBase64String(imageData)
+
+            'Dim encoder As New JpegBitmapEncoder()
+            'encoder.Frames.Add(BitmapFrame.Create(selectedImage.Source))
+            'encoder.Save(imageStream)
+            'Dim imageData As Byte() = imageStream.ToArray()
+
+
+            'Dim ms As New MemoryStream()
+            'selectedImage.Source(ms, selectedImage.Source)
+            'Dim data1 As Byte() = ms.GetBuffer()
+            ''Dim p As New SqlParameter("@image", SqlDbType.Image)
+            'p.Value = data1
+            ''Dim ms As New MemoryStream()
+            ''selectedImage.Image.Save(ms, selectedImage.Image.RawFormat)
+
+            'Dim imagePath As String = OpenFileDialog.FileName
+            'Dim itemsouer
+            'Growl.Info("base64String")
+            'Dim imageSource As New Byte
+            'Dim imagepath As String
+            'Dim imageBytes As Byte() = File.ReadAllBytes(imagepath)
+            'Dim imageBytes As Byte() = File.ReadAllBytes(imageSource)
+
+
+
+            Dim imageSource As BitmapImage = CType(selectedImage.Source, BitmapImage)
+
+            '' Convert the image source to bytes
+            'Dim encoder As New JpegBitmapEncoder()
+            'Dim bitmapImage As New BitmapImage()
+            'bitmapImage.BeginInit()
+            'bitmapImage.UriSource = imageSource.UriSource
+            'bitmapImage.EndInit()
+
+            'Dim imageStream As New MemoryStream()
+            'encoder.Frames.Add(BitmapFrame.Create(bitmapImage))
+            'encoder.Save(imageStream)
+
+            'Dim imageBytes As Byte() = imageStream.ToArray()
+            'Dim base64String As String = Convert.ToBase64String(imageBytes)
+            ''Dim byteArray As Byte() = Encoding.GetBytes(imageBytes)
 
             '---------------------------------------------------------
-
+            'Dim imageSource As Bitmap
             Dim data As New Dictionary(Of String, String) From {
                     {"id", _data?.Item("ID")},
                     {"category_id", CategoryComboBox.SelectedValue},
@@ -90,12 +142,18 @@ Public Class ProductDialog
                     {"product_description", If(String.IsNullOrEmpty(ProductDescriptionTextBox.Text), "", ProductDescriptionTextBox.Text)},
                     {"product_price", res(1)(1)},
                     {"product_cost", res(2)(1)},
-                    {"product_image", base64String}}
+                    {"product_image", ImageSource.ToString}
+            }
             '{"product_image", selectedImage.TouchesCaptured}
             '}
 
+            'Dim data1 As New Dictionary(Of Byte, Byte) From {
+            '    {"product_image", imageBytes}
+            '    }
+
             '/////////////////////////////////////////////////////
             baseCommand = New BaseProduct(data)
+            'baseCommand = New BaseProduct(data1)
             If BaseProduct.Exists(res(0)(1)) <= 0 AndAlso _data Is Nothing Then
                 invoker = New AddCommand(baseCommand)
             ElseIf _data IsNot Nothing Then
@@ -105,7 +163,8 @@ Public Class ProductDialog
             End If
             invoker?.Execute()
             _subject?.NotifyObserver()
-            CloseDialog(Closebtn)
+            'SaveImageToDatabase()
+            'CloseDialog(Closebtn)
         Else
             Growl.Info("Please fill out the empty field(s) or input a valid data.")
         End If
@@ -170,22 +229,20 @@ Public Class ProductDialog
             Growl.Info("dsjjd")
             ' Set the source of the Image control to display the selected image
             selectedImage.Source = imageSource
-            'pota = imageSource
 
-            ' Save image to database
-            'SaveImageToDatabase(imagePath)
-            'Growl.Info("dsjjd")
+            'Return imageSource
         End If
+        'selectedImage.Source = ImageSource
     End Sub
 
-    'Private Sub SaveImageToDatabase(imagePath As String)
+    'Private Sub SaveImageToDatabase()
+    '    'Dim imagePath As String
     '    Try
     '        Dim imageBytes As Byte() = File.ReadAllBytes(imagePath)
-    '        Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\source\repos\pos\pos\Data.mdf;Integrated Security=True;Connect Timeout=30"
-
+    '        Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
     '        Using connection As New SqlConnection(connectionString)
     '            connection.Open()
-    '            Dim query As String = "INSERT INTO tae (im) VALUES (@im)"
+    '            Dim query As String = "INSERT INTO tblproducts (product_image) VALUES (@product_image)"
     '            Using command As New SqlCommand(query, connection)
     '                command.Parameters.AddWithValue("@im", imageBytes)
     '                command.ExecuteNonQuery()
@@ -195,8 +252,9 @@ Public Class ProductDialog
     '        End Using
 
     '    Catch ex As Exception
-    '        Windows.MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error)
+    '        'Windows.MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error)
     '    End Try
-
     'End Sub
+
+    'Public imageSource
 End Class

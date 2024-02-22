@@ -7,9 +7,10 @@
              xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <!--<Button Click="ProductCard_Click" Width="240>-->
     <hc:Card MaxWidth="240" BorderThickness="0" Effect="{DynamicResource EffectShadow2}" Margin="8">
-        <!--Card Content section-->
-        <Border CornerRadius="4,4,0,0" 
+            <!--Card Content section-->
+            <Border CornerRadius="4,4,0,0" 
                 Width="160" 
                 Height="160"
                 >
@@ -18,22 +19,26 @@
                        HorizontalAlignment="Center" 
                        Text="{Binding Image}"
                        x:Name="Image"/>
-        </Border>
-        <!--Card Footer part-->
-        <hc:Card.Footer>
-            <StackPanel Margin="10" Width="160">
-                <!--Card First-level content-->
-                <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
+            </Border>
+            <!--Card Footer part-->
+
+            <hc:Card.Footer>
+                <StackPanel Margin="10" Width="160">
+                    <!--Card First-level content-->
+                    <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
                                        Text="{Binding Title}"
                                        HorizontalAlignment="Left"
                                        
                                        />
-                <!--Card Secondary content-->
-                <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 
+                    <!--Card Secondary content-->
+                    <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 
                                        Text="{Binding Description}" Margin="0,6,0,0"
                                        HorizontalAlignment="Left"
                                        x:Name="Description"/>
-            </StackPanel>
-        </hc:Card.Footer>
-    </hc:Card>
+
+                </StackPanel>
+            </hc:Card.Footer>
+
+        </hc:Card>
+    <!--</Button>-->
 </UserControl>

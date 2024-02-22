@@ -42,8 +42,4 @@ Public Class ProductCard
         ' Add any initialization after the InitializeComponent() call.
         DataContext = data
     End Sub
-
-    'Public Sub updated(ByVal data As String)
-    '    Title.Text = data
-    'End Sub
 End Class
