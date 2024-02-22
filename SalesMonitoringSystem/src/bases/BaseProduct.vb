@@ -10,15 +10,9 @@ Public Class BaseProduct
 
     Private ReadOnly _data As Dictionary(Of String, String)
     Private img As System.Drawing.Image
-    'Private ReadOnly data1 As Dictionary(Of Array, Array)
-    'Private _data1 As Object
-
     Public Sub New(data As Dictionary(Of String, String))
         _data = data
     End Sub
-    'Public Sub New(data21 As Dictionary(Of Array, Array))
-    '    data1 = data21
-    'End Sub
 
     Public Property Image() As System.Drawing.Image
         Set(value As System.Drawing.Image)
@@ -75,12 +69,16 @@ Public Class BaseProduct
             _sqlCommand.Parameters.AddWithValue("@user_id", My.Settings.userID)
             Dim converter As New ImageConverter
             Dim byteArr As Byte() = converter.ConvertTo(img, GetType(Byte()))
-            '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item().SqlDbType = SqlDbType.Image)
-            _sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image ' Assuming _data is a byte array representing the image
-            '
-            '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item("product_image")).SqlDbType = SqlDbType.Image ' Assuming _data is a byte array representing the image
-            '_sqlCommand.Parameters.AddWithValue("@product_image", _data.Item("product_image")) ' Assuming _data is a byte array representing the image
-            'Dim data1 As String
+            '_sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
+
+            'null image will be accepted as fuck
+            If byteArr IsNot Nothing Then
+                _sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
+            Else
+                'If the image Is null, you can add a DBNull.Value parameter
+                _sqlCommand.Parameters.AddWithValue("@product_image", DBNull.Value).SqlDbType = SqlDbType.Image
+            End If
+
 
 
             'Dim imageData As Byte() = GetImageData()
