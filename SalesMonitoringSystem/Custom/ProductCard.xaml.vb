@@ -6,7 +6,11 @@ Imports SalesMonitoringSystem.Pos
 Public Class ProductCard
     Inherits UserControl
 
-
+    'Public ReadOnly Property Image As Image
+    '    Get
+    '        Return Image
+    '    End Get
+    'End Property
     'Public Property TitleText As String
     '    Get
     '        Return Title.Text
@@ -39,7 +43,11 @@ Public Class ProductCard
         'This call Is required by the designer.
         InitializeComponent()
 
+
         ' Add any initialization after the InitializeComponent() call.
         DataContext = data
+
     End Sub
+
+
 End Class

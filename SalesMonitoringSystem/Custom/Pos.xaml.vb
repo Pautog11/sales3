@@ -1,9 +1,16 @@
 ﻿
 Imports System.Collections.ObjectModel
+Imports System.Data.SqlClient
+Imports System.Drawing
+Imports System.Drawing.Imaging
+Imports System.IO
+Imports System.Security.Cryptography.X509Certificates
+Imports System.Windows.Forms
+Imports MS.Internal
 
 Public Class Pos
 
-    Inherits UserControl
+    'Inherits UserControl
 
     Public Sub New()
 
@@ -19,51 +26,90 @@ Public Class Pos
         'Dim ProductCard As New ProductCard
         'ProductCard.updated("Poatebjhlkjgdlkg")
 
-        Dim cardModels As New List(Of CardModel) From {
-                New CardModel With {.Title = "Product 1", .Description = "Description 1", .Image = "Imgae 1"},
-                New CardModel With {.Title = "Product 2", .Description = "Description 2", .Image = "Imgae 2"},
-                New CardModel With {.Title = "Product 3", .Description = "Description 3", .Image = "Imgae 3"},
-                New CardModel With {.Title = "Product 4", .Description = "Description 4", .Image = "Imgae 4"}
-        }
+        '======================================================================================================================
+
+        'Dim cardModels As New List(Of CardModel) From {
+        '        New CardModel With {.Title = "Product 1", .Description = "Description 1", .Image = "Imgae 1"},
+        '        New CardModel With {.Title = "Product 2", .Description = "Description 2", .Image = "Imgae 2"},
+        '        New CardModel With {.Title = "Product 3", .Description = "Description 3", .Image = "Imgae 3"},
+        '        New CardModel With {.Title = "Product 4", .Description = "Description 4", .Image = "Imgae 4"},
+        '        New CardModel With {.Title = "Product 4", .Description = "Description 4", .Image = "Imgae 4"}
+        '}
+
+        'For Each cardModel In cardModels
+        '    ' Create an instance of ProductCard UserControl
+        '    Dim productCard As New ProductCard(cardModel)
+
+        '    ' Set the title and description using the exposed properties
+        '    'productCard.TitleText = cardModel.Title
+        '    'productCard.DescriptionText = cardModel.Description
+        '    'productCard.ImageText = cardModel.Image
+
+        '    ' Add the ProductCard to the WrapPanel
+        '    Wrappanelxd.Children.Add(productCard)
+        'Next
+        Newcardmodel()
+        'GetProductModels()
+
+    End Sub
+
+    Public Sub Newcardmodel()
+        Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
+        Dim query As String = "SELECT product_name, product_description, product_image FROM tblproducts"
+        Dim cardModels As New List(Of CardModel)()
+
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                connection.Open()
+                Using reader As SqlDataReader = command.ExecuteReader()
+                    While reader.Read()
+                        Dim cardModel As New CardModel()
+                        cardModel.Title = reader.GetString(0)
+                        cardModel.Description = If(Not reader.IsDBNull(1), reader.GetString(1), Nothing)
+
+                        If Not reader.IsDBNull(reader.GetOrdinal("product_image")) Then
+                            Try
+                                ' Assuming the image data is in the "product_image" column of the reader
+                                Dim imageData As Byte() = DirectCast(reader("product_image"), Byte())
+
+                                ' Create a memory stream from the byte array
+                                Dim ms As New System.IO.MemoryStream(imageData)
+
+                                ' Create a BitmapImage
+                                Dim bitmap As New BitmapImage()
+                                bitmap.BeginInit()
+                                bitmap.StreamSource = ms
+                                bitmap.EndInit()
+
+                                ' Assign the BitmapImage to the ImageSourceProperty
+                                cardModel.ImageSourceProperty = bitmap
+                            Catch ex As Exception
+                                ' Handle the exception or log it
+                                ' Dim a As String = "No Image"
+                                'cardModel.ImageSourceProperty = a
+                            End Try
+                        Else
+                            'cardModel.Image = "image_not_available"
+                        End If
+
+                        cardModels.Add(cardModel)
+                    End While
+                End Using
+            End Using
+        End Using
 
         For Each cardModel In cardModels
-            ' Create an instance of ProductCard UserControl
             Dim productCard As New ProductCard(cardModel)
-
-            ' Set the title and description using the exposed properties
-            'productCard.TitleText = cardModel.Title
-            'productCard.DescriptionText = cardModel.Description
-            'productCard.ImageText = cardModel.Image
-
-            ' Add the ProductCard to the WrapPanel
             Wrappanelxd.Children.Add(productCard)
         Next
     End Sub
 
 
-    'Public Event Click As RoutedEventHandler
-
-    'Public Sub New(ByVal cardModel As CardModel)
-    '    ' This call is required by the designer.
-    '    InitializeComponent()
-
-    '    ' Set the DataContext to the CardModel
-    '    Me.DataContext = cardModel
-
-    '    ' Add an event handler to the UserControl's MouseLeftButtonDown event
-    '    AddHandler Me.MouseLeftButtonDown, AddressOf ProductCard_MouseLeftButtonDown
-    'End Sub
-
-    'Private Sub ProductCard_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs)
-    '    ' Raise the Click event of the ProductCard when it is clicked
-    '    RaiseEvent Click(Me, e)
-    'End Sub
 End Class
 
 Public Class CardModel
     Public Property Title As String
     Public Property Description As String
-    Public Property Image As String
+    Public Property ImageSourceProperty As ImageSource
+
 End Class
-
-

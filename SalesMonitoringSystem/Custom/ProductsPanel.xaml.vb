@@ -1,5 +1,12 @@
-﻿Imports HandyControl.Controls
+﻿Imports System.Data
+Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Windows.Forms
+Imports HandyControl.Controls
 Imports HandyControl.Data
+Imports SalesMonitoringSystem.ProductDialog
+Imports System.Windows.Media.Imaging
+
 
 Public Class ProductsPanel
     Implements IObserverPanel
@@ -31,9 +38,43 @@ Public Class ProductsPanel
     End Sub
 
     Private Sub ProductDataGridView_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ProductDataGridView.SelectionChanged
+        'Private Sub ProductDataGridView_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ProductDataGridView.SelectionChanged
+
+
         If ProductDataGridView.SelectedItems.Count > 0 Then
+
+            'Dim imageData As String = productDataGridView.SelectedRows(0).Cells("product_image").Value.ToString()
+
+
+            'Dim imageData As String = ProductDataGridView.SelectedItem(0).Cells("product_image").Value.ToString()
+            'Dim imageDataBytes As Byte() = Convert.FromBase64String(imageData)
+            ''======================
+            'Dim selectedProductID As Integer = Convert.ToInt32(ProductDataGridView.SelectedItems(0).Cells("id").Value)
+            'Dim imageData As Byte() = GetImageDataFromDatabase(selectedProductID)
+
+            'If imageData IsNot Nothing AndAlso imageData.Length > 0 Then
+            '    Dim bitmapImage As New BitmapImage()
+            '    bitmapImage.BeginInit()
+            '    bitmapImage.StreamSource = New MemoryStream(imageData)
+            '    bitmapImage.EndInit()
+
+            '    'selectedImage.Source = bitmapImage
+
+
+            'End If
+
+            ''=========================
+
+            'selectedImage.Source = ByteArrayToImage(imageDataBytes)
+            'text1.Text = "lhljhlkjhlkj"
+
+
+
             Dialog.Show(New ProductDialog(_subject, ProductDataGridView.SelectedItems(0)))
+
             ProductDataGridView.SelectedIndex = -1
+
+            Growl.Info("jhlkj")
         End If
     End Sub
 
@@ -60,4 +101,32 @@ Public Class ProductsPanel
             Pagination.MaxPageCount = _dataTable.Count / MAX_PAGE_COUNT
         End If
     End Sub
+
+
+    Private Function GetImageDataFromDatabase(id As Integer) As Byte()
+        Dim imageData As Byte() = Nothing
+
+        Using connection As New SqlConnection(My.Settings.sgsmsdbConnectionString)
+            Dim query As String = "SELECT product_image FROM Products WHERE id = @id"
+            Dim command As New SqlCommand(query, connection)
+            command.Parameters.AddWithValue("id", id)
+
+            connection.Open()
+            Dim reader As SqlDataReader = command.ExecuteReader()
+
+            If reader.Read() Then
+                If Not reader.IsDBNull(0) Then
+                    imageData = DirectCast(reader("product_image"), Byte())
+                End If
+            End If
+
+            reader.Close()
+        End Using
+
+        Return imageData
+    End Function
 End Class
+
+'Public Class Fuck
+'    Public Property textimage As String
+'End Class

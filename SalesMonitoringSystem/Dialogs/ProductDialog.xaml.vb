@@ -12,8 +12,10 @@ Imports Microsoft.Win32
 Imports HandyControl
 Imports System.Security.Cryptography.X509Certificates
 Imports System.Text
+Imports SalesMonitoringSystem.ProductsPanel
 
 Public Class ProductDialog
+
     Private _tableAdapter As New sgsmsdbTableAdapters.viewtblcategoriesTableAdapter
     Private _subject As IObservablePanel
     Private _data As viewtblproductsRow = Nothing, _data1 As viewtblproductsRow = Nothing
@@ -35,8 +37,13 @@ Public Class ProductDialog
         Else
             DeleteButton.Visibility = Visibility.Collapsed
         End If
-
     End Sub
+
+
+    '===========================================
+
+
+    '===========================================
 
     Private Sub ProductDialog_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
         CategoryComboBox.ItemsSource = _tableAdapter.GetData().DefaultView
@@ -144,7 +151,7 @@ Public Class ProductDialog
             Dim imagePath As String = openFileDialog.FileName
             imagePathD = imagePath
             Dim imageSource As New BitmapImage(New Uri(imagePath))
-            Growl.Info("dsjjd")
+            'Growl.Info("dsjjd")
             ' Set the source of the Image control to display the selected image
             selectedImage.Source = imageSource
 
@@ -152,4 +159,31 @@ Public Class ProductDialog
         End If
         'selectedImage.Source = ImageSource
     End Sub
+
+    'Public Sub forimage()
+    '    Dim ScalarProducts As New ScalarProducts
+    '    Dim imageData As Byte() = ScalarProducts()
+
+    '    ' Convert byte array to BitmapImage
+    '    Dim bitmapImage As New BitmapImage()
+    '    bitmapImage.BeginInit()
+    '    bitmapImage.StreamSource = New MemoryStream(imageData)
+    '    bitmapImage.EndInit()
+
+    '    ' Set the BitmapImage as the image source for your Image control
+    '    selectedImage.Source = bitmapImage
+    'End Sub
+
+    Public Sub DisplayImage(imageData As Byte())
+        Dim bitmapImage As New BitmapImage()
+        bitmapImage.BeginInit()
+        bitmapImage.CacheOption = BitmapCacheOption.OnLoad
+        bitmapImage.StreamSource = New MemoryStream(imageData)
+        bitmapImage.EndInit()
+
+        selectedImage.Source = bitmapImage
+    End Sub
+End Class
+Public Class Image123
+    Public selectedImage As String
 End Class

@@ -10,15 +10,15 @@
     <!--<Button Click="ProductCard_Click" Width="240>-->
     <hc:Card MaxWidth="240" BorderThickness="0" Effect="{DynamicResource EffectShadow2}" Margin="8">
             <!--Card Content section-->
-            <Border CornerRadius="4,4,0,0" 
+        <Border CornerRadius="4,4,0,0" 
                 Width="160" 
                 Height="160"
                 >
-            <TextBlock TextWrapping="Wrap" 
+            <Image Stretch="Fill" Source="{Binding ImageSourceProperty}" Margin="5 10 5 10"/>
+            <!--<TextBlock TextWrapping="Wrap" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center" 
-                       Text="{Binding Image}"
-                       x:Name="Image"/>
+                       Text="{Binding Image}"/>-->
             </Border>
             <!--Card Footer part-->
 

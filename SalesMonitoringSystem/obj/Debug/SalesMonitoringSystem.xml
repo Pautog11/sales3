@@ -74,16 +74,6 @@ Pos
 InitializeComponent
 </summary>
 </member>
-<member name="T:SalesMonitoringSystem.PosPanel">
-<summary>
-PosPanel
-</summary>
-</member>
-<member name="M:SalesMonitoringSystem.PosPanel.InitializeComponent">
-<summary>
-InitializeComponent
-</summary>
-</member>
 <member name="T:SalesMonitoringSystem.ProductCard">
 <summary>
 ProductCard
@@ -197,16 +187,6 @@ AdminAcc
 </summary>
 </member>
 <member name="M:SalesMonitoringSystem.AdminAcc.InitializeComponent">
-<summary>
-InitializeComponent
-</summary>
-</member>
-<member name="T:SalesMonitoringSystem.InsertImage">
-<summary>
-InsertImage
-</summary>
-</member>
-<member name="M:SalesMonitoringSystem.InsertImage.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>

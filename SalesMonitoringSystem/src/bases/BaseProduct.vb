@@ -3,6 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Drawing
 Imports System.IO
 Imports HandyControl.Controls
+Imports SalesMonitoringSystem.Pos
 
 Public Class BaseProduct
     Inherits SqlBaseConnection

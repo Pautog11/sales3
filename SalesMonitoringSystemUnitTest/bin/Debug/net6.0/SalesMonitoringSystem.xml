@@ -64,6 +64,36 @@ AuditTrailPanel
 InitializeComponent
 </summary>
 </member>
+<member name="T:SalesMonitoringSystem.Pos">
+<summary>
+Pos
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.Pos.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.PosPanel">
+<summary>
+PosPanel
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.PosPanel.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.ProductCard">
+<summary>
+ProductCard
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.ProductCard.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:SalesMonitoringSystem.StackNotificationControl">
 <summary>
 StackNotificationControl
@@ -157,6 +187,26 @@ WelcomeDialog
 </summary>
 </member>
 <member name="M:SalesMonitoringSystem.WelcomeDialog.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.AdminAcc">
+<summary>
+AdminAcc
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.AdminAcc.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:SalesMonitoringSystem.InsertImage">
+<summary>
+InsertImage
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.InsertImage.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>
@@ -737,10 +787,10 @@ SupplierDialog
 InitializeComponent
 </summary>
 </member>
-<member name="T:SalesMonitoringSystem.Dashboard">
-<summary>
-Dashboard
-</summary>
+<member name="F:SalesMonitoringSystem.Dashboard._observables">
+ <summary>
+ List of observers registered to this Observale.
+ </summary>
 </member>
 <member name="M:SalesMonitoringSystem.Dashboard.InitializeComponent">
 <summary>

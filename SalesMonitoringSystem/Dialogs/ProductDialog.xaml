@@ -114,6 +114,11 @@
                            Height="83" 
                            Width="308" 
                            Margin="49,0,0,0"/>
+                    <TextBlock
+                        Text="dd"
+                        x:Name="text1"/>
+
+
                 </Grid>
                 <Grid Grid.Column="1">
                     <Button Content="Select Image" 

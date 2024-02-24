@@ -561,7 +561,6 @@ C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Resou
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Resources\strings\StringResource.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Resources\styles\StyleResource.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.g.vb
-C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.g.vb
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.g.vb
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.g.vb
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.g.vb
@@ -596,7 +595,6 @@ C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Sales
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem_MarkupCompile.lref
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Application.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\AuditTrailPanel.baml
-C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\PosPanel.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\StackNotificationControl.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\TutorialPanel.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Dialogs\AboutDialog.baml
@@ -631,8 +629,6 @@ C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Sales
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
-C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Forms\InsertImage.g.vb
-C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Forms\InsertImage.baml
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\Pos.g.vb
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\ProductCard.g.vb
 C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\Pos.baml
