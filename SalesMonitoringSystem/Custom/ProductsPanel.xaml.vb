@@ -42,39 +42,23 @@ Public Class ProductsPanel
 
 
         If ProductDataGridView.SelectedItems.Count > 0 Then
-
-            'Dim imageData As String = productDataGridView.SelectedRows(0).Cells("product_image").Value.ToString()
-
-
-            'Dim imageData As String = ProductDataGridView.SelectedItem(0).Cells("product_image").Value.ToString()
-            'Dim imageDataBytes As Byte() = Convert.FromBase64String(imageData)
-            ''======================
-            'Dim selectedProductID As Integer = Convert.ToInt32(ProductDataGridView.SelectedItems(0).Cells("id").Value)
-            'Dim imageData As Byte() = GetImageDataFromDatabase(selectedProductID)
-
-            'If imageData IsNot Nothing AndAlso imageData.Length > 0 Then
-            '    Dim bitmapImage As New BitmapImage()
-            '    bitmapImage.BeginInit()
-            '    bitmapImage.StreamSource = New MemoryStream(imageData)
-            '    bitmapImage.EndInit()
-
-            '    'selectedImage.Source = bitmapImage
-
-
-            'End If
-
-            ''=========================
-
-            'selectedImage.Source = ByteArrayToImage(imageDataBytes)
-            'text1.Text = "lhljhlkjhlkj"
-
-
-
             Dialog.Show(New ProductDialog(_subject, ProductDataGridView.SelectedItems(0)))
-
             ProductDataGridView.SelectedIndex = -1
 
-            Growl.Info("jhlkj")
+            '' Fetch the selected product details including the image data
+            'Dim selectedProduct As Product = ProductDataGridView.SelectedItems(0)
+
+            '' Create a new instance of the ProductDialog form
+            'Dim productDialogForm As New ProductDialog(_subject, selectedProduct)
+
+            '' Set the image to the PictureBox control in the ProductDialog form
+            'productDialogForm.PictureBox1.Image = ConvertByteArrayToImage(selectedProduct.ImageData)
+
+            '' Show the ProductDialog form
+            'Dialog.Show(productDialogForm)
+
+            '' Deselect the selected row in the DataGridView
+            'ProductDataGridView.SelectedIndex = -1
         End If
     End Sub
 
@@ -126,7 +110,3 @@ Public Class ProductsPanel
         Return imageData
     End Function
 End Class
-
-'Public Class Fuck
-'    Public Property textimage As String
-'End Class

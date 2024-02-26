@@ -55,9 +55,11 @@
             </Grid>
             
             <!--////////////////////////////////////-->
-            
-            <Grid Grid.Column="1" Background="DarkBlue">
 
+            <Grid Grid.Column="1" Background="DarkBlue">
+                <hc:ScrollViewer>
+                    
+                </hc:ScrollViewer>
             </Grid>
         </Grid>
     </Grid>

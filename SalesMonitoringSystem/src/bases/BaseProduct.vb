@@ -158,4 +158,7 @@ Public Class BaseProduct
             Return New sgsmsdb.viewtblproductsDataTable
         End Try
     End Function
+    Public Class ProductModel
+
+    End Class
 End Class

@@ -7,21 +7,23 @@
              xmlns:hc="https://handyorg.github.io/handycontrol"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <!--<Button Click="ProductCard_Click" Width="240>-->
-    <hc:Card MaxWidth="240" BorderThickness="0" Effect="{DynamicResource EffectShadow2}" Margin="8">
+
+    <Grid>
+
+        <hc:Card MaxWidth="240" BorderThickness="0" Effect="{DynamicResource EffectShadow2}" Margin="8">
             <!--Card Content section-->
-        <Border CornerRadius="4,4,0,0" 
+            <Border CornerRadius="4,4,0,0" 
                 Width="160" 
                 Height="160"
                 >
-            <Grid>
-                <Image Stretch="Fill" Source="{Binding ImageSourceProperty}" Margin="5 10 5 10"/>
-                <TextBlock TextWrapping="Wrap" 
+                <Grid>
+                    <Image Stretch="Fill" Source="{Binding ImageSourceProperty}" Margin="5 10 5 10"/>
+                    <TextBlock TextWrapping="Wrap" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center" 
                        Text="{Binding TextImage}"/>
-            </Grid>
-        </Border>
+                </Grid>
+            </Border>
             <!--Card Footer part-->
 
             <hc:Card.Footer>
@@ -32,46 +34,42 @@
                                TextTrimming="CharacterEllipsis" 
                                        Text="{Binding Title}"
                                        HorizontalAlignment="Left"
-                                       
                                        />
+
                     <!--Card Secondary content-->
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
 
-                        <TextBlock TextWrapping="NoWrap" 
+                            <TextBlock TextWrapping="NoWrap" 
                                Style="{DynamicResource TextBlockDefault}" 
                                TextTrimming="CharacterEllipsis" 
                                Text="{Binding Description}" 
                                Margin="0,6,0,0"
                                HorizontalAlignment="Left"
                                />
-                    </Grid>
+                        </Grid>
 
-                    <Grid Grid.Column="1">
-                        <TextBlock TextWrapping="NoWrap" 
+                        <Grid Grid.Column="1">
+                            <TextBlock TextWrapping="NoWrap" 
                                Style="{DynamicResource TextBlockDefault}" 
                                TextTrimming="CharacterEllipsis" 
                                Text="{Binding Price, StringFormat=Price: {0}}" 
                                Margin="0,6,0,0"
-                               HorizontalAlignment="Left"
-                               />
-                        <!--<TextBlock>
-                            <Run Text="Price: " />
-                            <Run Text="{Binding Price}" />
-                        </TextBlock>-->
+                               HorizontalAlignment="Left"/>
+                        </Grid>
                     </Grid>
 
-                </Grid>
-                    
-
                 </StackPanel>
+
             </hc:Card.Footer>
 
         </hc:Card>
-    <!--</Button>-->
+        
+    </Grid>
+    
 </UserControl>

@@ -117,8 +117,7 @@
                     <TextBlock
                         Text="dd"
                         x:Name="text1"/>
-
-
+                    
                 </Grid>
                 <Grid Grid.Column="1">
                     <Button Content="Select Image" 

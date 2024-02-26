@@ -1,5 +1,6 @@
 ﻿
 Imports System.Collections.ObjectModel
+Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Drawing
 Imports System.Drawing.Imaging
@@ -7,11 +8,11 @@ Imports System.IO
 Imports System.Security.Cryptography.X509Certificates
 Imports System.Windows.Forms
 Imports MS.Internal
+Imports SalesMonitoringSystem.BaseProduct
 
 Public Class Pos
-
+    'Private _subject As IObservablePanel
     'Inherits UserControl
-
     Public Sub New()
 
         ' This call is required by the designer.
@@ -48,64 +49,54 @@ Public Class Pos
         '    ' Add the ProductCard to the WrapPanel
         '    Wrappanelxd.Children.Add(productCard)
         'Next
-        Newcardmodel()
-        'GetProductModels()
+        'Newcardmodel()
+
 
     End Sub
 
     Public Sub Newcardmodel()
-        Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
-        Dim query As String = "SELECT product_name, product_description, product_image, product_price FROM tblproducts"
-        Dim cardModels As New List(Of CardModel)()
+        Try
+            Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
+            Dim cmd As New SqlCommand("SELECT product_name, product_description, product_image, product_price FROM tblproducts", conn)
+            Dim dTable As New DataTable
+            Dim adapter As New SqlDataAdapter(cmd)
+            adapter.Fill(dTable)
 
-        Using connection As New SqlConnection(connectionString)
-            Using command As New SqlCommand(query, connection)
-                connection.Open()
-                Using reader As SqlDataReader = command.ExecuteReader()
-                    While reader.Read()
-                        Dim cardModel As New CardModel()
-                        cardModel.Title = reader.GetString(0)
-                        cardModel.Description = If(Not reader.IsDBNull(1), reader.GetString(1), Nothing)
-                        cardModel.Price = reader.GetDouble(3)
+            Dim cardModels As New List(Of CardModel)()
 
-                        If Not reader.IsDBNull(reader.GetOrdinal("product_image")) Then
-                            Try
-                                ' Assuming the image data is in the "product_image" column of the reader
-                                Dim imageData As Byte() = DirectCast(reader("product_image"), Byte())
+            For Each row As DataRow In dTable.Rows
+                Dim cardModel As New CardModel()
+                cardModel.Title = row.Field(Of String)("product_name")
+                cardModel.Description = If(row.IsNull("product_description"), Nothing, row.Field(Of String)("product_description"))
+                cardModel.Price = row.Field(Of Double)("product_price")
+                If Not row.IsNull("product_image") Then
+                    Try
+                        Dim imageData As Byte() = DirectCast(row("product_image"), Byte())
+                        Dim ms As New System.IO.MemoryStream(imageData)
+                        Dim bitmap As New BitmapImage()
+                        bitmap.BeginInit()
+                        bitmap.StreamSource = ms
+                        bitmap.EndInit()
+                        cardModel.ImageSourceProperty = bitmap
+                    Catch ex As Exception
 
-                                ' Create a memory stream from the byte array
-                                Dim ms As New System.IO.MemoryStream(imageData)
+                        cardModel.TextImage = "No Image"
+                    End Try
+                Else
+                    cardModel.TextImage = "No Image"
+                End If
+                cardModels.Add(cardModel)
+            Next
 
-                                ' Create a BitmapImage
-                                Dim bitmap As New BitmapImage()
-                                bitmap.BeginInit()
-                                bitmap.StreamSource = ms
-                                bitmap.EndInit()
+            For Each cardModel In cardModels
+                Dim productCard As New ProductCard(cardModel)
+                Wrappanelxd.Children.Add(productCard)
+            Next
+        Catch ex As Exception
+            HandyControl.Controls.MessageBox.Show(ex.Message)
+        End Try
 
-                                ' Assign the BitmapImage to the ImageSourceProperty
-                                cardModel.ImageSourceProperty = bitmap
-                            Catch ex As Exception
-                                ' Handle the exception or log it
-                                ' Dim a As String = "No Image"
-                                cardModel.TextImage = "No Image"
-                            End Try
-                        Else
-                            'cardModel.Image = "image_not_available
-                            cardModel.TextImage = "No Image"
-                        End If
-
-                        cardModels.Add(cardModel)
-                    End While
-                End Using
-            End Using
-        End Using
-
-        For Each cardModel In cardModels
-            Dim productCard As New ProductCard(cardModel)
-            Wrappanelxd.Children.Add(productCard)
-        Next
     End Sub
-
 
 End Class
 
