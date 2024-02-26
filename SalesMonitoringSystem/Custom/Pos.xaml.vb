@@ -55,7 +55,7 @@ Public Class Pos
 
     Public Sub Newcardmodel()
         Dim connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
-        Dim query As String = "SELECT product_name, product_description, product_image FROM tblproducts"
+        Dim query As String = "SELECT product_name, product_description, product_image, product_price FROM tblproducts"
         Dim cardModels As New List(Of CardModel)()
 
         Using connection As New SqlConnection(connectionString)
@@ -66,6 +66,7 @@ Public Class Pos
                         Dim cardModel As New CardModel()
                         cardModel.Title = reader.GetString(0)
                         cardModel.Description = If(Not reader.IsDBNull(1), reader.GetString(1), Nothing)
+                        cardModel.Price = reader.GetDouble(3)
 
                         If Not reader.IsDBNull(reader.GetOrdinal("product_image")) Then
                             Try
@@ -86,10 +87,11 @@ Public Class Pos
                             Catch ex As Exception
                                 ' Handle the exception or log it
                                 ' Dim a As String = "No Image"
-                                'cardModel.ImageSourceProperty = a
+                                cardModel.TextImage = "No Image"
                             End Try
                         Else
-                            'cardModel.Image = "image_not_available"
+                            'cardModel.Image = "image_not_available
+                            cardModel.TextImage = "No Image"
                         End If
 
                         cardModels.Add(cardModel)
@@ -111,5 +113,6 @@ Public Class CardModel
     Public Property Title As String
     Public Property Description As String
     Public Property ImageSourceProperty As ImageSource
-
+    Public Property TextImage As String
+    Public Property Price As Double
 End Class

@@ -14,27 +14,60 @@
                 Width="160" 
                 Height="160"
                 >
-            <Image Stretch="Fill" Source="{Binding ImageSourceProperty}" Margin="5 10 5 10"/>
-            <!--<TextBlock TextWrapping="Wrap" 
+            <Grid>
+                <Image Stretch="Fill" Source="{Binding ImageSourceProperty}" Margin="5 10 5 10"/>
+                <TextBlock TextWrapping="Wrap" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center" 
-                       Text="{Binding Image}"/>-->
-            </Border>
+                       Text="{Binding TextImage}"/>
+            </Grid>
+        </Border>
             <!--Card Footer part-->
 
             <hc:Card.Footer>
                 <StackPanel Margin="10" Width="160">
                     <!--Card First-level content-->
-                    <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
+                    <TextBlock TextWrapping="NoWrap"  
+                               Style="{DynamicResource TextBlockLargeBold}" 
+                               TextTrimming="CharacterEllipsis" 
                                        Text="{Binding Title}"
                                        HorizontalAlignment="Left"
                                        
                                        />
                     <!--Card Secondary content-->
-                    <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 
-                                       Text="{Binding Description}" Margin="0,6,0,0"
-                                       HorizontalAlignment="Left"
-                                       x:Name="Description"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+
+                        <TextBlock TextWrapping="NoWrap" 
+                               Style="{DynamicResource TextBlockDefault}" 
+                               TextTrimming="CharacterEllipsis" 
+                               Text="{Binding Description}" 
+                               Margin="0,6,0,0"
+                               HorizontalAlignment="Left"
+                               />
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <TextBlock TextWrapping="NoWrap" 
+                               Style="{DynamicResource TextBlockDefault}" 
+                               TextTrimming="CharacterEllipsis" 
+                               Text="{Binding Price, StringFormat=Price: {0}}" 
+                               Margin="0,6,0,0"
+                               HorizontalAlignment="Left"
+                               />
+                        <!--<TextBlock>
+                            <Run Text="Price: " />
+                            <Run Text="{Binding Price}" />
+                        </TextBlock>-->
+                    </Grid>
+
+                </Grid>
+                    
 
                 </StackPanel>
             </hc:Card.Footer>
