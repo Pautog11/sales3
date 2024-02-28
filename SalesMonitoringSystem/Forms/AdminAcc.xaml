@@ -76,7 +76,8 @@
                     <hc:TextBox Name="RoleBox"
                                     HorizontalAlignment="Stretch"
                                     hc:BorderElement.CornerRadius="0"
-                                    Height="40"/>
+                                    Height="40"
+                                />
                 </StackPanel>
                 <StackPanel Grid.Column="1"
                             Margin="5 0 0 0">

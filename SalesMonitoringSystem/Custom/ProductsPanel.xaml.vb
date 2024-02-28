@@ -59,6 +59,8 @@ Public Class ProductsPanel
 
             '' Deselect the selected row in the DataGridView
             'ProductDataGridView.SelectedIndex = -1
+            'GetImageDataFromDatabase()
+
         End If
     End Sub
 

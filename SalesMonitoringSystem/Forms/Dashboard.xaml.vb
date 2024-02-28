@@ -20,6 +20,14 @@ Class Dashboard
         InitializeComponent()
         RegisterObserver(Me)
         NotifyObserver()
+
+
+
+        Dim StackPanel As StackPanel = StackNotifContainer
+        Dim newMessage As New TextBlock()
+        newMessage.Text = "Your Running out of Stack!"
+        StackPanel.Children.Add(newMessage)
+
     End Sub
 
     Public Sub RegisterObserver(o As IObserverPanel) Implements IObservablePanel.RegisterObserver

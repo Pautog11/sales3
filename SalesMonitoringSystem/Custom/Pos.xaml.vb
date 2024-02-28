@@ -11,45 +11,12 @@ Imports MS.Internal
 Imports SalesMonitoringSystem.BaseProduct
 
 Public Class Pos
-    'Private _subject As IObservablePanel
-    'Inherits UserControl
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
 
-        ' Add any initialization after the InitializeComponent() call.
-        'dim n As Integer = 10
-        'For i = 0 To 100
-        '    Wrappanelxd.Children.Add(New ProductCard())
-        'Next
-
-        'Dim ProductCard As New ProductCard
-        'ProductCard.updated("Poatebjhlkjgdlkg")
-
-        '======================================================================================================================
-
-        'Dim cardModels As New List(Of CardModel) From {
-        '        New CardModel With {.Title = "Product 1", .Description = "Description 1", .Image = "Imgae 1"},
-        '        New CardModel With {.Title = "Product 2", .Description = "Description 2", .Image = "Imgae 2"},
-        '        New CardModel With {.Title = "Product 3", .Description = "Description 3", .Image = "Imgae 3"},
-        '        New CardModel With {.Title = "Product 4", .Description = "Description 4", .Image = "Imgae 4"},
-        '        New CardModel With {.Title = "Product 4", .Description = "Description 4", .Image = "Imgae 4"}
-        '}
-
-        'For Each cardModel In cardModels
-        '    ' Create an instance of ProductCard UserControl
-        '    Dim productCard As New ProductCard(cardModel)
-
-        '    ' Set the title and description using the exposed properties
-        '    'productCard.TitleText = cardModel.Title
-        '    'productCard.DescriptionText = cardModel.Description
-        '    'productCard.ImageText = cardModel.Image
-
-        '    ' Add the ProductCard to the WrapPanel
-        '    Wrappanelxd.Children.Add(productCard)
-        'Next
-        'Newcardmodel()
+        Newcardmodel()
 
 
     End Sub
@@ -67,7 +34,7 @@ Public Class Pos
             For Each row As DataRow In dTable.Rows
                 Dim cardModel As New CardModel()
                 cardModel.Title = row.Field(Of String)("product_name")
-                cardModel.Description = If(row.IsNull("product_description"), Nothing, row.Field(Of String)("product_description"))
+                cardModel.Description = If(row.IsNull("product_description"), "None", row.Field(Of String)("product_description"))
                 cardModel.Price = row.Field(Of Double)("product_price")
                 If Not row.IsNull("product_image") Then
                     Try
@@ -97,7 +64,6 @@ Public Class Pos
         End Try
 
     End Sub
-
 End Class
 
 Public Class CardModel

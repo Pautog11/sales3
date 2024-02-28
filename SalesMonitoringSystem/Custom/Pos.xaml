@@ -51,6 +51,13 @@
                         <!--<local:ProductCard/>-->
                     </WrapPanel>
                 </hc:ScrollViewer>
+                <!--<ItemsControl ItemsSource="{Binding cardModels}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:Name="ds">
+                            --><!--<local:ProductCard />--><!--
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>-->
 
             </Grid>
             
