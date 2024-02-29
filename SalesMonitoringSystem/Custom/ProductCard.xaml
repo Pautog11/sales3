@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <Button  
+        <Button Click="Button_Click"
                 Width="240" 
                 Height="250" 
                 Margin="-10 0 -20 0" 
