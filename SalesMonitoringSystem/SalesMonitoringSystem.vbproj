@@ -136,6 +136,9 @@
     <Compile Include="Custom\StackNotificationControl.xaml.vb">
       <DependentUpon>StackNotificationControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Custom\StackProductNotification.xaml.vb">
+      <DependentUpon>StackProductNotification.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Custom\TutorialPanel.xaml.vb">
       <DependentUpon>TutorialPanel.xaml</DependentUpon>
     </Compile>
@@ -215,6 +218,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Custom\StackNotificationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Custom\StackProductNotification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

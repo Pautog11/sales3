@@ -1,4 +1,6 @@
 ﻿Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Threading
 Imports HandyControl.Controls
 Imports HandyControl.Tools.Extension
 
@@ -20,14 +22,12 @@ Class Dashboard
         InitializeComponent()
         RegisterObserver(Me)
         NotifyObserver()
+        'StartMonitoring()
 
-
-
-        Dim StackPanel As StackPanel = StackNotifContainer
-        Dim newMessage As New TextBlock()
-        newMessage.Text = "Your Running out of Stack!"
-        StackPanel.Children.Add(newMessage)
-
+        'Dim StackPanel As StackPanel = StackNotifContainer
+        'Dim newMessage As New TextBlock()
+        'newMessage.Text = ""
+        'StackPanel.Children.Add(newMessage)
     End Sub
 
     Public Sub RegisterObserver(o As IObserverPanel) Implements IObservablePanel.RegisterObserver
@@ -62,9 +62,12 @@ Class Dashboard
                 StackNotifContainer.Children.Add(stackpan)
                 stackpan.Show
             Next
+            '
+            CheckInventory()
         Catch ex As Exception
             MessageBox.Info(ex.Message)
         End Try
+
     End Sub
 
 #Region "SwithPanelEvents"
@@ -163,4 +166,51 @@ Class Dashboard
             Dialog.Show(New WelcomeDialog())
         End If
     End Sub
+
+#Region "CheckingStock"
+    Private ReadOnly connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\New folder\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
+
+    Public Sub CheckInventory()
+        Dim query As String = "SELECT stock_in, critical_level FROM tblinventory WHERE stock_in <= critical_level"
+
+        Using connection As New SqlConnection(connectionString)
+            Dim command As New SqlCommand(query, connection)
+
+            Try
+                connection.Open()
+                Dim reader As SqlDataReader = command.ExecuteReader()
+
+                If reader.HasRows Then
+                    While reader.Read()
+                        Dim stockIn As Integer = Convert.ToInt32(reader("stock_in"))
+                        Dim criticalLevel As Integer = Convert.ToInt32(reader("critical_level"))
+
+
+                        Dim stack As New StackProductNotification
+                        stack._parent1 = Me
+                        'stack.LabelDateAdded.Text = CDate(item.Item("date_added")).ToLongDateString
+                        stack.LabelStackHeading.Text = $"Critical level reached: Stock in = {stockIn}, Critical level = {criticalLevel}"
+                        StackNotifContainer.Children.Add(stack)
+                        stack.Show
+
+
+                        'Dim newMessage As New TextBlock()
+                        'Dim StackPanel As StackPanel = StackNotifContainer
+                        'newMessage.Text = $"Critical level reached: Stock in = {stockIn}, Critical level = {criticalLevel}"
+                        'StackPanel.Children.Add(newMessage)
+                    End While
+                End If
+
+
+                reader.Close()
+            Catch ex As Exception
+                Dim StackPanel As StackPanel = StackNotifContainer
+                Dim newMessage As New TextBlock()
+                newMessage.Text = "Error: " & ex.Message
+                StackPanel.Children.Add(newMessage)
+            End Try
+        End Using
+
+    End Sub
+#End Region
 End Class

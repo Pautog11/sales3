@@ -94,6 +94,16 @@ StackNotificationControl
 InitializeComponent
 </summary>
 </member>
+<member name="T:SalesMonitoringSystem.StackProductNotification">
+<summary>
+StackProductNotification
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.StackProductNotification.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:SalesMonitoringSystem.TutorialPanel">
 <summary>
 TutorialPanel
