@@ -2,6 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Threading
 Imports HandyControl.Controls
+Imports HandyControl.Tools.Converter
 Imports HandyControl.Tools.Extension
 
 ''' <summary>
@@ -62,7 +63,7 @@ Class Dashboard
                 StackNotifContainer.Children.Add(stackpan)
                 stackpan.Show
             Next
-            '
+
             CheckInventory()
         Catch ex As Exception
             MessageBox.Info(ex.Message)
@@ -168,10 +169,12 @@ Class Dashboard
     End Sub
 
 #Region "CheckingStock"
-    Private ReadOnly connectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\Desktop\New folder\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True"
+    Private ReadOnly connectionString As String = SqlConnectionSingleton.GetInstance.ConnectionString
 
     Public Sub CheckInventory()
-        Dim query As String = "SELECT stock_in, critical_level FROM tblinventory WHERE stock_in <= critical_level"
+        'Dim query As String = "SELECT stock_in, critical_level FROM tblinventory WHERE stock_in <= critical_level"
+        Dim query As String = "SELECT PRODUCT_NAME, PRODUCT_PRICE, STOCK_IN, CASE WHEN STOCK_IN < 50 THEN 'Critical' ELSE 'Not Critical' END AS critical_level FROM viewtblinventoryrecords WHERE STOCK_IN < 50;"
+        'Dim query As String = "SELECT * FROM viewtblinventoryrecords"
 
         Using connection As New SqlConnection(connectionString)
             Dim command As New SqlCommand(query, connection)
@@ -182,35 +185,32 @@ Class Dashboard
 
                 If reader.HasRows Then
                     While reader.Read()
-                        Dim stockIn As Integer = Convert.ToInt32(reader("stock_in"))
-                        Dim criticalLevel As Integer = Convert.ToInt32(reader("critical_level"))
 
+                        'Dim p1 As String = Convert.ToInt32(reader("PRODUCT_NAME"))
+                        Dim p1 As String = reader("PRODUCT_NAME").ToString()
+                        Dim p2 As Integer = Convert.ToDecimal(reader("STOCK_IN"))
+                        'Dim stockIn As String = Convert.ToInt32(reader("PRODUCT_NAME"))
+                        'Dim p2 As String = If(reader("STOCK_IN") IsNot DBNull.Value, reader("STOCK_IN").ToString(), String.Empty)
 
-                        Dim stack As New StackProductNotification
+                        ' criticalLevel As Integer = Convert.ToInt32(reader("critical_level"))
+
+                        Dim stack As New StackProductNotification()
                         stack._parent1 = Me
-                        'stack.LabelDateAdded.Text = CDate(item.Item("date_added")).ToLongDateString
-                        stack.LabelStackHeading.Text = $"Critical level reached: Stock in = {stockIn}, Critical level = {criticalLevel}"
+                        stack.LabelStackHeading.Text = $"Your Product {p1} is running out of stock, current stock is = {p2}"
+                        'stack.LabelStackHeading.Text = $"{p1}{p2}"
                         StackNotifContainer.Children.Add(stack)
-                        stack.Show
-
-
-                        'Dim newMessage As New TextBlock()
-                        'Dim StackPanel As StackPanel = StackNotifContainer
-                        'newMessage.Text = $"Critical level reached: Stock in = {stockIn}, Critical level = {criticalLevel}"
-                        'StackPanel.Children.Add(newMessage)
+                        stack.Show()
                     End While
                 End If
 
-
                 reader.Close()
             Catch ex As Exception
-                Dim StackPanel As StackPanel = StackNotifContainer
                 Dim newMessage As New TextBlock()
                 newMessage.Text = "Error: " & ex.Message
-                StackPanel.Children.Add(newMessage)
+                StackNotifContainer.Children.Add(newMessage)
             End Try
         End Using
-
     End Sub
+
 #End Region
 End Class

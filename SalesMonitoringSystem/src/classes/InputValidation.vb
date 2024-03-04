@@ -56,9 +56,9 @@ Public Class InputValidation
                     Return {True, String.Join(" ", nameString)}
                 End If
             Case DataInput.STRING_PASSWORD
-                If Regex.IsMatch(stringInput, "^(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$") Then
-                    Return {True, stringInput}
-                End If
+                ' If Regex.IsMatch(stringInput, "^(?=.*[0-9])(?=.*[@#$%^&+=]).{8,}$") Then
+                Return {True, stringInput}
+                'End If
 
             Case DataInput.STRING_PHONE
                 If Regex.IsMatch(start_trim_o, "^(\+639|09)\d{2}[-\s]?\d{3}[-\s]?\d{4}$") Then
