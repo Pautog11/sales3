@@ -7,10 +7,14 @@ Imports System.Drawing.Imaging
 Imports System.IO
 Imports System.Security.Cryptography.X509Certificates
 Imports System.Windows.Forms
+Imports HandyControl.Controls
+Imports HandyControl.Data
 Imports MS.Internal
 Imports SalesMonitoringSystem.BaseProduct
 
 Public Class Pos
+    Private _dataTable As New sgsmsdb.viewtblproductsDataTable
+    Private Const MAX_PAGE_COUNT = 30
     Public Sub New()
 
         ' This call is required by the designer.
@@ -64,6 +68,27 @@ Public Class Pos
         End Try
 
     End Sub
+
+    'Private Sub ProductSearch_SearchStarted(sender As Object, e As FunctionEventArgs(Of String)) Handles ProductSearch.SearchStarted
+    '    _dataTable = BaseProduct.Search(ProductSearch.Text)
+    '    Wrappanelxd.ItemsSource = _dataTable.Take(MAX_PAGE_COUNT)
+    '    PaginationConfig()
+    'End Sub
+
+    'Private Sub PaginationConfig()
+    '    If _dataTable.Count <= MAX_PAGE_COUNT Then
+    '        Pagination.Visibility = Visibility.Collapsed
+    '        Return
+    '    Else
+    '        Pagination.Visibility = Visibility.Visible
+    '    End If
+
+    '    If MAX_PAGE_COUNT / _dataTable.Count > 0 Then
+    '        Pagination.MaxPageCount = _dataTable.Count / MAX_PAGE_COUNT + 1
+    '    Else
+    '        Pagination.MaxPageCount = _dataTable.Count / MAX_PAGE_COUNT
+    '    End If
+    'End Sub
 End Class
 
 Public Class CardModel

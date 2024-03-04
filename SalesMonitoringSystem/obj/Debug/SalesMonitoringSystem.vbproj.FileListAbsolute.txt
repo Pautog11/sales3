@@ -744,3 +744,5 @@ C:\Users\Christian\OneDrive\Desktop\New folder\sales3\SalesMonitoringSystem\obj\
 C:\Users\Christian\OneDrive\Desktop\New folder\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
 C:\Users\Christian\OneDrive\Desktop\New folder\sales3\SalesMonitoringSystem\obj\Debug\Custom\StackProductNotification.g.vb
 C:\Users\Christian\OneDrive\Desktop\New folder\sales3\SalesMonitoringSystem\obj\Debug\Custom\StackProductNotification.baml
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\StackProductNotification.g.vb
+C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystem\obj\Debug\Custom\StackProductNotification.baml

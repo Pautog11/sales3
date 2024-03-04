@@ -69,9 +69,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Christian\OneDrive\"& _ 
-            "Desktop\New folder\sales3\SalesMonitoringSystem\sgsmsdb.mdf"";Integrated Security"& _ 
-            "=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\D"& _ 
+            "esktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True")>  _
         Public ReadOnly Property sgsmsdbConnectionString() As String
             Get
                 Return CType(Me("sgsmsdbConnectionString"),String)
@@ -105,9 +104,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Christian\OneDrive\"& _ 
-            "Desktop\New folder\sales3\SalesMonitoringSystem\sgsmsdb.mdf"";Integrated Security"& _ 
-            "=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Christian\OneDrive\D"& _ 
+            "esktop\sales3\SalesMonitoringSystem\sgsmsdb.mdf;Integrated Security=True")>  _
         Public ReadOnly Property sgsmsdbConnectionString1() As String
             Get
                 Return CType(Me("sgsmsdbConnectionString1"),String)

@@ -41,7 +41,7 @@ Public Class BaseProduct
 
     Public Sub Update() Implements ICommandPanel.Update
         Try
-            _sqlCommand = New SqlCommand("EXEC UpdateProductProcedure @id, @category_id, @product_name, @product_description, @product_price, @product_cost, @user_id;", _sqlConnection)
+            _sqlCommand = New SqlCommand("EXEC UpdateProductProcedure @id, @category_id, @product_name, @product_description, @product_price, @product_cost, @product_image, @user_id;", _sqlConnection)
             _sqlCommand.Parameters.AddWithValue("@id", _data.Item("id"))
             _sqlCommand.Parameters.AddWithValue("@category_id", _data.Item("category_id"))
             _sqlCommand.Parameters.AddWithValue("@product_name", _data.Item("product_name"))
@@ -49,6 +49,20 @@ Public Class BaseProduct
             _sqlCommand.Parameters.AddWithValue("@product_price", _data.Item("product_price"))
             _sqlCommand.Parameters.AddWithValue("@product_cost", _data.Item("product_cost"))
             _sqlCommand.Parameters.AddWithValue("@user_id", My.Settings.userID)
+
+            Dim converter As New ImageConverter
+            Dim byteArr As Byte() = converter.ConvertTo(img, GetType(Byte()))
+            '_sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
+
+            'null image will be accepted as fuck
+            If byteArr IsNot Nothing Then
+                _sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
+            Else
+                'If the image Is null, you can add a DBNull.Value parameter
+                _sqlCommand.Parameters.AddWithValue("@product_image", DBNull.Value).SqlDbType = SqlDbType.Image
+            End If
+
+
             If _sqlCommand.ExecuteNonQuery() > 0 Then
                 Growl.Success("Product has been updated successfully!")
             Else
@@ -61,7 +75,7 @@ Public Class BaseProduct
 
     Public Sub Add() Implements ICommandPanel.Add
         Try
-            _sqlCommand = New SqlCommand("EXEC InsertProductProcedure @category_id, @product_name, @product_description, @product_price, @product_cost,@product_image, @user_id;", _sqlConnection)
+            _sqlCommand = New SqlCommand("EXEC InsertProductProcedure @category_id, @product_name, @product_description, @product_price, @product_cost, @product_image, @user_id;", _sqlConnection)
             _sqlCommand.Parameters.AddWithValue("@category_id", _data.Item("category_id"))
             _sqlCommand.Parameters.AddWithValue("@product_name", _data.Item("product_name"))
             _sqlCommand.Parameters.AddWithValue("@product_description", If(String.IsNullOrEmpty(_data.Item("product_description")), DBNull.Value, _data.Item("product_description")))

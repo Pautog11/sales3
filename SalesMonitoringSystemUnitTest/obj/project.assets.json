@@ -2955,11 +2955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Christian\\OneDrive\\Desktop\\New folder\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+      "projectUniqueName": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
       "projectName": "SalesMonitoringSystemUnitTest",
-      "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\New folder\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+      "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
       "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\New folder\\sales3\\SalesMonitoringSystemUnitTest\\obj\\",
+      "outputPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2981,8 +2981,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Christian\\OneDrive\\Desktop\\New folder\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj": {
-              "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\New folder\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj"
+            "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj": {
+              "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj"
             }
           }
         }

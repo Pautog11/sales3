@@ -172,7 +172,7 @@ Class Dashboard
     Private ReadOnly connectionString As String = SqlConnectionSingleton.GetInstance.ConnectionString
     Public Sub CheckInventory()
 
-        Dim query As String = "SELECT PRODUCT_NAME, PRODUCT_PRICE, STOCK_IN, CASE WHEN STOCK_IN < 100 THEN 'Critical' ELSE 'Not Critical' END AS critical_level FROM viewtblinventoryrecords WHERE STOCK_IN < 100;"
+        Dim query As String = "SELECT PRODUCT_NAME, PRODUCT_PRICE, STOCK_IN, CASE WHEN STOCK_IN < 50 THEN 'Critical' ELSE 'Not Critical' END AS critical_level FROM viewtblinventoryrecords WHERE STOCK_IN < 50;"
 
         Using connection As New SqlConnection(connectionString)
             Dim command As New SqlCommand(query, connection)
