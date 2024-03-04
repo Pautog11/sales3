@@ -154,8 +154,6 @@ Public Class DeliveryCartDialog
         CloseDialog(Closebtn)
     End Sub
 
-
-
     Private Sub CancelButton_Click(sender As Object, e As RoutedEventArgs) Handles CancelButton.Click
         Dim baseCommand As New BaseDeliveryCart(New Dictionary(Of String, String) From {
             {"reference_number", ReferenceNumberLabel.Text}

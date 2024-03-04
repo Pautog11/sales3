@@ -170,11 +170,9 @@ Class Dashboard
 
 #Region "CheckingStock"
     Private ReadOnly connectionString As String = SqlConnectionSingleton.GetInstance.ConnectionString
-
     Public Sub CheckInventory()
-        'Dim query As String = "SELECT stock_in, critical_level FROM tblinventory WHERE stock_in <= critical_level"
-        Dim query As String = "SELECT PRODUCT_NAME, PRODUCT_PRICE, STOCK_IN, CASE WHEN STOCK_IN < 50 THEN 'Critical' ELSE 'Not Critical' END AS critical_level FROM viewtblinventoryrecords WHERE STOCK_IN < 50;"
-        'Dim query As String = "SELECT * FROM viewtblinventoryrecords"
+
+        Dim query As String = "SELECT PRODUCT_NAME, PRODUCT_PRICE, STOCK_IN, CASE WHEN STOCK_IN < 100 THEN 'Critical' ELSE 'Not Critical' END AS critical_level FROM viewtblinventoryrecords WHERE STOCK_IN < 100;"
 
         Using connection As New SqlConnection(connectionString)
             Dim command As New SqlCommand(query, connection)
@@ -186,23 +184,15 @@ Class Dashboard
                 If reader.HasRows Then
                     While reader.Read()
 
-                        'Dim p1 As String = Convert.ToInt32(reader("PRODUCT_NAME"))
                         Dim p1 As String = reader("PRODUCT_NAME").ToString()
                         Dim p2 As Integer = Convert.ToDecimal(reader("STOCK_IN"))
-                        'Dim stockIn As String = Convert.ToInt32(reader("PRODUCT_NAME"))
-                        'Dim p2 As String = If(reader("STOCK_IN") IsNot DBNull.Value, reader("STOCK_IN").ToString(), String.Empty)
-
-                        ' criticalLevel As Integer = Convert.ToInt32(reader("critical_level"))
 
                         Dim stack As New StackProductNotification()
                         stack._parent1 = Me
-                        stack.LabelStackHeading.Text = $"Your Product {p1} is running out of stock, current stock is = {p2}"
-                        'stack.LabelStackHeading.Text = $"{p1}{p2}"
+                        stack.LabelStackHeading.Text = $"Your Product {p1} is running out of stocks, current stocks is = {p2}"
                         StackNotifContainer.Children.Add(stack)
-                        stack.Show()
                     End While
                 End If
-
                 reader.Close()
             Catch ex As Exception
                 Dim newMessage As New TextBlock()

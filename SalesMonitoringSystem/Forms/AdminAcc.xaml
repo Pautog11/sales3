@@ -77,6 +77,8 @@
                                     HorizontalAlignment="Stretch"
                                     hc:BorderElement.CornerRadius="0"
                                     Height="40"
+                                    IsEnabled="False"
+                                Text="Super Admin"
                                 />
                 </StackPanel>
                 <StackPanel Grid.Column="1"

@@ -47,12 +47,13 @@ Public Class AdminAcc
                     invoker = New AddCommand(baseCommand)
                     invoker.Execute()
                 End If
-                Dim ask As MessageBoxResult = MessageBox.Ask("You will be directed to login page")
-                If ask = MessageBoxResult.OK Then
-                    Dim log As New Login
+                'Dim ask As MessageBoxResult = MessageBox.Ask("You will be directed to login page")
+                MessageBox.Show("You will be directed to login page")
+                'If ask = MessageBoxResult.OK Then
+                Dim log As New Login
                     log.Show()
                     Me.Hide()
-                End If
+                'End If
             End If
         End If
         Return
