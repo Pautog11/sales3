@@ -42,26 +42,14 @@ Public Class ProductsPanel
 
 
         If ProductDataGridView.SelectedItems.Count > 0 Then
+            'Dim pictureData As Image = ProductDataGridView.SelectedItems(0).Cells("PRODUCT_IMAGE").Value
+            'Dim imageData As Image = imageData()
             Dialog.Show(New ProductDialog(_subject, ProductDataGridView.SelectedItems(0)))
             ProductDataGridView.SelectedIndex = -1
-
-            '' Fetch the selected product details including the image data
-            'Dim selectedProduct As Product = ProductDataGridView.SelectedItems(0)
-
-            '' Create a new instance of the ProductDialog form
-            'Dim productDialogForm As New ProductDialog(_subject, selectedProduct)
-
-            '' Set the image to the PictureBox control in the ProductDialog form
-            'productDialogForm.PictureBox1.Image = ConvertByteArrayToImage(selectedProduct.ImageData)
-
-            '' Show the ProductDialog form
-            'Dialog.Show(productDialogForm)
-
-            '' Deselect the selected row in the DataGridView
-            'ProductDataGridView.SelectedIndex = -1
-            'GetImageDataFromDatabase()
-
         End If
+
+
+        '============================================================================================
     End Sub
 
     Private Sub ProductSearch_SearchStarted(sender As Object, e As FunctionEventArgs(Of String)) Handles ProductSearch.SearchStarted

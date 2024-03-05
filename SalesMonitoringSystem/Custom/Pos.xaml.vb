@@ -11,10 +11,10 @@ Imports HandyControl.Controls
 Imports HandyControl.Data
 Imports MS.Internal
 Imports SalesMonitoringSystem.BaseProduct
+Imports Spire.AI
 
 Public Class Pos
-    Private _dataTable As New sgsmsdb.viewtblproductsDataTable
-    Private Const MAX_PAGE_COUNT = 30
+    'Public Property CardModel As CardModel
     Public Sub New()
 
         ' This call is required by the designer.
@@ -22,7 +22,9 @@ Public Class Pos
 
         Newcardmodel()
 
-
+        ''ublic Sub() New(model As CardModel)
+        ''InitializeComponent()
+        'CardModel = Model
     End Sub
 
     Public Sub Newcardmodel()
@@ -58,9 +60,8 @@ Public Class Pos
                 End If
                 cardModels.Add(cardModel)
             Next
-
-            For Each cardModel In cardModels
-                Dim productCard As New ProductCard(cardModel)
+            For Each CardModel In cardModels
+                Dim productCard As New ProductCard(CardModel)
                 Wrappanelxd.Children.Add(productCard)
             Next
         Catch ex As Exception
@@ -69,26 +70,18 @@ Public Class Pos
 
     End Sub
 
-    'Private Sub ProductSearch_SearchStarted(sender As Object, e As FunctionEventArgs(Of String)) Handles ProductSearch.SearchStarted
-    '    _dataTable = BaseProduct.Search(ProductSearch.Text)
-    '    Wrappanelxd.ItemsSource = _dataTable.Take(MAX_PAGE_COUNT)
-    '    PaginationConfig()
-    'End Sub
+    Private Sub ProductSearch_TextChanged(sender As Object, e As TextChangedEventArgs) Handles ProductSearch.TextChanged
+        Dim searchText As String = ProductSearch.Text.ToLower()
 
-    'Private Sub PaginationConfig()
-    '    If _dataTable.Count <= MAX_PAGE_COUNT Then
-    '        Pagination.Visibility = Visibility.Collapsed
-    '        Return
-    '    Else
-    '        Pagination.Visibility = Visibility.Visible
-    '    End If
-
-    '    If MAX_PAGE_COUNT / _dataTable.Count > 0 Then
-    '        Pagination.MaxPageCount = _dataTable.Count / MAX_PAGE_COUNT + 1
-    '    Else
-    '        Pagination.MaxPageCount = _dataTable.Count / MAX_PAGE_COUNT
-    '    End If
-    'End Sub
+        For Each productCard As ProductCard In Wrappanelxd.Children
+            Dim cardModel As CardModel = productCard.CardModel
+            If cardModel.Title.ToLower().Contains(searchText) OrElse cardModel.Description.ToLower().Contains(searchText) Then
+                productCard.Visibility = Visibility.Visible
+            Else
+                productCard.Visibility = Visibility.Collapsed
+            End If
+        Next
+    End Sub
 End Class
 
 Public Class CardModel

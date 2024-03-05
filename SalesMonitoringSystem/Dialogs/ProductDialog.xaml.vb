@@ -18,15 +18,16 @@ Public Class ProductDialog
 
     Private _tableAdapter As New sgsmsdbTableAdapters.viewtblcategoriesTableAdapter
     Private _subject As IObservablePanel
-    Private _data As viewtblproductsRow = Nothing, _data1 As viewtblproductsRow = Nothing
+    Private _data As viewtblproductsRow = Nothing ', _data1 As viewtblproductsRow = Nothing
     Public imagePathD As String
     'Public imageSource As BitmapImage
     'Dim a As New InsertImage
     Public Sub New(
         Optional subject As IObservablePanel = Nothing,
-        Optional data As viewtblproductsRow = Nothing,
-        Optional data1 As viewtblproductsRow = Nothing
-    )
+        Optional data As viewtblproductsRow = Nothing
+        )
+        'Optional data1 As viewtblproductsRow = Nothing
+        ')
         InitializeComponent()
 
         _data = data
@@ -99,16 +100,8 @@ Public Class ProductDialog
                     {"product_description", If(String.IsNullOrEmpty(ProductDescriptionTextBox.Text), "", ProductDescriptionTextBox.Text)},
                     {"product_price", res(1)(1)},
                     {"product_cost", res(2)(1)},
-                    {"product_image", If(imageSource IsNot Nothing, imageSource.ToString(), DBNull.Value.ToString())}}
-            '{"product_image", If(imageSource.ToString(), DBNull.Value)}}
-            '{"product_image", imageSource.ToString}
-            '}
-            '_sqlCommand.Parameters.AddWithValue("@product_image", If(imageSource?.ToString(), DBNull.Value)).SqlDbType = SqlDbType.Image
-
-            '_sqlCommand.Parameters.AddWithValue("@product_image", If(imageSource IsNot Nothing, imageSource.ToString(), DBNull.Value.ToString())).SqlDbType = SqlDbType.Image
-
-
-            '/////////////////////////////////////////////////////
+                    {"product_image", If(imageSource IsNot Nothing, imageSource.ToString(), DBNull.Value.ToString())}
+            }
             baseCommand = New BaseProduct(data) With {
                 .Image = imgTOIMG
             }
@@ -132,7 +125,7 @@ Public Class ProductDialog
 
     Private Sub DeleteButton_Click(sender As Object, e As RoutedEventArgs) Handles DeleteButton.Click
         Dim baseCommand As New BaseProduct(New Dictionary(Of String, String) From {{"id", _data.Item("ID")}})
-        Dim invoker As New DeleteCommand(baseCommand)
+        Dim invoker As New DeleteCommand(baseCommand)   
 
         invoker?.Execute()
         _subject?.NotifyObserver()
@@ -151,38 +144,22 @@ Public Class ProductDialog
             Dim imagePath As String = openFileDialog.FileName
             imagePathD = imagePath
             Dim imageSource As New BitmapImage(New Uri(imagePath))
-            'Growl.Info("dsjjd")
-            ' Set the source of the Image control to display the selected image
+
             selectedImage.Source = imageSource
 
-            'Return imageSource
         End If
         'selectedImage.Source = ImageSource
     End Sub
 
-    'Public Sub forimage()
-    '    Dim ScalarProducts As New ScalarProducts
-    '    Dim imageData As Byte() = ScalarProducts()
-
-    '    ' Convert byte array to BitmapImage
+    'Public Sub DisplayImage(imageData As Byte())
     '    Dim bitmapImage As New BitmapImage()
     '    bitmapImage.BeginInit()
+    '    bitmapImage.CacheOption = BitmapCacheOption.OnLoad
     '    bitmapImage.StreamSource = New MemoryStream(imageData)
     '    bitmapImage.EndInit()
 
-    '    ' Set the BitmapImage as the image source for your Image control
     '    selectedImage.Source = bitmapImage
     'End Sub
-
-    Public Sub DisplayImage(imageData As Byte())
-        Dim bitmapImage As New BitmapImage()
-        bitmapImage.BeginInit()
-        bitmapImage.CacheOption = BitmapCacheOption.OnLoad
-        bitmapImage.StreamSource = New MemoryStream(imageData)
-        bitmapImage.EndInit()
-
-        selectedImage.Source = bitmapImage
-    End Sub
 End Class
 Public Class Image123
     Public selectedImage As String
