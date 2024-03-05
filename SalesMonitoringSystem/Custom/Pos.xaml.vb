@@ -22,9 +22,40 @@ Public Class Pos
 
         Newcardmodel()
 
-        ''ublic Sub() New(model As CardModel)
-        ''InitializeComponent()
-        'CardModel = Model
+        Dim data As New DataTable
+
+        ' Add columns to the DataTable
+        data.Columns.Add("Name", GetType(String))
+        data.Columns.Add("Quantity", GetType(Integer))
+        data.Columns.Add("Price", GetType(Double))
+        data.Columns.Add("TotalPrice", GetType(Double))
+
+        ' Sample data rows (you can replace it with your actual data)
+        data.Rows.Add("Item 1", 2, 105465.0) ' 0.0 for initial TotalPrice
+        data.Rows.Add("Item 2", 1, 5.0, 0.0)
+        data.Rows.Add("Item 3", 3, 8.0, 0.0)
+
+        ' Calculate the total price for each row
+        For Each row As DataRow In data.Rows
+            Dim quantity As Integer = row.Field(Of Integer)("Quantity")
+            Dim price As Double = row.Field(Of Double)("Price")
+
+            ' Calculate the total price and update the DataTable
+            row.SetField("TotalPrice", quantity * price)
+        Next
+
+        Receipt.ItemsSource = data.DefaultView
+
+        Dim grandTotalPrice As Double = 0.0
+        For Each row As DataRow In data.Rows
+            grandTotalPrice += row.Field(Of Double)("TotalPrice")
+        Next
+
+        pota.Text = grandTotalPrice
+
+        Dim discount As Double
+        discount = grandTotalPrice * 0.2
+        pota1.Text = discount
     End Sub
 
     Public Sub Newcardmodel()
@@ -67,7 +98,6 @@ Public Class Pos
         Catch ex As Exception
             HandyControl.Controls.MessageBox.Show(ex.Message)
         End Try
-
     End Sub
 
     Private Sub ProductSearch_TextChanged(sender As Object, e As TextChangedEventArgs) Handles ProductSearch.TextChanged

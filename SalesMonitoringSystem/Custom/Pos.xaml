@@ -38,8 +38,8 @@
 
         <Grid  Grid.Row="1" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Background="LightGray">
 
@@ -51,22 +51,57 @@
                         <!--<local:ProductCard/>-->
                     </WrapPanel>
                 </hc:ScrollViewer>
-                <!--<ItemsControl ItemsSource="{Binding cardModels}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate x:Name="ds">
-                            --><!--<local:ProductCard />--><!--
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>-->
-
+                
             </Grid>
             
-            <!--////////////////////////////////////-->
+            <!--//////////////////////////////////////////////////////// -->
 
-            <Grid Grid.Column="1" Background="DarkBlue">
-                <hc:ScrollViewer>
-                    
+            <Grid Grid.Column="1">
+                <!--Background="DarkBlue">-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <hc:ScrollViewer Grid.Row="0">
+                    <DataGrid x:Name="Receipt"
+                              RowStyle="{DynamicResource CustomDataGridRowStyle}"
+                              ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+                              CellStyle="{DynamicResource CustomDataGridCellStyle}"
+                              hc:Empty.ShowEmpty="True"
+                              Padding="0"
+                              IsReadOnly="True"
+                              CanUserResizeColumns="False"
+                              AutoGenerateColumns="False"
+                              Grid.Row="1"
+                              Margin="0 0 0 0" RowHeight="30">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn FontSize="13"
+                                    Header="NAME"
+                                    Binding="{Binding Name}"
+                                    Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                    Header="QUANTITY"
+                                    Binding="{Binding Quantity}"
+                                    Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                    Header="PRICE"
+                                    Binding="{Binding Price}"
+                                    Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                    Header="TOTAL PRICE"
+                                    Binding="{Binding TotalPrice}"
+                                    Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </hc:ScrollViewer>
+                <Grid Grid.Row="1">
+                    <StackPanel>
+                        <TextBlock
+                        x:Name="pota"/>
+                        <TextBlock
+                        x:Name="pota1"/>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

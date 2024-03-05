@@ -59,7 +59,8 @@ Public Class Login
                 If My.Settings.userRole <> 1 Then
                     dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
                     dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                    dash.pos.Visibility = Visibility.Collapsed                              '''  cosio
+                    dash.poss.Visibility = Visibility.Collapsed                             '''  cosio
+                    'dash.SalesToday.Visibility = Visibility.Collapsed
                     Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
                     tabs.Remove(dash.MaintainanceContainer.AccountTab)
                     tabs.Remove(dash.MaintainanceContainer.CategoryTab)
