@@ -148,6 +148,9 @@
     <Compile Include="Dialogs\InventoryDialog.xaml.vb">
       <DependentUpon>InventoryDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\QuantityDialog.xaml.vb">
+      <DependentUpon>QuantityDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\SubCategoryDialog.xaml.vb">
       <DependentUpon>SubCategoryDialog.xaml</DependentUpon>
     </Compile>
@@ -290,6 +293,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\ProductDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\QuantityDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

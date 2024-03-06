@@ -24,11 +24,25 @@ Public Class ProductCard
         ' Handle the click event here
         ' MessageBox.Show("Product card clicked!")
 
+        'If CardModel IsNot Nothing Then
+        '    Dim message As String = $"Product Name: {CardModel.Title}" & vbCrLf &
+        '                            $"Description: {CardModel.Description}" & vbCrLf &
+        '                            $"Price: {CardModel.Price}"
+        '    MessageBox.Show(message, "Product Details")
+        '    'Dialog.Show(New QuantityDialog)
+        'End If
+
+        'Dialog.Show(New QuantityDialog)
+
         If CardModel IsNot Nothing Then
-            Dim message As String = $"Product Name: {CardModel.Title}" & vbCrLf &
-                                    $"Description: {CardModel.Description}" & vbCrLf &
-                                    $"Price: {CardModel.Price}"
-            MessageBox.Show(message, "Product Details")
+            ' Assuming MyUserControl1 is the instance of your user control
+            QuantityDialog.ProductName = CardModel.Title
+            QuantityDialog.Description = CardModel.Description
+            QuantityDialog.Price = CardModel.Price
         End If
+
+        Dialog.Show(New QuantityDialog)
+
+
     End Sub
 End Class

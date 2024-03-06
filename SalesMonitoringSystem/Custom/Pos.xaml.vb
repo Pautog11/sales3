@@ -9,6 +9,7 @@ Imports System.Security.Cryptography.X509Certificates
 Imports System.Windows.Forms
 Imports HandyControl.Controls
 Imports HandyControl.Data
+Imports HandyControl.Tools.Extension
 Imports MS.Internal
 Imports SalesMonitoringSystem.BaseProduct
 Imports Spire.AI
@@ -24,16 +25,16 @@ Public Class Pos
 
         Dim data As New DataTable
 
-        ' Add columns to the DataTable
+        'Add columns to the DataTable
         data.Columns.Add("Name", GetType(String))
         data.Columns.Add("Quantity", GetType(Integer))
         data.Columns.Add("Price", GetType(Double))
         data.Columns.Add("TotalPrice", GetType(Double))
 
         ' Sample data rows (you can replace it with your actual data)
-        data.Rows.Add("Item 1", 2, 105465.0) ' 0.0 for initial TotalPrice
-        data.Rows.Add("Item 2", 1, 5.0, 0.0)
-        data.Rows.Add("Item 3", 3, 8.0, 0.0)
+        data.Rows.Add("Item 1", 2, 500) ' 0.0 for initial TotalPrice
+        data.Rows.Add("Item 2", 1, 250, 0.0)
+        data.Rows.Add("Item 3", 3, 300, 0.0)
 
         ' Calculate the total price for each row
         For Each row As DataRow In data.Rows
@@ -51,11 +52,21 @@ Public Class Pos
             grandTotalPrice += row.Field(Of Double)("TotalPrice")
         Next
 
-        pota.Text = grandTotalPrice
+        pota.Text = grandTotalPrice 'Total Price
+
 
         Dim discount As Double
         discount = grandTotalPrice * 0.2
-        pota1.Text = discount
+        pota1.Text = discount ' Amount Discounted
+
+
+        pota2.Text = grandTotalPrice - discount ' deducted the discount amount
+
+
+        Dim change As Double
+        change = 3000 - pota2.Text
+        pota3.Text = change
+
     End Sub
 
     Public Sub Newcardmodel()
@@ -111,6 +122,22 @@ Public Class Pos
                 productCard.Visibility = Visibility.Collapsed
             End If
         Next
+    End Sub
+
+    Private Sub AsdDsll_Click(sender As Object, e As RoutedEventArgs) Handles AsdDsll.Click
+        If Tite.Visibility = Visibility.Visible Then
+            Tite.Visibility = Visibility.Collapsed
+            ' Optionally, you can also hide the row containing the collapsed grid
+            ' Grid.SetRowSpan(Grid1, 0)
+        Else
+            Tite.Visibility = Visibility.Visible
+            ' Optionally, if you hid the row containing the collapsed grid, set it back to 1
+            ' Grid.SetRowSpan(Grid1, 1)
+        End If
+    End Sub
+
+    Private Sub Asdsll_Click(sender As Object, e As RoutedEventArgs) Handles Asdsll.Click
+        Dialog.Show(New QuantityDialog)
     End Sub
 End Class
 

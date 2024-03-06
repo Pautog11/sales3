@@ -19,10 +19,10 @@
     </UserControl.Resources>
     <Grid Background="{StaticResource ApplicationPrimaryLight}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="{StaticResource ApplicationDimBlue}">
+        <Grid Grid.Row="0" Background="White">
             <hc:FlexPanel>
                 <hc:SearchBar x:Name="ProductSearch"
                                   IsRealTime="True"
@@ -41,22 +41,73 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0" Background="LightGray">
+            <Grid Grid.Column="0" Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="43"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"  
+                      Margin="10 0 10 0"
+                      Background="{StaticResource ApplicationPrimaryDark}">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="All"
+                            Content="ALL"
+                            Width="90"
+                            Height="25"
+                            FontWeight="Bold"
+                            Margin="20 0 0 0"
+                            FontStyle="Italic"
+                            FontFamily="Arial"
+                            BorderThickness="0"/>
 
-                <!--- /////////////////////////////////////////////////// -->
+                        <Button x:Name="Alsl"
+                            Content="FRAMES"
+                            Width="90"
+                            Height="25"
+                            FontWeight="Bold"
+                            Margin="30 0 0 0"
+                            FontStyle="Italic"
+                            FontFamily="Arial"
+                            BorderThickness="0"/>
+                        
+                        <Button x:Name="Asdsll"
+                            Content="LENS"
+                            Width="90"
+                            Height="25"
+                            FontWeight="Bold"
+                            Margin="30 0 0 0"
+                            FontStyle="Italic"
+                            FontFamily="Arial"
+                            BorderThickness="0"/>
 
-                <hc:ScrollViewer IsInertiaEnabled="True">
-                    <WrapPanel Orientation="Horizontal" 
+                        <Button x:Name="AsdDsll"
+                            Content="OTHER"
+                            Width="90"
+                            Height="25"
+                            FontWeight="Bold"
+                            Margin="30 0 0 0"
+                            FontStyle="Italic"
+                            FontFamily="Arial"
+                            BorderThickness="0"/>
+                        
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="10 0 10 5" Background="LightGray">
+                    <hc:ScrollViewer IsInertiaEnabled="True">
+                        <WrapPanel Orientation="Horizontal" 
                                x:Name="Wrappanelxd">
-                        <!--<local:ProductCard/>-->
-                    </WrapPanel>
-                </hc:ScrollViewer>
-                
+                            <!--<local:ProductCard/>-->
+
+                        </WrapPanel>
+                    </hc:ScrollViewer>
+
+                </Grid>
             </Grid>
             
             <!--//////////////////////////////////////////////////////// -->
 
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" x:Name="Tite">
                 <!--Background="DarkBlue">-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -100,6 +151,10 @@
                         x:Name="pota"/>
                         <TextBlock
                         x:Name="pota1"/>
+                        <TextBlock
+                        x:Name="pota2"/>
+                        <TextBlock
+                        x:Name="pota3"/>
                     </StackPanel>
                 </Grid>
             </Grid>

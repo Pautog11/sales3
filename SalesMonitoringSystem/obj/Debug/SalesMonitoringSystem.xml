@@ -134,6 +134,16 @@ InventoryDialog
 InitializeComponent
 </summary>
 </member>
+<member name="T:SalesMonitoringSystem.QuantityDialog">
+<summary>
+QuantityDialog
+</summary>
+</member>
+<member name="M:SalesMonitoringSystem.QuantityDialog.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
 <member name="T:SalesMonitoringSystem.SubCategoryDialog">
 <summary>
 SubCategoryDialog
