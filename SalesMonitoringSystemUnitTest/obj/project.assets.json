@@ -2955,11 +2955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+      "projectUniqueName": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
       "projectName": "SalesMonitoringSystemUnitTest",
-      "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+      "projectPath": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
       "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\obj\\",
+      "outputPath": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2974,15 +2974,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/handycontrols/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj": {
-              "projectPath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj"
+            "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj": {
+              "projectPath": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\SalesMonitoringSystem.vbproj"
             }
           }
         }
@@ -2991,6 +2990,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3041,13 +3045,39 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.27, 6.0.27]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.27, 6.0.27]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.27, 6.0.27]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.8.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

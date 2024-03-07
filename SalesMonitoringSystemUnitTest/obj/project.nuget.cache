@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QXqLk8JMbV/QZRuG6p4MBkxOYP61GseySNZFdQYHgqZLAUQDs61YyLM9YZzJXULHgABvT0UsCtGzXqhuPa8HGA==",
+  "dgSpecHash": "YKhWxb6T0iHSS/ZYYWf6eqJVKlmWM/3ldfU1/VvGaX+XJ0McgqXyuFA8DjT2RcyDX24RCcHgKzyEp7wyk1gktQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Christian\\OneDrive\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
+  "projectFilePath": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystemUnitTest\\SalesMonitoringSystemUnitTest.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\Christian\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Christian\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
@@ -42,7 +42,21 @@
     "C:\\Users\\Christian\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Christian\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Christian\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\Christian\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\Christian\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Christian\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Christian\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Christian\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Data.SqlClient' 4.8.5 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
+      "libraryId": "System.Data.SqlClient",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
