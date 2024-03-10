@@ -84,7 +84,7 @@
                             BorderThickness="0"/>
 
                         <Button x:Name="AsdDsll"
-                            Content="OTHER"
+                            Content="OTHERS"
                             Width="90"
                             Height="25"
                             Background="Transparent"
@@ -115,7 +115,7 @@
                 <!--Background="DarkBlue">-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="150"/>
                 </Grid.RowDefinitions>
                 <hc:ScrollViewer Grid.Row="0">
                     <DataGrid x:Name="Receipt"
@@ -149,7 +149,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </hc:ScrollViewer>
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="1" Background="White">
                     <StackPanel>
                         <TextBlock
                         x:Name="pota"/>

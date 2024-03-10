@@ -3,11 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:SalesMonitoringSystem"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <TextBlock x:Name="Pota"
-            />
+        <!--<TextBlock x:Name="Pota"
+            />-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="AntiqueWhite">
+
+
+            <Button x:Name="Push"
+                    Content="Plplpl" Margin="145,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.584,-6.13" HorizontalAlignment="Left"
+                />
+
+
+        </Grid>
+
+        <Grid Grid.Column="1" Background="Aqua">
+            <hc:ScrollViewer Grid.Row="0">
+                <DataGrid x:Name="Receipt"
+              RowStyle="{DynamicResource CustomDataGridRowStyle}"
+              ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+              CellStyle="{DynamicResource CustomDataGridCellStyle}"
+              hc:Empty.ShowEmpty="True"
+              Padding="0"
+              IsReadOnly="True"
+              CanUserResizeColumns="False"
+              AutoGenerateColumns="False"
+              Grid.Row="1"
+              Margin="0 0 0 0" RowHeight="30">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn FontSize="13"
+                    Header="NAME"
+                    Binding="{Binding Name}"
+                    Width="*"/>
+                        <DataGridTextColumn FontSize="13"
+                    Header="QUANTITY"
+                    Binding="{Binding Quantity}"
+                    Width="*"/>
+                        <DataGridTextColumn FontSize="13"
+                    Header="PRICE"
+                    Binding="{Binding Price}"
+                    Width="*"/>
+                        <DataGridTextColumn FontSize="13"
+                    Header="TOTAL PRICE"
+                    Binding="{Binding TotalPrice}"
+                    Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </hc:ScrollViewer>
+        </Grid>
     </Grid>
 </UserControl>

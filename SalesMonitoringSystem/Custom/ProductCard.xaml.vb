@@ -42,7 +42,7 @@ Public Class ProductCard
         End If
 
         Dialog.Show(New QuantityDialog)
-
+        'Dialog.Show(New TransactionProductDialog(parent:=Me))
 
     End Sub
 End Class

@@ -3,7 +3,6 @@ Imports System.Data.SqlClient
 Imports System.Drawing
 Imports System.IO
 Imports HandyControl.Controls
-Imports SalesMonitoringSystem.Pos
 
 Public Class BaseProduct
     Inherits SqlBaseConnection
@@ -172,7 +171,18 @@ Public Class BaseProduct
             Return New sgsmsdb.viewtblproductsDataTable
         End Try
     End Function
-    Public Class ProductModel
 
-    End Class
+    Public Shared Function GetAllProduct() As DataTable
+        Try
+            Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
+            Dim cmd As New SqlCommand("SELECT product_name, product_description, product_image, product_price FROM tblproducts", conn)
+            Dim dTable As New DataTable
+            Dim adapter As New SqlDataAdapter(cmd)
+            adapter.Fill(dTable)
+            Return dTable
+        Catch ex As Exception
+            HandyControl.Controls.MessageBox.Show(ex.Message)
+            Return Nothing
+        End Try
+    End Function
 End Class

@@ -2,7 +2,7 @@
 Imports System.Data
 
 Public Class TransactionDialog
-    Private _tableAdapter As New sgsmsdbTableAdapters.viewtblsuppliersTableAdapter
+    'Private _tableAdapter As New sgsmsdbTableAdapters.viewtblsuppliersTableAdapter
     Private _data As DataRowView
     Private _subject As IObservablePanel
     Private Const ID_NOT_SET As Integer = -1
@@ -19,7 +19,7 @@ Public Class TransactionDialog
         DataContext = _data
 
         If _data Is Nothing Then
-            ' Create a data table to populate the item source
+            'Create a data table to populate the item source
             _itemSource = New DataTable
             _itemSource.Columns.Add("ID")
             _itemSource.Columns.Add("PRODUCT_ID")
