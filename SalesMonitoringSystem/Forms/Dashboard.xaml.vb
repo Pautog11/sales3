@@ -75,7 +75,7 @@ Class Dashboard
     ' Use for panel switching
     Public Sub SwitchPanelEvents(sender As Object, e As EventArgs) Handles BottomContainerDashboardButton.Click,
         BottomContainerProductsButton.Click, BottomContainerTransactionsButton.Click, BottomContainerLogoutButton.Click,
-        BottomContainerMaintenaceButton.Click, BottomContainerInventoryButton.Click, BottomContainerLogsButton.Click, BottomContainerSalesReportButton.Click, poss.Click, sam.Click
+        BottomContainerMaintenaceButton.Click, BottomContainerInventoryButton.Click, BottomContainerLogsButton.Click, BottomContainerSalesReportButton.Click, poss.Click
 
         If sender.Equals(BottomContainerLogoutButton) Then
             Dim res As MessageBoxResult = MessageBox.Ask("Do you want to log out?")
@@ -92,12 +92,12 @@ Class Dashboard
 
         Dim panels As Object() = {
             DashboardPanel, ProductsPanel, TransactionsPanel, MaintenancePanel, InventoryPanel,
-            AuditTrailPanel, SalesReportPanel, Pos, fuck
+            AuditTrailPanel, SalesReportPanel, Pos
         }
         Dim buttons As Object() = {
             BottomContainerDashboardButton, BottomContainerProductsButton,
             BottomContainerTransactionsButton, BottomContainerMaintenaceButton,
-            BottomContainerInventoryButton, BottomContainerLogsButton, BottomContainerSalesReportButton, poss, sam
+            BottomContainerInventoryButton, BottomContainerLogsButton, BottomContainerSalesReportButton, poss
         }
 
         ' Collapse all the panels first before opening the desired panel
@@ -189,7 +189,7 @@ Class Dashboard
 
                         Dim stack As New StackProductNotification()
                         stack._parent1 = Me
-                        stack.LabelStackHeading.Text = $"Your Product {p1} is running out of stocks, current stocks is = {p2}"
+                        stack.LabelStackHeading.Text = $"Your Product {p1} is running out of stocks, current stocks is {p2}pcs."
                         StackNotifContainer.Children.Add(stack)
                     End While
                 End If

@@ -116,7 +116,7 @@ Public Class QuantityDialog
         Dim is_existing As Boolean = False
 
         Try
-            Dim a As Pos()
+            Dim a As New Pos()
             For Each item As DataRow In a._itemSource.Rows
                 If item.Item("Name") = ProductNameTextBox.Text Then
                     item.Item("Quantity") = CInt(ProductQuantityTextBox.Text)
