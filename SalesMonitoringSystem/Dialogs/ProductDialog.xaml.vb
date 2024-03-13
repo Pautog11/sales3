@@ -57,29 +57,6 @@ Public Class ProductDialog
             CategoryComboBox.SelectedValue = If(DBNull.Value.Equals(_data.Item("CATEGORY_ID")), -1, _data.Item("CATEGORY_ID"))
         End If
 
-        '        If (DataSet.Tables[0].Rows.Count == 1)
-        '{
-        '    Byte[] data = New Byte[0];
-        '    Data = (Byte[])(dataSet.Tables[0].Rows[0]["pic"]);
-        '    MemoryStream mem = New MemoryStream(Data);
-        '    yourPictureBox.Image = Image.FromStream(mem);
-        '} 
-
-        'Dim ms As New IO.MemoryStream(CType(plr.PlayerImage, Byte())) 'This is correct...
-        'Dim returnImage As Image = Image.FromStream(ms)
-        'pcbEditPlayer.Image = returnImage
-
-        'If _data IsNot Nothing Then
-        '    Dim ms As New MemoryStream(CType(_data.PRODUCT_IMAGE, Byte()))
-        '    Dim b As New BitmapImage
-        '    b.BeginInit()
-        '    b.StreamSource = ms
-        '    b.EndInit()
-        '    selectedImage.Source = b
-        '    'Else
-        '    '    selectedImage.Source = Nothing
-        'End If
-
         If _data IsNot Nothing Then
             If _data.PRODUCT_IMAGE IsNot Nothing Then
                 Try

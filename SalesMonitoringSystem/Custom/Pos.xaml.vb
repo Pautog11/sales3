@@ -282,6 +282,57 @@ Public Class Pos
     Private Sub All_Click(sender As Object, e As RoutedEventArgs) Handles All.Click
 
     End Sub
+
+
+    'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
+    '    ' Check if any rows are selected
+    '    If Receipt.SelectedItems.Count > 0 Then
+    '        ' Get the data from the selected row(s)
+    '        Dim selectedRow As DataGridViewRow = Receipt.SelectedItems(0) ' Assuming you only allow single row selection
+    '        Dim firstName As String = selectedRow.Cells("FirstNameColumn").Value.ToString()
+    '        Dim lastName As String = selectedRow.Cells("LastNameColumn").Value.ToString()
+    '        Dim age As Integer = Convert.ToInt32(selectedRow.Cells("AgeColumn").Value)
+
+    '        ' Do something with the selected data
+    '        Windows.MessageBox.Show($"Selected: {firstName} {lastName}, Age: {age}")
+    '    End If
+    'End Sub
+
+    'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
+    '    ' Check if any cells are selected
+    '    If Receipt.SelectedCells.Count > 0 Then
+    '        ' Get the row index of the first selected cell
+    '        Dim rowIndex As Integer = Receipt.SelectedCells(0).RowIndex
+
+    '        ' Get the selected row
+    '        Dim selectedRow As DataGridViewRow = Receipt.Rows(rowIndex)
+
+    '        ' Access the data from the selected row
+    '        Dim firstName As String = selectedRow.Cells("FirstNameColumn").Value.ToString()
+    '        Dim lastName As String = selectedRow.Cells("LastNameColumn").Value.ToString()
+    '        Dim age As Integer = Convert.ToInt32(selectedRow.Cells("AgeColumn").Value)
+
+    '        ' Do something with the selected data
+    '        Windows.MessageBox.Show($"Selected: {firstName} {lastName}, Age: {age}")
+    '    End If
+
+    'End Sub
+
+    Private Sub Receipt_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Receipt.SelectionChanged
+        'Private Sub ProductDataGridView_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ProductDataGridView.SelectionChanged
+
+
+        If Receipt.SelectedItems.Count > 0 Then
+            'Dim pictureData As Image = ProductDataGridView.SelectedItems(0).Cells("PRODUCT_IMAGE").Value
+            'Dim imageData As Image = imageData()
+            Dialog.Show(New QuantityDialog(_subject, Receipt.SelectedItems(0)))
+            Receipt.SelectedIndex = -1
+        End If
+
+        '============================================================================================
+    End Sub
+
+
 End Class
 
 Public Class CardModel

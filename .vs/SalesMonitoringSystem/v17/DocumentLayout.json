@@ -1,12 +1,224 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Christian\\Desktop\\sales3\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|c:\\users\\christian\\desktop\\sales3\\salesmonitoringsystem\\forms\\login.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\forms\\login.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\src\\classes\\loginmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\src\\classes\\loginmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\dialogs\\accountdialog.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\dialogs\\accountdialog.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Christian\\AppData\\Local\\Temp\\u1vagmsu..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\src\\bases\\baseaccount.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\src\\bases\\baseaccount.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_CHRISTIAN_DESKTOP_SALES3_SALESMONITORINGSYSTEM_SGSMSDB.MDF/True/SqlTable/dbo.tblroles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\forms\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\forms\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\forms\\dashboard.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\forms\\dashboard.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\dialogs\\transactionproductdialog.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\dialogs\\transactionproductdialog.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\dialogs\\transactionproductdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\dialogs\\transactionproductdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\custom\\productspanel.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\custom\\productspanel.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\custom\\pos.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\custom\\pos.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|C:\\Users\\Christian\\Desktop\\sales3\\salesmonitoringsystem\\dialogs\\productdialog.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{72ED9EE0-AC12-474C-B680-8B80FDA2C6A6}|SalesMonitoringSystem\\SalesMonitoringSystem.vbproj|solutionrelative:salesmonitoringsystem\\dialogs\\productdialog.xaml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.tblroles [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_CHRISTIAN_DESKTOP_SALES3_SALESMONITORINGSYSTEM_SGSMSDB.MDF/True/SqlTable/dbo.tblroles.sql",
+              "ToolTip": "dbo.tblroles [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-13T16:32:55.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginModule.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\src\\classes\\LoginModule.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\src\\classes\\LoginModule.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\src\\classes\\LoginModule.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\src\\classes\\LoginModule.vb",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T16:26:06.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Forms\\Login.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Forms\\Login.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Forms\\Login.xaml.vb*",
+              "RelativeToolTip": "SalesMonitoringSystem\\Forms\\Login.xaml.vb*",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T16:23:44.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Forms\\Dashboard.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Forms\\Dashboard.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Forms\\Dashboard.xaml.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\Forms\\Dashboard.xaml.vb",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAIwMoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T16:23:35.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\Christian\\AppData\\Local\\Temp\\u1vagmsu..sql",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\u1vagmsu..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-13T16:15:48.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseAccount.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\src\\bases\\BaseAccount.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\src\\bases\\BaseAccount.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\src\\bases\\BaseAccount.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\src\\bases\\BaseAccount.vb",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAuwIMAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T16:13:20.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountDialog.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\AccountDialog.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Dialogs\\AccountDialog.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\AccountDialog.xaml.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\Dialogs\\AccountDialog.xaml.vb",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAowGsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T15:57:02.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Forms\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Forms\\Dashboard.xaml",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Forms\\Dashboard.xaml",
+              "RelativeToolTip": "SalesMonitoringSystem\\Forms\\Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-13T15:51:53.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransactionProductDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml",
+              "RelativeToolTip": "SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-13T12:26:51.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransactionProductDialog.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\Dialogs\\TransactionProductDialog.xaml.vb",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowBwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T12:26:48.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dialogs\\ProductDialog.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\ProductDialog.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Dialogs\\ProductDialog.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Dialogs\\ProductDialog.xaml.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\Dialogs\\ProductDialog.xaml.vb",
+              "ViewState": "AQIAACQAAAAAAAAAAAAqwDkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T12:20:56.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Custom\\ProductsPanel.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Custom\\ProductsPanel.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Custom\\ProductsPanel.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Custom\\ProductsPanel.xaml.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\Custom\\ProductsPanel.xaml.vb",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowC4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T12:13:28.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Pos.xaml.vb",
+              "DocumentMoniker": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Custom\\Pos.xaml.vb",
+              "RelativeDocumentMoniker": "SalesMonitoringSystem\\Custom\\Pos.xaml.vb",
+              "ToolTip": "C:\\Users\\Christian\\Desktop\\sales3\\SalesMonitoringSystem\\Custom\\Pos.xaml.vb",
+              "RelativeToolTip": "SalesMonitoringSystem\\Custom\\Pos.xaml.vb",
+              "ViewState": "AQIAABsBAAAAAAAAAAAkwEABAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-13T11:47:33.249Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

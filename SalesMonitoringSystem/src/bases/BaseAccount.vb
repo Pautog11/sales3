@@ -128,7 +128,8 @@ Public Class BaseAccount
     Public Shared Function FillByRoles() As DataTable
         Try
             Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
-            Dim cmd As New SqlCommand("SELECT id, role_name FROM tblroles", conn)
+            'Dim cmd As New SqlCommand("SELECT id, role_name FROM tblroles", conn)
+            Dim cmd As New SqlCommand("SELECT id, role_name FROM tblroles WHERE role_name != 'Super Admin'", conn)
 
             Dim dTable As New DataTable
             Dim adapter As New SqlDataAdapter(cmd)

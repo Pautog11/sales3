@@ -1,4 +1,6 @@
 ﻿
+Imports System.Diagnostics.Eventing.Reader
+Imports System.Security.Policy
 Imports HandyControl.Controls
 Public Class Login
     Private _loginModule As New LoginModule
@@ -9,33 +11,6 @@ Public Class Login
         Dim types As DataInput() = {DataInput.STRING_USERNAME, DataInput.STRING_PASSWORD}
 
         If BaseAccount.CountUser() = 0 Then
-            'Dim res1 As MessageBoxResult = MessageBox.Ask("This account will be created as a default user of this system.", "Create this account as default?")
-            'If res1 = MessageBoxResult.OK Then
-            '    Dim pwd As String = PasswordTextBox.Password
-            '    Dim data As New Dictionary(Of String, String) From {
-            '            {"id", Nothing},
-            '            {"role_id", 1},
-            '            {"first_name", "John"},
-            '            {"last_name", "Doe"},
-            '            {"address", "Taguig City"},
-            '            {"contact", "09123456789"},
-            '            {"username", UsernameTextBox.Text},
-            '            {"password", pwd}
-            '        }
-            '    '{"username", UsernameTextBox.Text},
-            '    '{"password", pwd}
-            '    Dim baseCommand As New BaseAccount(data)
-            '    Dim invoker As New AddCommand(baseCommand)
-            '    invoker.Execute()
-            '    MessageBox.Info("Please log in your account.")
-            'Else
-            '    MessageBox.Info("Please create a default account.")
-
-            'End If
-            'UsernameTextBox.Text = ""
-            'PasswordTextBox.Password = ""
-            'Return
-
             Dim createadmin As New AdminAcc
             Dim res1 As MessageBoxResult = MessageBox.Ask("You will be directed to create account Panel.")
             If res1 = MessageBoxResult.OK Then
@@ -65,6 +40,25 @@ Public Class Login
                     tabs.Remove(dash.MaintainanceContainer.AccountTab)
                     tabs.Remove(dash.MaintainanceContainer.CategoryTab)
                     tabs.Remove(dash.MaintainanceContainer.SupplierTab)
+                    'ElseIf My.Settings.userRole <> 2 Then
+                    '    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                    '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                    '    dash.BottomContainerTransactionsButton.Visibility = Visibility.Collapsed
+                    '    dash.BottomContainerMaintenaceButton.Visibility = Visibility.Collapsed
+                    '    dash.BottomContainerInventoryButton.Visibility = Visibility.Collapsed
+                    '    dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
+                    '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                End If
+
+                If My.Settings.userRole <> 2 Then
+                    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                    dash.BottomContainerTransactionsButton.Visibility = Visibility.Collapsed
+                    dash.BottomContainerMaintenaceButton.Visibility = Visibility.Collapsed
+                    dash.BottomContainerInventoryButton.Visibility = Visibility.Collapsed
+                    dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
+                    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+
                 End If
                 dash.Show()
                 Close()

@@ -1,4 +1,5 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.Collections.ObjectModel
+Imports System.Text.RegularExpressions
 Imports HandyControl.Controls
 
 Public Class AccountDialog
@@ -17,6 +18,7 @@ Public Class AccountDialog
         Else
             SaveButton.Content = "UPDATE"
         End If
+
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As RoutedEventArgs) Handles SaveButton.Click
@@ -93,7 +95,7 @@ Public Class AccountDialog
         RoleComboBox.SelectedValuePath = "id"
 
         If _data Is Nothing Then
-            RoleComboBox.SelectedIndex = 1
+            RoleComboBox.SelectedIndex = 2
         Else
             ' Would be a lot easier if I use a ViewModel here but yeah lesson learned.
             FirstNameTextBox.Text = _data.Item("first_name")
@@ -104,5 +106,9 @@ Public Class AccountDialog
             ContactTextBox.Text = _data.Item("contact")
             PasswordTextBox.ShowEyeButton = False
         End If
+    End Sub
+
+    Private Sub RoleComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles RoleComboBox.SelectionChanged
+
     End Sub
 End Class

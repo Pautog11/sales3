@@ -78,7 +78,6 @@
                     <hc:ComboBox Name="RoleComboBox"
                                  HorizontalAlignment="Stretch"
                                  hc:BorderElement.CornerRadius="0"
-                                 IsEnabled="False"
                                  Height="40"
                                  hc:InfoElement.Placeholder="Role"/>
                 </StackPanel>
