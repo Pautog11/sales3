@@ -249,11 +249,11 @@ Public Class Pos
         'a.Rows.Add()
         Receipt.ItemsSource = _itemSource?.DefaultView
         'DataGridView1.Refresh()
-        'Dim total As Double = 0
-        'For i = 0 To _itemSource?.Rows.Count - 1
-        '    total += _itemSource.Rows(i).Item("TotalPrice")
-        'Next
-        'pota3.Text = total
+        Dim total As Double = 0
+        For i = 0 To _itemSource?.Rows.Count - 1
+            total += _itemSource.Rows(i).Item("TotalPrice")
+        Next
+        pota3.Text = total
     End Sub
     Private Sub ProductSearch_TextChanged(sender As Object, e As TextChangedEventArgs) Handles ProductSearch.TextChanged
         Dim searchText As String = ProductSearch.Text.ToLower()

@@ -10,10 +10,10 @@ Public Class fuck
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
 
-        Pos._itemSource.Columns.Add("Name")
-        Pos._itemSource.Columns.Add("Quantity")
-        Pos._itemSource.Columns.Add("Price")
-        Pos._itemSource.Columns.Add("TotalPrice")
+        'Pos._itemSource.Columns.Add("Name")
+        'Pos._itemSource.Columns.Add("Quantity")
+        'Pos._itemSource.Columns.Add("Price")
+        'Pos._itemSource.Columns.Add("TotalPrice")
 
     End Sub
 
