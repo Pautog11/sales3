@@ -94,21 +94,6 @@ Public Class BaseProduct
             End If
 
 
-
-            'Dim imageData As Byte() = GetImageData()
-
-            'Command.Parameters.Add("@ImageData", SqlDbType.VarBinary, -1).Value = imageData
-            '_sqlCommand.Parameters.Add("@product_image", SqlDbType.VarBinary, -1).Value = "product_image"
-            'If data1.ContainsKey("product_image") AndAlso TypeOf data1("product_image") Is Byte() Then
-            '    Dim imageBytes As Byte() = DirectCast(data1("product_image"), Byte())
-
-            '    ' Add the image bytes as parameter
-            '    _sqlCommand.Parameters.Add("@product_image", SqlDbType.Image).Value = imageBytes
-            'Else
-            '    MessageBox.Show("Error: 'product_image' data is not valid.")
-            'End If
-
-
             If _sqlCommand.ExecuteNonQuery() > 0 Then
                 Growl.Success("Product has been added successfully!")
             Else
@@ -183,6 +168,17 @@ Public Class BaseProduct
         Catch ex As Exception
             HandyControl.Controls.MessageBox.Show(ex.Message)
             Return Nothing
+        End Try
+    End Function
+
+    Public Shared Function ProductStocks() As Integer
+        Try
+            Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
+            Dim cmd As New SqlCommand("SELECT PRODUCT_NAME, STOCK_IN FROM viewtblinventoryrecords;", conn)
+            Return cmd.ExecuteScalar()
+        Catch ex As Exception
+            HandyControl.Controls.MessageBox.Show(ex.Message)
+            Return 0
         End Try
     End Function
 End Class

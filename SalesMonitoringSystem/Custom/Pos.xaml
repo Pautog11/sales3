@@ -61,7 +61,7 @@
                             FontFamily="Arial"
                             BorderThickness="0"/>
 
-                        <Button x:Name="Alsl"
+                        <Button x:Name="Frames"
                             Content="FRAMES"
                             Width="90"
                             Height="25"
@@ -135,12 +135,12 @@
                                     Binding="{Binding Name}"
                                     Width="*"/>
                             <DataGridTextColumn FontSize="13"
-                                    Header="QUANTITY"
-                                    Binding="{Binding Quantity}"
-                                    Width="*"/>
-                            <DataGridTextColumn FontSize="13"
                                     Header="PRICE"
                                     Binding="{Binding Price}"
+                                    Width="*"/>
+                            <DataGridTextColumn FontSize="13"
+                                    Header="QUANTITY"
+                                    Binding="{Binding Quantity}"
                                     Width="*"/>
                             <DataGridTextColumn FontSize="13"
                                     Header="TOTAL PRICE"

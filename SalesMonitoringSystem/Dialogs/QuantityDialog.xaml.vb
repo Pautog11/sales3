@@ -38,26 +38,48 @@ Public Class QuantityDialog
         End If
         ' Add any initialization after the InitializeComponent() call.
 
-        If Pos._itemSource Is Nothing Then
-            Pos._itemSource = New DataTable()
-            Pos._itemSource.Columns.Add("Name")
-            Pos._itemSource.Columns.Add("Quantity")
-            Pos._itemSource.Columns.Add("Price")
-            Pos._itemSource.Columns.Add("TotalPrice")
-            'Else
-            '    'Pos._itemSource.Columns.Add("Name")
-            '    'Pos._itemSource.Columns.Add("Quantity")
-            '    'Pos._itemSource.Columns.Add("Price")
-            '    'Pos._itemSource.Columns.Add("TotalPrice")
-            '    Pos._itemSource.Clear()
-        End If
+        'If Pos._itemSource Is Nothing Then
+        '    Pos._itemSource = New DataTable()
+        '    Pos._itemSource.Columns.Add("Name")
+        '    Pos._itemSource.Columns.Add("Quantity")
+        '    Pos._itemSource.Columns.Add("Price")
+        '    Pos._itemSource.Columns.Add("TotalPrice")
+        '    Pos._itemSource.Clear()
+        '    'Else
+        '    '    'Pos._itemSource.Columns.Add("Name")
+        '    '    'Pos._itemSource.Columns.Add("Quantity")
+        '    '    'Pos._itemSource.Columns.Add("Price")
+        '    '    'Pos._itemSource.Columns.Add("TotalPrice")
+        '    '    Pos._itemSource.Clear()
+        'End If
 
-
+        'Pos._itemSource.Clear()
         'Pos._itemSource.Columns.Add("Name")
         'Pos._itemSource.Columns.Add("Quantity")
         'Pos._itemSource.Columns.Add("Price")
         'Pos._itemSource.Columns.Add("TotalPrice")
-        'Pos._itemSource.Clear()
+
+        ' Check if the DataTable already has the columns
+        Dim hasNameColumn As Boolean = Pos._itemSource.Columns.Contains("Name")
+        Dim hasQuantityColumn As Boolean = Pos._itemSource.Columns.Contains("Quantity")
+        Dim hasPriceColumn As Boolean = Pos._itemSource.Columns.Contains("Price")
+        Dim hasTotalPriceColumn As Boolean = Pos._itemSource.Columns.Contains("TotalPrice")
+
+        ' Add columns conditionally if they don't already exist
+        If Not hasNameColumn Then
+            Pos._itemSource.Columns.Add("Name")
+        End If
+        If Not hasQuantityColumn Then
+            Pos._itemSource.Columns.Add("Quantity")
+        End If
+        If Not hasPriceColumn Then
+            Pos._itemSource.Columns.Add("Price")
+        End If
+        If Not hasTotalPriceColumn Then
+            Pos._itemSource.Columns.Add("TotalPrice")
+        End If
+
+
         UpdateTextboxes()
     End Sub
 
@@ -65,6 +87,15 @@ Public Class QuantityDialog
         ProductNameTextBox.Text = ProductName
         ProductDescriptionTextBox.Text = Description
         ProductPriceTextBox.Text = Price.ToString()
+
+        'If Not String.IsNullOrEmpty(ProductNameTextBox.Text) Then
+        '    Dim info As DataTable = BaseProduct.ProductInfo(ProductNameTextBox.Text)
+        '    ' Assuming BaseInventory.ScalarStocks(ProductNameTextBox.Text) returns an integer
+        '    ProductStocks.Text = BaseInventory.ScalarStocks(ProductNameTextBox.Text).ToString()
+        'End If
+        'Dim info As String = BaseProduct.ProductStocks(ProductNameTextBox.Text)
+        'ProductStocks.Text = 
+
     End Sub
     Private Sub SaveCategoryButton_Click(ByVal sender As Object, e As RoutedEventArgs) Handles SaveCategoryButton.Click
 
@@ -80,12 +111,12 @@ Public Class QuantityDialog
         Dim totalPrice As Double = quantity * price
         newRow1("TotalPrice") = totalPrice
 
-        For Each row As DataRow In Pos._itemSource.Rows
-            ' Calculate the total price for existing rows
-            Dim existingQuantity As Integer = row.Field(Of Integer)("Quantity")
-            Dim existingPrice As Double = row.Field(Of Double)("Price")
-            row.SetField("TotalPrice", existingQuantity * existingPrice)
-        Next
+        'For Each row As DataRow In Pos._itemSource.Rows
+        '    ' Calculate the total price for existing rows
+        '    Dim existingQuantity As Integer = row.Field(Of Integer)("Quantity")
+        '    Dim existingPrice As Double = row.Field(Of Double)("Price")
+        '    row.SetField("TotalPrice", existingQuantity * existingPrice)
+        'Next
 
 
 
@@ -93,4 +124,14 @@ Public Class QuantityDialog
         Pos._itemSource.Rows.Add(newRow1)
         CloseDialog(Closebtn)
     End Sub
+    'Private Sub ProductNameComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ProductNameComboBox.SelectionChanged
+    '    If ProductNameComboBox.SelectedIndex <> -1 Then
+    '        Dim info As DataTable = BaseProduct.ProductInfo(ProductNameComboBox.SelectedValue)
+    '        SellingPriceTextBox.Text = info.Rows(0).Item("PRICE").ToString
+    '        QuantityAvailable.Text = BaseInventory.ScalarStocks(ProductNameComboBox.SelectedValue).ToString
+    '    Else
+    '        SellingPriceTextBox.Text = Nothing
+    '        QuantityAvailable.Text = Nothing
+    '    End If
+    'End Sub
 End Class

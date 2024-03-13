@@ -268,15 +268,19 @@ Public Class Pos
         Next
     End Sub
 
-    Private Sub AsdDsll_Click(sender As Object, e As RoutedEventArgs) Handles AsdDsll.Click
+    'Private Sub AsdDsll_Click(sender As Object, e As RoutedEventArgs) Handles AsdDsll.Click
 
-        'Dim newRow1 As DataRow = _itemSource.NewRow()
-        'newRow1("Name") = "Jok"
-        'newRow1("Quantity") = 2
-        'newRow1("Price") = 9
-        'newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
-        '_itemSource.Rows.Add(newRow1)
-        'UpdateVisualData()
+    '    'Dim newRow1 As DataRow = _itemSource.NewRow()
+    '    'newRow1("Name") = "Jok"
+    '    'newRow1("Quantity") = 2
+    '    'newRow1("Price") = 9
+    '    'newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
+    '    '_itemSource.Rows.Add(newRow1)
+    '    'UpdateVisualData()
+    'End Sub
+
+    Private Sub All_Click(sender As Object, e As RoutedEventArgs) Handles All.Click
+
     End Sub
 End Class
 

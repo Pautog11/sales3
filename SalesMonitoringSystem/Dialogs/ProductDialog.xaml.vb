@@ -69,16 +69,38 @@ Public Class ProductDialog
         'Dim returnImage As Image = Image.FromStream(ms)
         'pcbEditPlayer.Image = returnImage
 
+        'If _data IsNot Nothing Then
+        '    Dim ms As New MemoryStream(CType(_data.PRODUCT_IMAGE, Byte()))
+        '    Dim b As New BitmapImage
+        '    b.BeginInit()
+        '    b.StreamSource = ms
+        '    b.EndInit()
+        '    selectedImage.Source = b
+        '    'Else
+        '    '    selectedImage.Source = Nothing
+        'End If
+
         If _data IsNot Nothing Then
-            Dim ms As New MemoryStream(CType(_data.PRODUCT_IMAGE, Byte()))
-            Dim b As New BitmapImage
-            b.BeginInit()
-            b.StreamSource = ms
-            b.EndInit()
-            selectedImage.Source = b
-            'Else
-            '    selectedImage.Source = Nothing
+            If _data.PRODUCT_IMAGE IsNot Nothing Then
+                Try
+                    Dim ms As New MemoryStream(CType(_data.PRODUCT_IMAGE, Byte()))
+                    Dim b As New BitmapImage
+                    b.BeginInit()
+                    b.StreamSource = ms
+                    b.EndInit()
+                    selectedImage.Source = b
+                Catch ex As Exception
+                    selectedImage.Source = Nothing ' Clear the image source
+                    'selectedImage.Content = "No Image" ' Display text "No Image"
+                End Try
+            Else
+                selectedImage.Source = Nothing ' Clear the image source
+                'selectedImage.Content = "No Image" ' Display text "No Image"
+            End If
         End If
+
+
+
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As RoutedEventArgs) Handles SaveButton.Click

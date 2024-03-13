@@ -14,7 +14,7 @@
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <hc:SimplePanel Background="{StaticResource ApplicationDimBlue}">
-            <TextBlock Text="Quantity"
+            <TextBlock Text="Product"
                        Foreground="{StaticResource ApplicationLight}"
                        FontSize="24"
                        HorizontalAlignment="Left"
@@ -66,6 +66,17 @@
                              hc:InfoElement.Placeholder="Product Price"
                              AcceptsReturn="True"/>
             </StackPanel>
+
+            <StackPanel Margin="0 8 0 0">
+                <hc:TextBox Name="ProductStocks"
+                             HorizontalAlignment="Stretch"
+                             hc:BorderElement.CornerRadius="0"
+                             MinHeight="40"
+                             Height="Auto"
+                             IsEnabled="False"
+                             hc:InfoElement.Placeholder="Product Stocks"
+                             AcceptsReturn="True"/>
+            </StackPanel>
             
             <StackPanel Margin="0 8 0 0">
                 <hc:TextBox Name="ProductQuantityTextBox"
@@ -74,7 +85,7 @@
                              MinHeight="40"
                              Height="Auto"
                              hc:InfoElement.Necessary="True"
-                             hc:InfoElement.Placeholder="Product Quantity"
+                             hc:InfoElement.Placeholder="Quantity"
                              />
             </StackPanel>
             
