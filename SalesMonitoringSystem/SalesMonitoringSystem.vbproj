@@ -127,6 +127,9 @@
     <Compile Include="Custom\AuditTrailPanel.xaml.vb">
       <DependentUpon>AuditTrailPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Custom\fuck.xaml.vb">
+      <DependentUpon>fuck.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Custom\Pos.xaml.vb">
       <DependentUpon>Pos.xaml</DependentUpon>
     </Compile>
@@ -209,6 +212,10 @@
     <Compile Include="src\interfaces\IObservablePanel.vb" />
     <Compile Include="src\interfaces\IObserverPanel.vb" />
     <Page Include="Custom\AuditTrailPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Custom\fuck.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

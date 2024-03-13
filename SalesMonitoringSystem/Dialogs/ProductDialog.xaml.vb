@@ -76,7 +76,8 @@ Public Class ProductDialog
             b.StreamSource = ms
             b.EndInit()
             selectedImage.Source = b
-
+            'Else
+            '    selectedImage.Source = Nothing
         End If
     End Sub
 

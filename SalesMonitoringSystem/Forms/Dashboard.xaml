@@ -452,6 +452,14 @@
                                        TextAlignment="Center" Height="10" VerticalAlignment="Bottom"/>
                     </hc:FlexPanel>
                 </Button>
+                    
+                    
+                    
+                    <!--s-->
+
+                    <Button x:Name="fk"
+                        Content="Fuck"/>
+
 
                 </StackPanel>
             
@@ -725,6 +733,13 @@
                 <local:Pos/>
             </Grid>
             <!--#endregion-->
+
+            <Grid x:Name="fuck"
+                  Grid.Column="1"
+                  Visibility="Collapsed"
+                  Margin="15 10">
+                <local:fuck/>
+            </Grid>
         </Grid>
         <!--#endregion-->
     </Grid>

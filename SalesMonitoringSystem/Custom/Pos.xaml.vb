@@ -1,16 +1,28 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Reflection.Emit
 Imports System.Windows.Forms
 Imports System.Windows.Media.Animation
 Imports HandyControl.Controls
 Imports Spire.Xls.Core.Spreadsheet
+Imports SalesMonitoringSystem.fuck
+Imports System.Windows.Controls
 
 Public Class Pos
     Implements IObserverPanel
     Private _subject As IObservablePanel
-    Private _data As DataRowView
-    Public _itemSource As DataTable
+    Public Shared _itemSource As New DataTable
 
+
+
+    'Public ReadOnly Property ReceiptDataGrid As DataTable
+    '    Get
+    '        Return Receipt
+    '    End Get
+    'End Property
+    'Private _data As DataRowView
+    'Public _itemSource As New DataTable
+    'Public DataGridView1 As New DataGridView()
 
     'Implements IObservablePanel, IObserverPanel
 
@@ -42,51 +54,48 @@ Public Class Pos
     '    Dialog.Show(New QuantityDialog)
     'End Sub
 
-    'Public Sub lickmedaddy()
-    '    Dim data As New DataTable
-    '    'Add columns to the DataTable
-    '    data.Columns.Add("Name", GetType(String))
-    '    data.Columns.Add("Quantity", GetType(Integer))
-    '    data.Columns.Add("Price", GetType(Double))
-    '    data.Columns.Add("TotalPrice", GetType(Double))
+    Public Sub lickmedaddy()
+        '    Dim data As New DataTable
+        '    'Add columns to the DataTable
+        '    data.Columns.Add("Name", GetType(String))
+        '    data.Columns.Add("Quantity", GetType(Integer))
+        '    data.Columns.Add("Price", GetType(Double))
+        '    data.Columns.Add("TotalPrice", GetType(Double))
 
-    '    'Sample data rows (you can replace it with your actual data)
-    '    data.Rows.Add("Item 1", 2, 500) ' 0.0 for initial TotalPrice
-    '    data.Rows.Add("Item 2", 1, 250, 0.0)
-    '    data.Rows.Add("Item 3", 3, 300, 0.0)
+        '    'Sample data rows (you can replace it with your actual data)
+        '    data.Rows.Add("Item 1", 2, 500) ' 0.0 for initial TotalPrice
+        '    data.Rows.Add("Item 2", 1, 250, 0.0)
+        '    data.Rows.Add("Item 3", 3, 300, 0.0)
 
-    '    '' Calculate the total price for each row
-    '    For Each row As DataRow In data.Rows
-    '        Dim quantity As Integer = row.Field(Of Integer)("Quantity")
-    '        Dim price As Double = row.Field(Of Double)("Price")
+        '    '' Calculate the total price for each row
+        'For Each row As DataRow In Data.Rows
+        '    Dim quantity As Integer = row.Field(Of Integer)("Quantity")
+        '    Dim price As Double = row.Field(Of Double)("Price")
 
-    '        ' Calculate the total price and update the DataTable
-    '        row.SetField("TotalPrice", quantity * price)
-    '    Next
+        '    ' Calculate the total price and update the DataTable
+        '    row.SetField("TotalPrice", quantity * price)
+        'Next
 
-    '    Receipt.ItemsSource = data.DefaultView
+        '    Receipt.ItemsSource = data.DefaultView
 
-    '    Dim grandTotalPrice As Double = 0.0
-    '    For Each row As DataRow In data.Rows
-    '        grandTotalPrice += row.Field(Of Double)("TotalPrice")
-    '    Next
+        '    Dim grandTotalPrice As Double = 0.0
+        '    For Each row As DataRow In data.Rows
+        '        grandTotalPrice += row.Field(Of Double)("TotalPrice")
+        '    Next
 
-    '    pota.Text = grandTotalPrice 'Total Price
-
-
-    '    Dim discount As Double
-    '    discount = grandTotalPrice * 0.2
-    '    pota1.Text = discount ' Amount Discounted
-
-    '    pota2.Text = grandTotalPrice - discount ' deducted the discount amount
-
-    '    Dim change As Double
-    '    change = 3000 - pota2.Text
-    '    pota3.Text = change
-    'End Sub
+        '    pota.Text = grandTotalPrice 'Total Price
 
 
+        '    Dim discount As Double
+        '    discount = grandTotalPrice * 0.2
+        '    pota1.Text = discount ' Amount Discounted
 
+        '    pota2.Text = grandTotalPrice - discount ' deducted the discount amount
+
+        '    Dim change As Double
+        '    change = 3000 - pota2.Text
+        '    pota3.Text = change
+    End Sub
     Public Sub New()
         'Optional data1 As DataRowView = Nothing,
         'Optional subject1 As IObservablePanel = Nothing
@@ -97,21 +106,11 @@ Public Class Pos
         '_data = data1
         '_subject = subject1
         'DataContext = _data
-        'up()
-
-        _itemSource = New DataTable
-        _itemSource.Columns.Add("Name")
-        _itemSource.Columns.Add("Quantity")
-        _itemSource.Columns.Add("Price")
-        _itemSource.Columns.Add("TotalPrice")
-
         '_itemSource = New DataTable
         '_itemSource.Columns.Add("Name")
         '_itemSource.Columns.Add("Quantity")
         '_itemSource.Columns.Add("Price")
         '_itemSource.Columns.Add("TotalPrice")
-
-
 
 
         ' Add any initialization after the InitializeComponent() call.
@@ -122,45 +121,30 @@ Public Class Pos
         Catch ex As Exception
             HandyControl.Controls.MessageBox.Error(ex.Message, "Observer Error")
         End Try
-        up()
+        ' up()
+
+        'Me._itemSource = New DataTable()
+        '_itemSource.Columns.Add("Name", GetType(String))
+        '_itemSource.Columns.Add("Quantity", GetType(Integer))
+        '_itemSource.Columns.Add("Price", GetType(Double))
+        '_itemSource.Columns.Add("TotalPrice", GetType(Double))
+
+        'Dim newRow As DataRow = _itemSource.NewRow()
+        'newRow("Name") = a
+        'newRow("Quantity") = c
+        'newRow("Price") = b
+        'newRow("TotalPrice") = 75
+
+        '_itemSource.Rows.Add()
 
     End Sub
-
-    Public Sub up(
-        Optional data As DataRowView = Nothing,
-        Optional subject As IObservablePanel = Nothing
-        )
-        ' This call is required by the designer.
-        InitializeComponent()
-        _data = data
-        _subject = subject
-        DataContext = _data
-
-        ' Add any initialization after the InitializeComponent() call.
-        If _data Is Nothing Then
-            _itemSource = New DataTable
-            _itemSource.Columns.Add("Name")
-            _itemSource.Columns.Add("Quantity")
-            _itemSource.Columns.Add("Price")
-            _itemSource.Columns.Add("TotalPrice")
-
-
-            '_itemSource.Rows.Add("as", "as", "As", "AS")
-
-            'Receipt.ItemsSource = _itemSource.DefaultView
-        Else
-            Growl.Info("kj")
-        End If
-
-    End Sub
-
 
     Public Sub Update() Implements IObserverPanel.Update
 
         Try
-            'pota.Text = ClearTypeHint
-
+            UpdateVisualData()
             pota.Text = GenInvoiceNumber(InvoiceType.Transaction)
+
 
             Wrappanelxd.Children.Clear()
 
@@ -202,12 +186,12 @@ Public Class Pos
 
         'Dim dt As New DataTable
 
-        ''If dt.Columns.Count = 0 Then
-        'dt.Columns.Add("Name", GetType(String))
-        'dt.Columns.Add("Quantity", GetType(Integer))
-        'dt.Columns.Add("Price", GetType(Double))
-        'dt.Columns.Add("TotalPrice", GetType(Double))
-        ''End If
+        'If dt.Columns.Count = 0 Then
+        '_itemSource.Columns.Add("Name", GetType(String))
+        '_itemSource.Columns.Add("Quantity", GetType(Integer))
+        '_itemSource.Columns.Add("Price", GetType(Double))
+        '_itemSource.Columns.Add("TotalPrice", GetType(Double))
+        'End If
 
         ''Dim newRow As DataRow = dt.NewRow()
         ''newRow("Name") = a
@@ -262,12 +246,14 @@ Public Class Pos
     End Sub
 
     Public Sub UpdateVisualData()
+        'a.Rows.Add()
         Receipt.ItemsSource = _itemSource?.DefaultView
-        'Dim total As Integer = 0
+        'DataGridView1.Refresh()
+        'Dim total As Double = 0
         'For i = 0 To _itemSource?.Rows.Count - 1
-        '    total += _itemSource.Rows(i).Item("TOTAL")
+        '    total += _itemSource.Rows(i).Item("TotalPrice")
         'Next
-        'TotalPrice.Text = total
+        'pota3.Text = total
     End Sub
     Private Sub ProductSearch_TextChanged(sender As Object, e As TextChangedEventArgs) Handles ProductSearch.TextChanged
         Dim searchText As String = ProductSearch.Text.ToLower()
@@ -284,13 +270,13 @@ Public Class Pos
 
     Private Sub AsdDsll_Click(sender As Object, e As RoutedEventArgs) Handles AsdDsll.Click
 
-        Dim newRow1 As DataRow = _itemSource.NewRow()
-        newRow1("Name") = "Product A"
-        newRow1("Quantity") = 2
-        newRow1("Price") = 10.99
-        newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
-        _itemSource.Rows.Add(newRow1)
-        UpdateVisualData()
+        'Dim newRow1 As DataRow = _itemSource.NewRow()
+        'newRow1("Name") = "Jok"
+        'newRow1("Quantity") = 2
+        'newRow1("Price") = 9
+        'newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
+        '_itemSource.Rows.Add(newRow1)
+        'UpdateVisualData()
     End Sub
 End Class
 
