@@ -31,35 +31,60 @@ Public Class Login
 
             If res?(0) Then
                 Dim dash As New Dashboard
-                If My.Settings.userRole <> 1 Then
-                    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                    dash.poss.Visibility = Visibility.Collapsed                             '''  cosio
-                    'dash.SalesToday.Visibility = Visibility.Collapsed
-                    Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
-                    tabs.Remove(dash.MaintainanceContainer.AccountTab)
-                    tabs.Remove(dash.MaintainanceContainer.CategoryTab)
-                    tabs.Remove(dash.MaintainanceContainer.SupplierTab)
-                    'ElseIf My.Settings.userRole <> 2 Then
-                    '    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
-                    '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                    '    dash.BottomContainerTransactionsButton.Visibility = Visibility.Collapsed
-                    '    dash.BottomContainerMaintenaceButton.Visibility = Visibility.Collapsed
-                    '    dash.BottomContainerInventoryButton.Visibility = Visibility.Collapsed
-                    '    dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
-                    '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                End If
+                'If My.Settings.userRole <> 1 Then
+                '    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                '    dash.poss.Visibility = Visibility.Collapsed                             '''  cosio
+                '    'dash.SalesToday.Visibility = Visibility.Collapsed
+                '    Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
+                '    tabs.Remove(dash.MaintainanceContainer.AccountTab)
+                '    tabs.Remove(dash.MaintainanceContainer.CategoryTab)
+                '    tabs.Remove(dash.MaintainanceContainer.SupplierTab)
+                'ElseIf My.Settings.userRole = 2 Then
+                '    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerTransactionsButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerMaintenaceButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerInventoryButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
+                '    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                'End If
 
-                If My.Settings.userRole <> 2 Then
-                    dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerTransactionsButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerMaintenaceButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerInventoryButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
-                    dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-
-                End If
+                Select Case My.Settings.userRole
+                    Case 1 ' Super Admin
+                        ' Handle Super Admin
+                        'dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                        'dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                        'dash.poss.Visibility = Visibility.Collapsed ' Not sure what this is
+                        'dash.SalesToday.Visibility = Visibility.Collapsed
+                        'Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
+                        'tabs.Remove(dash.MaintainanceContainer.AccountTab)
+                        'tabs.Remove(dash.MaintainanceContainer.CategoryTab)
+                        'tabs.Remove(dash.MaintainanceContainer.SupplierTab)
+                    Case 2 ' Stock Holder
+                        ' Handle Stock Holder
+                        dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerTransactionsButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerMaintenaceButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerInventoryButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                        dash.poss.Visibility = Visibility.Collapsed
+                    Case 3 ' Admin
+                        dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
+                        dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
+                        dash.poss.Visibility = Visibility.Collapsed ' Not sure what this is
+                        'dash.SalesToday.Visibility = Visibility.Collapsed
+                        Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
+                        tabs.Remove(dash.MaintainanceContainer.AccountTab)
+                        tabs.Remove(dash.MaintainanceContainer.CategoryTab)
+                        '    tabs.Remove(dash.MaintainanceContainer.SupplierTab)
+                        'Case Else
+                        '    ' Handle other roles or invalid roles (optional)
+                        '    MessageBox.Info("Invalid user role!", "Login Failed!")
+                        '    Return ' or any other appropriate action
+                End Select
                 dash.Show()
                 Close()
             Else
