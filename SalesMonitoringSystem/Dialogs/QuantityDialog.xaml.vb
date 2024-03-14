@@ -2,14 +2,19 @@
 Imports HandyControl.Tools.Extension
 Imports SalesMonitoringSystem.sgsmsdbTableAdapters
 Imports System.Collections.Specialized
+Imports System.ComponentModel
 Imports System.Data
 Imports System.Diagnostics.Eventing.Reader
+Imports System.Runtime.CompilerServices
 Imports System.Security.Cryptography
 Imports System.Windows.Forms
 Imports System.Windows.Media
 
 
 Public Class QuantityDialog
+    'Inherits Dialog
+
+    '///
     Public Shared Property ProductName As String
     Public Shared Property Description As String
     Public Shared Property Price As Decimal
@@ -36,28 +41,6 @@ Public Class QuantityDialog
         If _data IsNot Nothing Then
             DataContext = _data
         End If
-        ' Add any initialization after the InitializeComponent() call.
-
-        'If Pos._itemSource Is Nothing Then
-        '    Pos._itemSource = New DataTable()
-        '    Pos._itemSource.Columns.Add("Name")
-        '    Pos._itemSource.Columns.Add("Quantity")
-        '    Pos._itemSource.Columns.Add("Price")
-        '    Pos._itemSource.Columns.Add("TotalPrice")
-        '    Pos._itemSource.Clear()
-        '    'Else
-        '    '    'Pos._itemSource.Columns.Add("Name")
-        '    '    'Pos._itemSource.Columns.Add("Quantity")
-        '    '    'Pos._itemSource.Columns.Add("Price")
-        '    '    'Pos._itemSource.Columns.Add("TotalPrice")
-        '    '    Pos._itemSource.Clear()
-        'End If
-
-        'Pos._itemSource.Clear()
-        'Pos._itemSource.Columns.Add("Name")
-        'Pos._itemSource.Columns.Add("Quantity")
-        'Pos._itemSource.Columns.Add("Price")
-        'Pos._itemSource.Columns.Add("TotalPrice")
 
         ' Check if the DataTable already has the columns
         Dim hasNameColumn As Boolean = Pos._itemSource.Columns.Contains("Name")
@@ -134,4 +117,8 @@ Public Class QuantityDialog
     '        QuantityAvailable.Text = Nothing
     '    End If
     'End Sub
+
+
 End Class
+
+

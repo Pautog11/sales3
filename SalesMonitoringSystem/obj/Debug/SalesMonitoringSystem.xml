@@ -64,16 +64,6 @@ AuditTrailPanel
 InitializeComponent
 </summary>
 </member>
-<member name="T:SalesMonitoringSystem.fuck">
-<summary>
-fuck
-</summary>
-</member>
-<member name="M:SalesMonitoringSystem.fuck.InitializeComponent">
-<summary>
-InitializeComponent
-</summary>
-</member>
 <member name="T:SalesMonitoringSystem.Pos">
 <summary>
 Pos

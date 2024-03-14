@@ -53,14 +53,7 @@ Public Class Login
                 Select Case My.Settings.userRole
                     Case 1 ' Super Admin
                         ' Handle Super Admin
-                        'dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
-                        'dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                        'dash.poss.Visibility = Visibility.Collapsed ' Not sure what this is
-                        'dash.SalesToday.Visibility = Visibility.Collapsed
-                        'Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
-                        'tabs.Remove(dash.MaintainanceContainer.AccountTab)
-                        'tabs.Remove(dash.MaintainanceContainer.CategoryTab)
-                        'tabs.Remove(dash.MaintainanceContainer.SupplierTab)
+
                     Case 2 ' Stock Holder
                         ' Handle Stock Holder
                         dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
@@ -71,11 +64,22 @@ Public Class Login
                         dash.BottomContainerSalesReportButton.Visibility = Visibility.Collapsed
                         dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
                         dash.poss.Visibility = Visibility.Collapsed
+
+                        'for removing uniform grid
+                        dash.UniformGrid.Columns = 1
+                        dash.SalesToday.Visibility = Visibility.Collapsed
+                        dash.TotalTransaction.Visibility = Visibility.Collapsed
+
                     Case 3 ' Admin
                         dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
                         dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
                         dash.poss.Visibility = Visibility.Collapsed ' Not sure what this is
-                        'dash.SalesToday.Visibility = Visibility.Collapsed
+
+                        'for removing uniform grid
+                        dash.UniformGrid.Columns = 2
+                        dash.SalesToday.Visibility = Visibility.Collapsed
+
+                        'for few tabs removed
                         Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
                         tabs.Remove(dash.MaintainanceContainer.AccountTab)
                         tabs.Remove(dash.MaintainanceContainer.CategoryTab)

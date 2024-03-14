@@ -422,7 +422,7 @@
                     </Button>
                 <!--</StackPanel> -->
                 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-                <Button Name="poss"
+                    <Button Name="poss"
                             Style="{x:Null}"
                             Height="50"
                             Background="{x:Null}"
@@ -432,35 +432,26 @@
                             HorizontalAlignment="Center"
                             Margin="0 10 0 0"
                             Template="{StaticResource CustomTemplateButton}">
-                    <hc:FlexPanel Height="{Binding Height, ElementName=BottomContainerDashboardButton}"
+                        <hc:FlexPanel Height="{Binding Height, ElementName=BottomContainerDashboardButton}"
                                     Width="{Binding Width, ElementName=BottomContainerDashboardButton}"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     FlexDirection="Column"
                                     JustifyContent="Center"
                                     AlignContent="Center">
-                        <hc:ImageBlock Name="null"
+                            <hc:ImageBlock Name="null"
                                            Source="{StaticResource ic_pos2}"
                                            Width="28"
                                            Height="28"
                                            VerticalAlignment="Top"
                                            HorizontalAlignment="Center"
                                            />
-                        <!-- STRING -->
-                        <TextBlock Text="POS"
+                            <!-- STRING -->
+                            <TextBlock Text="POS"
                                        FontSize="8"
                                        TextAlignment="Center" Height="10" VerticalAlignment="Bottom"/>
-                    </hc:FlexPanel>
-                </Button>
-                    
-                    
-                    
-                    <!--s-->
-
-                    <Button x:Name="fk"
-                        Content="Fuck"/>
-
-
+                        </hc:FlexPanel>
+                    </Button>
                 </StackPanel>
             
                 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxxxxxxxx -->
@@ -509,7 +500,8 @@
                             Margin="0 0 0 10">
                     <Border>
                         <UniformGrid Columns="3"
-                                 Rows="1">
+                                     x:Name="UniformGrid"
+                                     Rows="1">
                             <Grid VerticalAlignment="Stretch"
                                   x:Name="SalesToday"
                                   HorizontalAlignment="Stretch"
@@ -553,7 +545,8 @@
                             <Grid VerticalAlignment="Stretch"
                                   HorizontalAlignment="Stretch"
                                   Background="{StaticResource ApplicationLight}"
-                                  Margin="5 0">
+                                  Margin="5 0"
+                                  x:Name="TotalTransaction">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="*"/>
@@ -733,13 +726,6 @@
                 <local:Pos/>
             </Grid>
             <!--#endregion-->
-
-            <Grid x:Name="fuck"
-                  Grid.Column="1"
-                  Visibility="Collapsed"
-                  Margin="15 10">
-                <local:fuck/>
-            </Grid>
         </Grid>
         <!--#endregion-->
     </Grid>

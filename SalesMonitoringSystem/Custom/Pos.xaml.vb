@@ -7,6 +7,7 @@ Imports HandyControl.Controls
 Imports Spire.Xls.Core.Spreadsheet
 Imports SalesMonitoringSystem.fuck
 Imports System.Windows.Controls
+Imports HandyControl.Tools.Extension
 
 Public Class Pos
     Implements IObserverPanel
@@ -246,7 +247,6 @@ Public Class Pos
     End Sub
 
     Public Sub UpdateVisualData()
-        'a.Rows.Add()
         Receipt.ItemsSource = _itemSource?.DefaultView
         'DataGridView1.Refresh()
         Dim total As Double = 0
@@ -278,11 +278,6 @@ Public Class Pos
     '    '_itemSource.Rows.Add(newRow1)
     '    'UpdateVisualData()
     'End Sub
-
-    Private Sub All_Click(sender As Object, e As RoutedEventArgs) Handles All.Click
-
-    End Sub
-
 
     'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
     '    ' Check if any rows are selected
@@ -319,17 +314,17 @@ Public Class Pos
     'End Sub
 
     Private Sub Receipt_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Receipt.SelectionChanged
-        'Private Sub ProductDataGridView_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ProductDataGridView.SelectionChanged
 
+        'If Receipt.SelectedItems.Count > 0 Then
+        '    Dialog.Show(New QuantityDialog(_subject, Receipt.SelectedItems(0)))
+        '    Receipt.SelectedIndex = -1
+        'End If
 
         If Receipt.SelectedItems.Count > 0 Then
-            'Dim pictureData As Image = ProductDataGridView.SelectedItems(0).Cells("PRODUCT_IMAGE").Value
-            'Dim imageData As Image = imageData()
-            Dialog.Show(New QuantityDialog(_subject, Receipt.SelectedItems(0)))
+            Dim dialog As New QuantityDialog(_subject, Receipt.SelectedItems(0))
+            dialog.Show()
             Receipt.SelectedIndex = -1
         End If
-
-        '============================================================================================
     End Sub
 
 
