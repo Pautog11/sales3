@@ -53,7 +53,7 @@ Public Class Login
                 Select Case My.Settings.userRole
                     Case 1 ' Super Admin
                         ' Handle Super Admin
-
+                        dash.hi.Text = "Hi! Super Admin"
                     Case 2 ' Stock Holder
                         ' Handle Stock Holder
                         dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
@@ -70,6 +70,7 @@ Public Class Login
                         dash.SalesToday.Visibility = Visibility.Collapsed
                         dash.TotalTransaction.Visibility = Visibility.Collapsed
 
+                        dash.hi.Text = "Hi! Stock Holder"
                     Case 3 ' Admin
                         dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
                         dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
@@ -83,11 +84,8 @@ Public Class Login
                         Dim tabs As ItemCollection = dash.MaintainanceContainer.TabControlContainer.Items()
                         tabs.Remove(dash.MaintainanceContainer.AccountTab)
                         tabs.Remove(dash.MaintainanceContainer.CategoryTab)
-                        '    tabs.Remove(dash.MaintainanceContainer.SupplierTab)
-                        'Case Else
-                        '    ' Handle other roles or invalid roles (optional)
-                        '    MessageBox.Info("Invalid user role!", "Login Failed!")
-                        '    Return ' or any other appropriate action
+
+                        dash.hi.Text = "Hi! Admin"
                 End Select
                 dash.Show()
                 Close()
