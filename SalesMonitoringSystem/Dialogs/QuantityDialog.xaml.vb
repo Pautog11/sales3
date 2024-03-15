@@ -12,22 +12,14 @@ Imports System.Windows.Media
 
 
 Public Class QuantityDialog
-    'Inherits Dialog
 
-    '///
     Public Shared Property ProductName As String
     Public Shared Property Description As String
     Public Shared Property Price As Decimal
     Public Shared Property Id As Decimal
 
-
     Private _parent As Pos
     Private _data As DataRowView
-
-    'Private _subject As IObservablePanel
-    'Public _itemSource As DataTable
-    'Private _tableAdapter As New viewtblproductsTableAdapter
-    ' c As String
 
     Public Sub New(
         Optional parent As Pos = Nothing,
@@ -82,17 +74,57 @@ Public Class QuantityDialog
             Growl.Info("Insufficient Stocks")
             CloseDialog(Closebtn)
         Else
+
+            Dim isexist As Boolean = False
+
+            'If Not isexist Then
+
             Dim newRow1 As DataRow = Pos._itemSource.NewRow()
-            newRow1("Name") = ProductNameTextBox.Text
-            newRow1("Quantity") = ProductQuantityTextBox.Text
-            newRow1("Price") = ProductPriceTextBox.Text
+                newRow1("Name") = ProductNameTextBox.Text
+                newRow1("Quantity") = ProductQuantityTextBox.Text
+                newRow1("Price") = ProductPriceTextBox.Text
 
-            Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
-            Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
+                Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
+                Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
 
-            ' Calculate the total price for the new row
-            Dim totalPrice As Double = quantity * price
-            newRow1("TotalPrice") = totalPrice
+                ' Calculate the total price for the new row
+                Dim totalPrice As Double = quantity * price
+                newRow1("TotalPrice") = totalPrice
+            isexist = True
+
+            Pos._itemSource.Rows.Add(newRow1)
+            If isexist Then
+                Growl.Info("nandoon na!")
+                'isexist = False
+            End If
+            'Dim isexist As Boolean
+            'If isexist = True Then
+            '    Dim newRow1 As DataRow = Pos._itemSource.NewRow()
+            '    newRow1("Name") = ProductNameTextBox.Text
+            '    newRow1("Quantity") = ProductQuantityTextBox.Text
+            '    newRow1("Price") = ProductPriceTextBox.Text
+
+            '    Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
+            '    Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
+
+            '    ' Calculate the total price for the new row
+            '    Dim totalPrice As Double = quantity * price
+            '    newRow1("TotalPrice") = totalPrice
+            'Else
+            '    Growl.Info("nandoon na!")
+            'End If
+            'Dim newRow1 As DataRow = Pos._itemSource.NewRow()
+            'newRow1("Name") = ProductNameTextBox.Text
+            'newRow1("Quantity") = ProductQuantityTextBox.Text
+            'newRow1("Price") = ProductPriceTextBox.Text
+
+            'Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
+            'Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
+
+            '' Calculate the total price for the new row
+            'Dim totalPrice As Double = quantity * price
+            'newRow1("TotalPrice") = totalPrice
+            'isexist = True
 
             'For Each row As DataRow In Pos._itemSource.Rows
             '    ' Calculate the total price for existing rows
@@ -105,12 +137,23 @@ Public Class QuantityDialog
             'For i = 0 To Pos._itemSource?.Rows.Count - 1
             '    b += Pos._itemSource.Rows(i).Item("TotalPrice")
             'Next
-            'Dim a As New Pos
-            'a.pota3.Text = b
+            'Dim a As Pos
+            'a.Subtotal.Text = b
 
-            Pos._itemSource.Rows.Add(newRow1)
-            CloseDialog(Closebtn)
+            'Dim s As New SharedTextBox
+            'b = s.Subtotal.Text
+            'Growl.Info(b)
+            'Dim isexist As Boolean
+
+            'If Not isexist Then
+            '    Growl.Info("nandoon na!")
+            'End If
+
+            'Pos._itemSource.Rows.Add(newRow1)
+            'Dim z As Pos
+            'z.UpdateVisualData()
         End If
+        CloseDialog(Closebtn)
     End Sub
 End Class
 

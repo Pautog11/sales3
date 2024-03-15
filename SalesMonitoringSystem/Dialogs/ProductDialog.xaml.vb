@@ -99,9 +99,9 @@ Public Class ProductDialog
 
 
             ' ----------------------cosio -----------------
-            If ProductPriceTextBox.Text < ProductCostTextBox.Text Then
+            If ProductPriceTextBox.Text <= ProductCostTextBox.Text Then
                 Growl.Info("Should not lessthan from the cost price")
-                Return ' ----------------cosio -----------
+                Return
             End If
 
             Dim imageSource As BitmapImage = CType(selectedImage.Source, BitmapImage)
@@ -147,7 +147,7 @@ Public Class ProductDialog
 
     Private Sub DeleteButton_Click(sender As Object, e As RoutedEventArgs) Handles DeleteButton.Click
         Dim baseCommand As New BaseProduct(New Dictionary(Of String, String) From {{"id", _data.Item("ID")}})
-        Dim invoker As New DeleteCommand(baseCommand)   
+        Dim invoker As New DeleteCommand(baseCommand)
 
         invoker?.Execute()
         _subject?.NotifyObserver()
@@ -173,16 +173,4 @@ Public Class ProductDialog
         'selectedImage.Source = ImageSource
     End Sub
 
-    'Public Sub DisplayImage(imageData As Byte())
-    '    Dim bitmapImage As New BitmapImage()
-    '    bitmapImage.BeginInit()
-    '    bitmapImage.CacheOption = BitmapCacheOption.OnLoad
-    '    bitmapImage.StreamSource = New MemoryStream(imageData)
-    '    bitmapImage.EndInit()
-
-    '    selectedImage.Source = bitmapImage
-    'End Sub
-End Class
-Public Class Image123
-    Public selectedImage As String
 End Class

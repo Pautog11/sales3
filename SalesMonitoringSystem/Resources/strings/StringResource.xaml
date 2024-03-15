@@ -19,6 +19,12 @@
     <system:String x:Key="en_name_second">Medical &amp; Diagnostic Clinic</system:String>
     <system:String x:Key="en_name_third">Sales Monitoring System</system:String>
     <!--#endregion-->
-    
 
+    <x:Array x:Key="DiscountOptions" Type="{x:Type system:String}">
+        <system:String>0%</system:String>
+        <system:String>10%</system:String>
+        <system:String>20%</system:String>
+        <system:String>30%</system:String>
+        <system:String>50%</system:String>
+    </x:Array>
 </ResourceDictionary>

@@ -97,7 +97,7 @@
                     </StackPanel>
                 </Grid>
 
-                <Grid Grid.Row="1" Margin="10 0 10 5" Background="#ededed">
+                <Grid Grid.Row="1" Margin="10 0 10 10" Background="#ededed">
                     <hc:ScrollViewer IsInertiaEnabled="True">
                         <WrapPanel Orientation="Horizontal" 
                                x:Name="Wrappanelxd">
@@ -121,7 +121,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0"
                       Margin="0 0 10 0">
-                    <hc:ScrollViewer Grid.Row="0">
+                    <hc:ScrollViewer>
                         <DataGrid x:Name="Receipt"
                                   RowStyle="{DynamicResource CustomDataGridRowStyle}"
                                   ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
@@ -135,22 +135,23 @@
                                   Margin="0 0 0 0" RowHeight="30">
                             <DataGrid.Columns>
                                 <DataGridTextColumn FontSize="13"
-                                                    Header="NAME"
-                                                    Binding="{Binding Name}"
-                                                    Width="*"/>
+                                                        Header="NAME"
+                                                        Binding="{Binding Name}"
+                                                        Width="*"/>
                                 <DataGridTextColumn FontSize="13"
-                                                    Header="PRICE"
-                                                    Binding="{Binding Price}"
-                                                    Width="*"/>
+                                                        Header="PRICE"
+                                                        Binding="{Binding Price}"
+                                                        Width="*"/>
                                 <DataGridTextColumn FontSize="13"
-                                                    Header="QUANTITY"
-                                                    Binding="{Binding Quantity}"
-                                                    Width="*"/>
+                                                        Header="QUANTITY"
+                                                        Binding="{Binding Quantity}"
+                                                        Width="*"/>
                                 <DataGridTextColumn FontSize="13"
-                                                    Header="TOTAL PRICE"
-                                                    Binding="{Binding TotalPrice}"
-                                                    Width="*"/>
+                                                        Header="TOTAL PRICE"
+                                                        Binding="{Binding TotalPrice}"
+                                                        Width="*"/>
                             </DataGrid.Columns>
+
                         </DataGrid>
                     </hc:ScrollViewer>
                 </Grid>
@@ -174,48 +175,21 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0"
-                                               Text="Total"/>
-                                    <TextBox Grid.Column="1"
-                                             />
-                                </Grid>
-
-                                <Grid  Margin="5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"
-                                               Text="Total"/>
-                                    <TextBox Grid.Column="1"
-                                             />
-                                </Grid>
-
-                                <Grid  Margin="5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"
-                                               Text="Total"/>
-                                    <TextBox Grid.Column="1"
-                                              />
-                                </Grid>
-
-                                <Grid  Margin="5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"
-                                               Text="Total"/>
-                                    <TextBox Grid.Column="1"
-                                             />
+                                               FontFamily="arial"
+                                               FontWeight="Bold"
+                                               FontSize="12"
+                                               Text="Discount :"
+                                               Padding="0 10 0 0"/>
+                                    <ComboBox Grid.Column="1"
+                                             x:Name="Discount"
+                                             ItemsSource="{StaticResource DiscountOptions}"/>
                                 </Grid>
                             </StackPanel>
                         </Grid>
 
                         <!--Right Panel-->
-                        <Grid Grid.Column="1">
+                        <Grid Grid.Column="1"
+                              Margin="5 0 0 0">
                             <StackPanel>
                                 <Grid  Margin="5">
                                     <Grid.ColumnDefinitions>
@@ -223,9 +197,13 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0"
-                                               Text="Total"/>
+                                               FontFamily="arial"
+                                               FontWeight="Bold"
+                                               Text="Subtotal :"
+                                               FontSize="12"
+                                               Padding="0 10 0 0"/>
                                     <TextBox Grid.Column="1"
-                                             />
+                                             x:Name="Subtotal"/>
                                 </Grid>
 
                                 <Grid  Margin="5">
@@ -234,34 +212,22 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0"
-                                               Text="Total"/>
+                                               Padding="0 10 0 0"
+                                               FontFamily="arial"
+                                               FontWeight="Bold"
+                                               FontSize="12"
+                                               Text="Total :"/>
                                     <TextBox Grid.Column="1"
-                                             />
-                                </Grid>
-
-                                <Grid  Margin="5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"
-                                               Text="Total"/>
-                                    <TextBox Grid.Column="1"
-                                             />
-                                </Grid>
-
-                                <Grid  Margin="5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0"
-                                               Text="Total"/>
-                                    <TextBox Grid.Column="1"
-                                             />
+                                             x:Name="Total"/>
                                 </Grid>
                             </StackPanel>
-                            
+                            <Button
+                                 Width="69"
+                                 Background="{StaticResource ApplicationPrimaryDark}"
+                                 HorizontalAlignment="Right"
+                                 Foreground="White"
+                                 VerticalAlignment="Bottom"
+                                 Content="Purchase" Click="Button_Click"/>
                         </Grid>
                     </Grid>
                 </Border>
