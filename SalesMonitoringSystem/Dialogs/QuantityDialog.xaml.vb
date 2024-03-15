@@ -101,6 +101,13 @@ Public Class QuantityDialog
             '    row.SetField("TotalPrice", existingQuantity * existingPrice)
             'Next
 
+            'Dim b As Integer
+            'For i = 0 To Pos._itemSource?.Rows.Count - 1
+            '    b += Pos._itemSource.Rows(i).Item("TotalPrice")
+            'Next
+            'Dim a As New Pos
+            'a.pota3.Text = b
+
             Pos._itemSource.Rows.Add(newRow1)
             CloseDialog(Closebtn)
         End If

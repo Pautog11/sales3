@@ -144,7 +144,7 @@ Public Class Pos
 
         Try
             UpdateVisualData()
-            pota.Text = GenInvoiceNumber(InvoiceType.Transaction)
+            'pota.Text = GenInvoiceNumber(InvoiceType.Transaction)
 
 
             Wrappanelxd.Children.Clear()
@@ -250,11 +250,11 @@ Public Class Pos
     Public Sub UpdateVisualData()
         Receipt.ItemsSource = _itemSource?.DefaultView
         'DataGridView1.Refresh()
-        Dim total As Double = 0
-        For i = 0 To _itemSource?.Rows.Count - 1
-            total += _itemSource.Rows(i).Item("TotalPrice")
-        Next
-        pota3.Text = total
+        'Dim total As Double = 0
+        'For i = 0 To _itemSource?.Rows.Count - 1
+        '    total += _itemSource.Rows(i).Item("TotalPrice")
+        'Next
+        'pota3.Text = total
     End Sub
     Private Sub ProductSearch_TextChanged(sender As Object, e As TextChangedEventArgs) Handles ProductSearch.TextChanged
         Dim searchText As String = ProductSearch.Text.ToLower()
@@ -269,50 +269,50 @@ Public Class Pos
         Next
     End Sub
 
-    'Private Sub AsdDsll_Click(sender As Object, e As RoutedEventArgs) Handles AsdDsll.Click
+    Private Sub AsdDsll_Click(sender As Object, e As RoutedEventArgs) Handles AsdDsll.Click
 
-    '    'Dim newRow1 As DataRow = _itemSource.NewRow()
-    '    'newRow1("Name") = "Jok"
-    '    'newRow1("Quantity") = 2
-    '    'newRow1("Price") = 9
-    '    'newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
-    '    '_itemSource.Rows.Add(newRow1)
-    '    'UpdateVisualData()
-    'End Sub
+        Dim newRow1 As DataRow = _itemSource.NewRow()
+        newRow1("Name") = "Jok"
+        newRow1("Quantity") = 2
+        newRow1("Price") = 9
+        newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
+        _itemSource.Rows.Add(newRow1)
+        UpdateVisualData()
+        'End Sub
 
-    'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
-    '    ' Check if any rows are selected
-    '    If Receipt.SelectedItems.Count > 0 Then
-    '        ' Get the data from the selected row(s)
-    '        Dim selectedRow As DataGridViewRow = Receipt.SelectedItems(0) ' Assuming you only allow single row selection
-    '        Dim firstName As String = selectedRow.Cells("FirstNameColumn").Value.ToString()
-    '        Dim lastName As String = selectedRow.Cells("LastNameColumn").Value.ToString()
-    '        Dim age As Integer = Convert.ToInt32(selectedRow.Cells("AgeColumn").Value)
+        'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
+        '    ' Check if any rows are selected
+        '    If Receipt.SelectedItems.Count > 0 Then
+        '        ' Get the data from the selected row(s)
+        '        Dim selectedRow As DataGridViewRow = Receipt.SelectedItems(0) ' Assuming you only allow single row selection
+        '        Dim firstName As String = selectedRow.Cells("FirstNameColumn").Value.ToString()
+        '        Dim lastName As String = selectedRow.Cells("LastNameColumn").Value.ToString()
+        '        Dim age As Integer = Convert.ToInt32(selectedRow.Cells("AgeColumn").Value)
 
-    '        ' Do something with the selected data
-    '        Windows.MessageBox.Show($"Selected: {firstName} {lastName}, Age: {age}")
-    '    End If
-    'End Sub
+        '        ' Do something with the selected data
+        '        Windows.MessageBox.Show($"Selected: {firstName} {lastName}, Age: {age}")
+        '    End If
+        'End Sub
 
-    'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
-    '    ' Check if any cells are selected
-    '    If Receipt.SelectedCells.Count > 0 Then
-    '        ' Get the row index of the first selected cell
-    '        Dim rowIndex As Integer = Receipt.SelectedCells(0).RowIndex
+        'Private Sub Receipt_SelectionChanged(sender As Object, e As EventArgs) Handles Receipt.SelectionChanged
+        '    ' Check if any cells are selected
+        '    If Receipt.SelectedCells.Count > 0 Then
+        '        ' Get the row index of the first selected cell
+        '        Dim rowIndex As Integer = Receipt.SelectedCells(0).RowIndex
 
-    '        ' Get the selected row
-    '        Dim selectedRow As DataGridViewRow = Receipt.Rows(rowIndex)
+        '        ' Get the selected row
+        '        Dim selectedRow As DataGridViewRow = Receipt.Rows(rowIndex)
 
-    '        ' Access the data from the selected row
-    '        Dim firstName As String = selectedRow.Cells("FirstNameColumn").Value.ToString()
-    '        Dim lastName As String = selectedRow.Cells("LastNameColumn").Value.ToString()
-    '        Dim age As Integer = Convert.ToInt32(selectedRow.Cells("AgeColumn").Value)
+        '        ' Access the data from the selected row
+        '        Dim firstName As String = selectedRow.Cells("FirstNameColumn").Value.ToString()
+        '        Dim lastName As String = selectedRow.Cells("LastNameColumn").Value.ToString()
+        '        Dim age As Integer = Convert.ToInt32(selectedRow.Cells("AgeColumn").Value)
 
-    '        ' Do something with the selected data
-    '        Windows.MessageBox.Show($"Selected: {firstName} {lastName}, Age: {age}")
-    '    End If
+        '        ' Do something with the selected data
+        '        Windows.MessageBox.Show($"Selected: {firstName} {lastName}, Age: {age}")
+        '    End If
 
-    'End Sub
+    End Sub
 
     Private Sub Receipt_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Receipt.SelectionChanged
 

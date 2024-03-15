@@ -71,7 +71,7 @@
                             FontStyle="Italic"
                             FontFamily="Arial"
                             BorderThickness="0"/>
-                        
+
                         <Button x:Name="Asdsll"
                             Content="LENS"
                             Width="90"
@@ -93,7 +93,7 @@
                             FontStyle="Italic"
                             FontFamily="Arial"
                             BorderThickness="0"/>
-                        
+
                     </StackPanel>
                 </Grid>
 
@@ -106,62 +106,167 @@
                         </WrapPanel>
                     </hc:ScrollViewer>
 
-            </Grid>
                 </Grid>
-            
+            </Grid>
+
             <!--//////////////////////////////////////////////////////// -->
 
-            <Grid Grid.Column="1" x:Name="Tite">
+            <Grid Grid.Column="1" 
+                  Background="White"
+                  x:Name="Tite">
                 <!--Background="DarkBlue">-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="250"/>
                 </Grid.RowDefinitions>
-                <hc:ScrollViewer Grid.Row="0">
-                    <DataGrid x:Name="Receipt"
-                              RowStyle="{DynamicResource CustomDataGridRowStyle}"
-                              ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
-                              CellStyle="{DynamicResource CustomDataGridCellStyle}"
-                              hc:Empty.ShowEmpty="True"
-                              Padding="0"
-                              IsReadOnly="True"
-                              CanUserResizeColumns="False"
-                              AutoGenerateColumns="False"
-                              Grid.Row="1"
-                              Margin="0 0 0 0" RowHeight="30">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn FontSize="13"
-                                    Header="NAME"
-                                    Binding="{Binding Name}"
-                                    Width="*"/>
-                            <DataGridTextColumn FontSize="13"
-                                    Header="PRICE"
-                                    Binding="{Binding Price}"
-                                    Width="*"/>
-                            <DataGridTextColumn FontSize="13"
-                                    Header="QUANTITY"
-                                    Binding="{Binding Quantity}"
-                                    Width="*"/>
-                            <DataGridTextColumn FontSize="13"
-                                    Header="TOTAL PRICE"
-                                    Binding="{Binding TotalPrice}"
-                                    Width="*"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </hc:ScrollViewer>
-                <Grid Grid.Row="1" Background="White">
-                    <StackPanel>
-                        <TextBlock
-                        x:Name="pota"/>
-                        <TextBlock
-                        x:Name="pota1"/>
-                        <TextBlock
-                        x:Name="pota2"/>
-                        <TextBlock
-                        x:Name="pota3"/>
-                    </StackPanel>
+                <Grid Grid.Row="0"
+                      Margin="0 0 10 0">
+                    <hc:ScrollViewer Grid.Row="0">
+                        <DataGrid x:Name="Receipt"
+                                  RowStyle="{DynamicResource CustomDataGridRowStyle}"
+                                  ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
+                                  CellStyle="{DynamicResource CustomDataGridCellStyle}"
+                                  hc:Empty.ShowEmpty="True"
+                                  Padding="0"
+                                  IsReadOnly="True"
+                                  CanUserResizeColumns="False"
+                                  AutoGenerateColumns="False"
+                                  Grid.Row="1"
+                                  Margin="0 0 0 0" RowHeight="30">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn FontSize="13"
+                                                    Header="NAME"
+                                                    Binding="{Binding Name}"
+                                                    Width="*"/>
+                                <DataGridTextColumn FontSize="13"
+                                                    Header="PRICE"
+                                                    Binding="{Binding Price}"
+                                                    Width="*"/>
+                                <DataGridTextColumn FontSize="13"
+                                                    Header="QUANTITY"
+                                                    Binding="{Binding Quantity}"
+                                                    Width="*"/>
+                                <DataGridTextColumn FontSize="13"
+                                                    Header="TOTAL PRICE"
+                                                    Binding="{Binding TotalPrice}"
+                                                    Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </hc:ScrollViewer>
                 </Grid>
+                <Border Grid.Row="1"
+                        BorderBrush="LightGray"
+                        BorderThickness=".9"
+                        CornerRadius="5"
+                        Margin="0 5 10 10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Left Panel-->
+                        <Grid Grid.Column="0">
+                            <StackPanel>
+                                <Grid Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                              />
+                                </Grid>
+
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+
+                        <!--Right Panel-->
+                        <Grid Grid.Column="1">
+                            <StackPanel>
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+
+                                <Grid  Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Total"/>
+                                    <TextBox Grid.Column="1"
+                                             />
+                                </Grid>
+                            </StackPanel>
+                            
+                        </Grid>
+                    </Grid>
+                </Border>
             </Grid>
         </Grid>
     </Grid>
 </UserControl>
+    
