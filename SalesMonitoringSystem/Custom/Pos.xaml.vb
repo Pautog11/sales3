@@ -155,6 +155,7 @@ Public Class Pos
 
             For Each row As DataRow In dTable.Rows
                 Dim cardModel As New CardModel()
+                cardModel.Id = row.Field(Of Integer)("id")
                 cardModel.Title = row.Field(Of String)("product_name")
                 cardModel.Description = If(row.IsNull("product_description"), "None", row.Field(Of String)("product_description"))
                 cardModel.Price = row.Field(Of Double)("product_price")
@@ -331,6 +332,7 @@ Public Class Pos
 End Class
 
 Public Class CardModel
+    Public Property Id As String
     Public Property Title As String
     Public Property Description As String
     Public Property ImageSourceProperty As ImageSource

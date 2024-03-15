@@ -18,6 +18,8 @@ Public Class QuantityDialog
     Public Shared Property ProductName As String
     Public Shared Property Description As String
     Public Shared Property Price As Decimal
+    Public Shared Property Id As Decimal
+
 
     Private _parent As Pos
     Private _data As DataRowView
@@ -64,61 +66,45 @@ Public Class QuantityDialog
 
 
         UpdateTextboxes()
+
     End Sub
 
     Public Sub UpdateTextboxes()
         ProductNameTextBox.Text = ProductName
         ProductDescriptionTextBox.Text = Description
         ProductPriceTextBox.Text = Price.ToString()
-
-        'If Not String.IsNullOrEmpty(ProductNameTextBox.Text) Then
-        '    Dim info As DataTable = BaseProduct.ProductInfo(ProductNameTextBox.Text)
-        '    ' Assuming BaseInventory.ScalarStocks(ProductNameTextBox.Text) returns an integer
-        '    ProductStocks.Text = BaseInventory.ScalarStocks(ProductNameTextBox.Text).ToString()
-        'End If
-        'Dim info As String = BaseProduct.ProductStocks(ProductNameTextBox.Text)
-        'ProductStocks.Text = 
+        ProductStocks.Text = BaseInventory.ScalarStocks(Id).ToString()
 
     End Sub
     Private Sub SaveCategoryButton_Click(ByVal sender As Object, e As RoutedEventArgs) Handles SaveCategoryButton.Click
 
-        Dim newRow1 As DataRow = Pos._itemSource.NewRow()
-        newRow1("Name") = ProductNameTextBox.Text
-        newRow1("Quantity") = ProductQuantityTextBox.Text
-        newRow1("Price") = ProductPriceTextBox.Text
+        If Integer.Parse(ProductStocks.Text) < Integer.Parse(ProductQuantityTextBox.Text) Then
+            Growl.Info("Insufficient Stocks")
+            CloseDialog(Closebtn)
+        Else
+            Dim newRow1 As DataRow = Pos._itemSource.NewRow()
+            newRow1("Name") = ProductNameTextBox.Text
+            newRow1("Quantity") = ProductQuantityTextBox.Text
+            newRow1("Price") = ProductPriceTextBox.Text
 
-        Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
-        Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
+            Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
+            Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
 
-        ' Calculate the total price for the new row
-        Dim totalPrice As Double = quantity * price
-        newRow1("TotalPrice") = totalPrice
+            ' Calculate the total price for the new row
+            Dim totalPrice As Double = quantity * price
+            newRow1("TotalPrice") = totalPrice
 
-        'For Each row As DataRow In Pos._itemSource.Rows
-        '    ' Calculate the total price for existing rows
-        '    Dim existingQuantity As Integer = row.Field(Of Integer)("Quantity")
-        '    Dim existingPrice As Double = row.Field(Of Double)("Price")
-        '    row.SetField("TotalPrice", existingQuantity * existingPrice)
-        'Next
+            'For Each row As DataRow In Pos._itemSource.Rows
+            '    ' Calculate the total price for existing rows
+            '    Dim existingQuantity As Integer = row.Field(Of Integer)("Quantity")
+            '    Dim existingPrice As Double = row.Field(Of Double)("Price")
+            '    row.SetField("TotalPrice", existingQuantity * existingPrice)
+            'Next
 
-
-
-
-        Pos._itemSource.Rows.Add(newRow1)
-        CloseDialog(Closebtn)
+            Pos._itemSource.Rows.Add(newRow1)
+            CloseDialog(Closebtn)
+        End If
     End Sub
-    'Private Sub ProductNameComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles ProductNameComboBox.SelectionChanged
-    '    If ProductNameComboBox.SelectedIndex <> -1 Then
-    '        Dim info As DataTable = BaseProduct.ProductInfo(ProductNameComboBox.SelectedValue)
-    '        SellingPriceTextBox.Text = info.Rows(0).Item("PRICE").ToString
-    '        QuantityAvailable.Text = BaseInventory.ScalarStocks(ProductNameComboBox.SelectedValue).ToString
-    '    Else
-    '        SellingPriceTextBox.Text = Nothing
-    '        QuantityAvailable.Text = Nothing
-    '    End If
-    'End Sub
-
-
 End Class
 
 

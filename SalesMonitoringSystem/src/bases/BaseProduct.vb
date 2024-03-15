@@ -160,7 +160,7 @@ Public Class BaseProduct
     Public Shared Function GetAllProduct() As DataTable
         Try
             Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
-            Dim cmd As New SqlCommand("SELECT product_name, product_description, product_image, product_price FROM tblproducts", conn)
+            Dim cmd As New SqlCommand("SELECT id, product_name, product_description, product_image, product_price FROM tblproducts", conn)
             Dim dTable As New DataTable
             Dim adapter As New SqlDataAdapter(cmd)
             adapter.Fill(dTable)

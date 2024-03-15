@@ -97,7 +97,7 @@
                     </StackPanel>
                 </Grid>
 
-                <Grid Grid.Row="1" Margin="10 0 10 5" Background="LightGray">
+                <Grid Grid.Row="1" Margin="10 0 10 5" Background="#ededed">
                     <hc:ScrollViewer IsInertiaEnabled="True">
                         <WrapPanel Orientation="Horizontal" 
                                x:Name="Wrappanelxd">

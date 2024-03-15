@@ -1,0 +1,1 @@
+﻿SELECT CASE WHEN SUM(stock_in) IS NULL THEN 0 ELSE SUM(stock_in) END AS stocks FROM tblinventory i JOIN tbldeliveries d ON i.delivery_id = d.id WHERE d.product_id = 1302

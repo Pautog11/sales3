@@ -25,6 +25,7 @@ Public Class ProductCard
             QuantityDialog.ProductName = CardModel.Title
             QuantityDialog.Description = CardModel.Description
             QuantityDialog.Price = CardModel.Price
+            QuantityDialog.Id = CardModel.Id
         End If
 
         Dialog.Show(New QuantityDialog)

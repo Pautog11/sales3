@@ -71,7 +71,7 @@
                          Text="{Binding PRODUCT_DESCRIPTION}"
                          HorizontalAlignment="Stretch"
                          hc:BorderElement.CornerRadius="0"
-                         hc:InfoElement.Placeholder="Description"
+                         hc:InfoElement.Placeholder="Description (Optional)"
                          Height="40"/>
             </StackPanel>
             <StackPanel Margin="0 15 0 0">
@@ -106,7 +106,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0">
+                <Grid Grid.Column="0"
+                      Margin="25 0 0 0">
                     <Image x:Name="selectedImage" 
                            HorizontalAlignment="Left" 
                            VerticalAlignment="Center" 

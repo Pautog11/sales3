@@ -68,7 +68,7 @@
             </StackPanel>
 
             <StackPanel Margin="0 8 0 0">
-                <hc:TextBox Name="ProductStocks"
+                <hc:TextBox x:Name="ProductStocks"
                              HorizontalAlignment="Stretch"
                              hc:BorderElement.CornerRadius="0"
                              MinHeight="40"
