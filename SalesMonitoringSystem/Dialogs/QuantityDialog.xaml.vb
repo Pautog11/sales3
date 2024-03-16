@@ -9,6 +9,8 @@ Imports System.Runtime.CompilerServices
 Imports System.Security.Cryptography
 Imports System.Windows.Forms
 Imports System.Windows.Media
+Imports SalesMonitoringSystem.Pos.DataUpdater ' Replace YourNamespace with the actual namespace containing DataUpdater class
+
 
 
 Public Class QuantityDialog
@@ -17,7 +19,6 @@ Public Class QuantityDialog
     Public Shared Property Description As String
     Public Shared Property Price As Decimal
     Public Shared Property Id As Decimal
-
     Private _parent As Pos
     Private _data As DataRowView
 
@@ -58,6 +59,10 @@ Public Class QuantityDialog
 
 
         UpdateTextboxes()
+        'ProductNameTextBox.Text = ""
+        'ProductNameTextBox.Text = ""
+        'ProductNameTextBox.Text = ""
+        'ProductStocks.Text = ""
 
     End Sub
 
@@ -94,7 +99,12 @@ Public Class QuantityDialog
                     newRow("TotalPrice") = totalPrice
 
                     Pos._itemSource.Rows.Add(newRow)
-                    isExist = True ' This sets isExist to True only after adding the new row
+
+                    isExist = True
+
+                    Dim a As New Pos
+                    a.UpdateVisualData()
+
                 End If
 
             End If

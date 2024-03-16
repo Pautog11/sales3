@@ -33,15 +33,20 @@ Public Class DeliveryCartDialog
             RecievedButton.Visibility = Visibility.Collapsed
             CancelButton.Visibility = Visibility.Collapsed
         Else
-            'Dim values As String() = _data.Item("DELIVERY_DATE").Split("/")
-            DeliveryDate.SelectedDate = Date.Parse(_data.Item("DELIVERY_DATE"))
-            DeliveryDate.IsEnabled = False
-            SupplierNameComboBox.IsEnabled = False
-            SaveButton.Visibility = Visibility.Collapsed
-            RecievedButton.Margin = New Thickness(0, 0, 30, 0)
-            AddItemButton.Visibility = Visibility.Collapsed
+            Try
+                'Dim values As String() = _data.Item("DELIVERY_DATE").Split("/")
+                DeliveryDate.SelectedDate = Date.Parse(_data.Item("DELIVERY_DATE"))
+                DeliveryDate.IsEnabled = False
+                SupplierNameComboBox.IsEnabled = False
+                SaveButton.Visibility = Visibility.Collapsed
+                RecievedButton.Margin = New Thickness(0, 0, 30, 0)
+                AddItemButton.Visibility = Visibility.Collapsed
+            Catch ex As Exception
+                HandyControl.Controls.MessageBox.Show(ex.Message)
+            End Try
 
         End If
+        Growl.Info(Date.Now)
     End Sub
 
     Private Sub AddItemButton_Click(sender As Object, e As RoutedEventArgs) Handles AddItemButton.Click

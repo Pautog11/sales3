@@ -40,12 +40,6 @@ Public Class ProductDialog
         End If
     End Sub
 
-
-    '===========================================
-
-
-    '===========================================
-
     Private Sub ProductDialog_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
         CategoryComboBox.ItemsSource = _tableAdapter.GetData().DefaultView
         CategoryComboBox.DisplayMemberPath = "CATEGORY_NAME"
@@ -75,8 +69,6 @@ Public Class ProductDialog
                 'selectedImage.Content = "No Image" ' Display text "No Image"
             End If
         End If
-
-
 
     End Sub
 

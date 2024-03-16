@@ -121,7 +121,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0"
                       Margin="0 0 10 0">
-                    <hc:ScrollViewer>
+                    <!--<hc:ScrollViewer>-->
                         <DataGrid x:Name="Receipt"
                                   RowStyle="{DynamicResource CustomDataGridRowStyle}"
                                   ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
@@ -153,7 +153,7 @@
                             </DataGrid.Columns>
 
                         </DataGrid>
-                    </hc:ScrollViewer>
+                    <!--</hc:ScrollViewer>-->
                 </Grid>
                 <Border Grid.Row="1"
                         BorderBrush="LightGray"
@@ -203,7 +203,8 @@
                                                FontSize="12"
                                                Padding="0 10 0 0"/>
                                     <TextBox Grid.Column="1"
-                                             x:Name="Subtotal"/>
+                                             x:Name="Subtotal"
+                                             IsEnabled="False"/>
                                 </Grid>
 
                                 <Grid  Margin="5">
@@ -218,7 +219,8 @@
                                                FontSize="12"
                                                Text="Total :"/>
                                     <TextBox Grid.Column="1"
-                                             x:Name="Total"/>
+                                             x:Name="Total"
+                                             IsEnabled="False"/>
                                 </Grid>
                             </StackPanel>
                             <Button

@@ -27,10 +27,10 @@ Public Class Pos
         ' up()
 
         'Me._itemSource = New DataTable()
-        _itemSource.Columns.Add("Name", GetType(String))
-        _itemSource.Columns.Add("Quantity", GetType(Integer))
-        _itemSource.Columns.Add("Price", GetType(Double))
-        _itemSource.Columns.Add("TotalPrice", GetType(Double))
+        '_itemSource.Columns.Add("Name", GetType(String))
+        '_itemSource.Columns.Add("Quantity", GetType(Integer))
+        '_itemSource.Columns.Add("Price", GetType(Double))
+        '_itemSource.Columns.Add("TotalPrice", GetType(Double))
 
         'Dim newRow As DataRow = _itemSource.NewRow()
         'newRow("Name") = a
@@ -40,6 +40,7 @@ Public Class Pos
 
         '_itemSource.Rows.Add()
         'Receipt.AutoGenerateColumns = False
+        'UpdateVisualData()
 
     End Sub
 
@@ -86,16 +87,17 @@ Public Class Pos
         Catch ex As Exception
             HandyControl.Controls.MessageBox.Show(ex.Message)
         End Try
-
     End Sub
 
     Public Sub UpdateVisualData()
+
         'DataGridView1.Refresh()
-        Dim total As Double = 0
+        Dim total1 As Double = 0
         For i = 0 To _itemSource?.Rows.Count - 1
-            total += _itemSource.Rows(i).Item("TotalPrice")
+            total1 += _itemSource.Rows(i).Item("TotalPrice")
         Next
-        Subtotal.Text = total
+        Subtotal.Text = total1
+        Total.Text = total1
 
         Receipt.ItemsSource = _itemSource?.DefaultView
 
@@ -133,7 +135,7 @@ Public Class Pos
         '    Dialog.Show(New QuantityDialog(_subject, Receipt.SelectedItems(0)))
         '    Receipt.SelectedIndex = -1
         'End If
-
+        UpdateVisualData()
         If Receipt.SelectedItems.Count > 0 Then
             '    Dim dialog As New QuantityDialog(_subject, Receipt.SelectedItems(0))
             '    dialog.Show()
@@ -144,8 +146,7 @@ Public Class Pos
     End Sub
 
     Private Sub Discount_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Discount.SelectionChanged
-        ' Check if an item is selected in the ComboBox
-        'Subtotal.Text = "1000"
+
         If Discount.SelectedIndex <> -1 Then
             Dim subtotalValue As Decimal
             If Decimal.TryParse(Subtotal.Text, subtotalValue) Then
@@ -164,11 +165,7 @@ Public Class Pos
                 End Select
 
                 Total.Text = dis.ToString("F2")
-                'Else
-                '    Growl.Info("Please enter a valid subtotal value.")
             End If
-            'Else
-            '    Total.Text = "" ' Clear the total if no discount is selected
         End If
     End Sub
 
