@@ -27,10 +27,10 @@ Public Class Pos
         ' up()
 
         'Me._itemSource = New DataTable()
-        '_itemSource.Columns.Add("Name", GetType(String))
-        '_itemSource.Columns.Add("Quantity", GetType(Integer))
-        '_itemSource.Columns.Add("Price", GetType(Double))
-        '_itemSource.Columns.Add("TotalPrice", GetType(Double))
+        _itemSource.Columns.Add("Name", GetType(String))
+        _itemSource.Columns.Add("Quantity", GetType(Integer))
+        _itemSource.Columns.Add("Price", GetType(Double))
+        _itemSource.Columns.Add("TotalPrice", GetType(Double))
 
         'Dim newRow As DataRow = _itemSource.NewRow()
         'newRow("Name") = a
@@ -119,7 +119,7 @@ Public Class Pos
         newRow1("Name") = "Jok"
         newRow1("Quantity") = 2
         newRow1("Price") = 9
-        newRow1("TotalPrice") = 2 * 10.99 ' Example calculation
+        newRow1("TotalPrice") = 100 ' Example calculation
         _itemSource.Rows.Add(newRow1)
         UpdateVisualData()
 

@@ -70,89 +70,38 @@ Public Class QuantityDialog
     End Sub
     Private Sub SaveCategoryButton_Click(ByVal sender As Object, e As RoutedEventArgs) Handles SaveCategoryButton.Click
 
-        If Integer.Parse(ProductStocks.Text) < Integer.Parse(ProductQuantityTextBox.Text) Then
-            Growl.Info("Insufficient Stocks")
-            CloseDialog(Closebtn)
-        Else
+        If InputValidation.ValidateInputString(ProductQuantityTextBox, DataInput.STRING_INTEGER)(0) Then
+            'Growl.Info("Invalid Quantity!")
+            If Integer.Parse(ProductStocks.Text) < Integer.Parse(ProductQuantityTextBox.Text) Then
+                Growl.Info("Insufficient Stocks")
+                CloseDialog(Closebtn)
+            Else
+                Dim isExist As Boolean = False
 
-            Dim isexist As Boolean = False
+                Dim existingRows() As DataRow = Pos._itemSource.Select("Name = '" & ProductNameTextBox.Text & "'")
 
-            'If Not isexist Then
+                If existingRows.Length > 0 Then
+                    Growl.Info("Item already exists!")
+                Else
+                    Dim newRow As DataRow = Pos._itemSource.NewRow()
+                    newRow("Name") = ProductNameTextBox.Text
+                    newRow("Quantity") = ProductQuantityTextBox.Text
+                    newRow("Price") = ProductPriceTextBox.Text
 
-            Dim newRow1 As DataRow = Pos._itemSource.NewRow()
-                newRow1("Name") = ProductNameTextBox.Text
-                newRow1("Quantity") = ProductQuantityTextBox.Text
-                newRow1("Price") = ProductPriceTextBox.Text
+                    Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
+                    Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
+                    Dim totalPrice As Double = quantity * price
+                    newRow("TotalPrice") = totalPrice
 
-                Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
-                Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
+                    Pos._itemSource.Rows.Add(newRow)
+                    isExist = True ' This sets isExist to True only after adding the new row
+                End If
 
-                ' Calculate the total price for the new row
-                Dim totalPrice As Double = quantity * price
-                newRow1("TotalPrice") = totalPrice
-            isexist = True
-
-            Pos._itemSource.Rows.Add(newRow1)
-            If isexist Then
-                Growl.Info("nandoon na!")
-                'isexist = False
             End If
-            'Dim isexist As Boolean
-            'If isexist = True Then
-            '    Dim newRow1 As DataRow = Pos._itemSource.NewRow()
-            '    newRow1("Name") = ProductNameTextBox.Text
-            '    newRow1("Quantity") = ProductQuantityTextBox.Text
-            '    newRow1("Price") = ProductPriceTextBox.Text
-
-            '    Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
-            '    Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
-
-            '    ' Calculate the total price for the new row
-            '    Dim totalPrice As Double = quantity * price
-            '    newRow1("TotalPrice") = totalPrice
-            'Else
-            '    Growl.Info("nandoon na!")
-            'End If
-            'Dim newRow1 As DataRow = Pos._itemSource.NewRow()
-            'newRow1("Name") = ProductNameTextBox.Text
-            'newRow1("Quantity") = ProductQuantityTextBox.Text
-            'newRow1("Price") = ProductPriceTextBox.Text
-
-            'Dim quantity As Integer = Convert.ToInt32(ProductQuantityTextBox.Text)
-            'Dim price As Double = Convert.ToDouble(ProductPriceTextBox.Text)
-
-            '' Calculate the total price for the new row
-            'Dim totalPrice As Double = quantity * price
-            'newRow1("TotalPrice") = totalPrice
-            'isexist = True
-
-            'For Each row As DataRow In Pos._itemSource.Rows
-            '    ' Calculate the total price for existing rows
-            '    Dim existingQuantity As Integer = row.Field(Of Integer)("Quantity")
-            '    Dim existingPrice As Double = row.Field(Of Double)("Price")
-            '    row.SetField("TotalPrice", existingQuantity * existingPrice)
-            'Next
-
-            'Dim b As Integer
-            'For i = 0 To Pos._itemSource?.Rows.Count - 1
-            '    b += Pos._itemSource.Rows(i).Item("TotalPrice")
-            'Next
-            'Dim a As Pos
-            'a.Subtotal.Text = b
-
-            'Dim s As New SharedTextBox
-            'b = s.Subtotal.Text
-            'Growl.Info(b)
-            'Dim isexist As Boolean
-
-            'If Not isexist Then
-            '    Growl.Info("nandoon na!")
-            'End If
-
-            'Pos._itemSource.Rows.Add(newRow1)
-            'Dim z As Pos
-            'z.UpdateVisualData()
+        Else
+            Growl.Info("Invalid Quantity!")
         End If
+        'Growl.Info("Invalid Quantity!")
         CloseDialog(Closebtn)
     End Sub
 End Class

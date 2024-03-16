@@ -32,6 +32,7 @@ Public Class TransactionProductDialog
 
     Private Sub SaveButton_Click(sender As Object, e As RoutedEventArgs) Handles SaveButton.Click
         If InputValidation.ValidateInputString(QuantityTextBox, DataInput.STRING_INTEGER)(0) Then
+            'Growl.Info("Invalid Quantity!")
             If ProductNameComboBox.SelectedIndex = -1 Then
                 Growl.Info("Please select a product.")
                 Return

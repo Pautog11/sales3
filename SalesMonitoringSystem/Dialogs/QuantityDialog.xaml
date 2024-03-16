@@ -84,6 +84,7 @@
                              hc:BorderElement.CornerRadius="0"
                              MinHeight="40"
                              Height="Auto"
+                             InputScope="Number"
                              hc:InfoElement.Necessary="True"
                              hc:InfoElement.Placeholder="Quantity"
                              />

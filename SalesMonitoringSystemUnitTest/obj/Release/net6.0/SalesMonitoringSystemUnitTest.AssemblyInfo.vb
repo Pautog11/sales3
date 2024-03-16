@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("SalesMonitoringSystemUnitTest"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7b1b8b8c863e226a7f46459f6f164d3e11ba493"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("SalesMonitoringSystemUnitTest"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("SalesMonitoringSystemUnitTest"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 

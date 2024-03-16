@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SalesMonitoringSystemUnitTest
-build_property.ProjectDir = C:\Users\Christian\OneDrive\Desktop\sales3\SalesMonitoringSystemUnitTest\
+build_property.ProjectDir = C:\Users\Christian\Desktop\sales3\SalesMonitoringSystemUnitTest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
