@@ -860,3 +860,7 @@ C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMon.86BBE
 C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe
 C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.xml
 C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.pdb
+C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.exe.manifest
+C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.application
+C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe.manifest
+C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.application

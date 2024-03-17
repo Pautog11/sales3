@@ -114,6 +114,16 @@ Public Class QuantityDialog
         'Growl.Info("Invalid Quantity!")
         CloseDialog(Closebtn)
     End Sub
+    'Private Sub QuantityDialog_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
+    '    'ProductNameTextBox.Text = "ddd"'
+    '    Dim pos As Pos
+    '    If pos.Receipt.SelectedItems.Count > 0 Then
+    '        Dim selectedItem = pos.Receipt.SelectedItems(0)
+    '        ' Assuming _subject is accessible here, replace _subject with the appropriate object
+    '        Dialog.Show(New QuantityDialog(pos, selectedItem))
+    '        pos.Receipt.SelectedIndex = -1
+    '    End If
+    'End Sub
 End Class
 
 

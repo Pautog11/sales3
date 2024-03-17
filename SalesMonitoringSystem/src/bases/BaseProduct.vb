@@ -181,4 +181,33 @@ Public Class BaseProduct
             Return 0
         End Try
     End Function
+
+    Public Shared Function FramesQuery() As DataTable
+        Try
+            Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
+            Dim cmd As New SqlCommand("select * from tblcategories a join tblproducts b on a.id = b.category_id where a.category_name = 'Frames';", conn)
+            Dim dTable As New DataTable
+            Dim adapter As New SqlDataAdapter(cmd)
+            adapter.Fill(dTable)
+            Return dTable
+        Catch ex As Exception
+            HandyControl.Controls.MessageBox.Show(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
+    Public Shared Function LensQuery() As DataTable
+        Try
+            Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
+            Dim cmd As New SqlCommand("select * from tblcategories a join tblproducts b on a.id = b.category_id where a.category_name = 'lens';", conn)
+            Dim dTable As New DataTable
+            Dim adapter As New SqlDataAdapter(cmd)
+            adapter.Fill(dTable)
+            Return dTable
+        Catch ex As Exception
+            HandyControl.Controls.MessageBox.Show(ex.Message)
+            Return Nothing
+        End Try
+    End Function
+
 End Class

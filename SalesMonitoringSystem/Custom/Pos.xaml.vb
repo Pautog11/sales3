@@ -42,6 +42,26 @@ Public Class Pos
         'Receipt.AutoGenerateColumns = False
         'UpdateVisualData()
 
+
+        Dim hasNameColumn As Boolean = Pos._itemSource.Columns.Contains("Name")
+        Dim hasQuantityColumn As Boolean = Pos._itemSource.Columns.Contains("Quantity")
+        Dim hasPriceColumn As Boolean = Pos._itemSource.Columns.Contains("Price")
+        Dim hasTotalPriceColumn As Boolean = Pos._itemSource.Columns.Contains("TotalPrice")
+
+        ' Add columns conditionally if they don't already exist
+        If Not hasNameColumn Then
+            Pos._itemSource.Columns.Add("Name")
+        End If
+        If Not hasQuantityColumn Then
+            Pos._itemSource.Columns.Add("Quantity")
+        End If
+        If Not hasPriceColumn Then
+            Pos._itemSource.Columns.Add("Price")
+        End If
+        If Not hasTotalPriceColumn Then
+            Pos._itemSource.Columns.Add("TotalPrice")
+        End If
+
     End Sub
 
     Public Sub Update() Implements IObserverPanel.Update
@@ -135,14 +155,22 @@ Public Class Pos
         '    Dialog.Show(New QuantityDialog(_subject, Receipt.SelectedItems(0)))
         '    Receipt.SelectedIndex = -1
         'End If
-        UpdateVisualData()
+
         If Receipt.SelectedItems.Count > 0 Then
-            '    Dim dialog As New QuantityDialog(_subject, Receipt.SelectedItems(0))
-            '    dialog.Show()
-            '    Receipt.SelectedIndex = -1
-            Dim dialog As New QuantityDialog
-            dialog.Show()
+            ' Assuming _subject is accessible and YourItemType is the type of the selected item
+            Dim selectedObject As DataRowView = CType(Receipt.SelectedItems(0), DataRowView)
+            Dialog.Show(New QuantityDialog(_subject, selectedObject))
+            Receipt.SelectedIndex = -1
         End If
+
+        'UpdateVisualData()
+        'If Receipt.SelectedItems.Count > 0 Then
+        '    '    Dim dialog As New QuantityDialog(_subject, Receipt.SelectedItems(0))
+        '    '    dialog.Show()
+        '    '    Receipt.SelectedIndex = -1
+        '    Dim dialog As New QuantityDialog
+        '    dialog.Show()
+        'End If
     End Sub
 
     Private Sub Discount_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Discount.SelectionChanged
@@ -170,7 +198,99 @@ Public Class Pos
     End Sub
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-        Receipt.ItemsSource = Nothing
+        ''Receipt.ItemsSource = Nothing
+        'Dim a As New DataGridView
+        'a.DataSource = Nothing
+        'a.datas.Clear()
+        'Receipt.ItemsSource = New List(Of CardModel)()
+        'Receipt.Columns.Clear()
+        ''Receipt.Refresh()
+        'Receipt.ItemsSource = Nothing
+        'Receipt.Refresh()
+
+        'Receipt.Rows.Clear()
+
+        _itemSource.Clear()
+
+        'Call CType(Receipt.ItemsSource, DataTable).Rows.Clear()
+    End Sub
+
+    Private Sub Frames_Click(sender As Object, e As RoutedEventArgs) Handles Frames.Click
+        'Growl.Info(BaseProduct.FramesQuery)
+        Wrappanelxd.Children.Clear()
+
+        Dim cardModels As New List(Of CardModel)()
+
+        Dim dTable As DataTable = BaseProduct.FramesQuery()
+
+        For Each row As DataRow In dTable.Rows
+            Dim cardModel As New CardModel()
+            cardModel.Id = row.Field(Of Integer)("id")
+            cardModel.Title = row.Field(Of String)("product_name")
+            cardModel.Description = If(row.IsNull("product_description"), "None", row.Field(Of String)("product_description"))
+            cardModel.Price = row.Field(Of Double)("product_price")
+            If Not row.IsNull("product_image") Then
+                Try
+                    Dim imageData As Byte() = DirectCast(row("product_image"), Byte())
+                    Dim ms As New System.IO.MemoryStream(imageData)
+                    Dim bitmap As New BitmapImage()
+                    bitmap.BeginInit()
+                    bitmap.StreamSource = ms
+                    bitmap.EndInit()
+                    cardModel.ImageSourceProperty = bitmap
+                Catch ex As Exception
+                    cardModel.TextImage = "No Image"
+                End Try
+            Else
+                cardModel.TextImage = "No Image"
+            End If
+            cardModels.Add(cardModel)
+        Next
+        For Each CardModel In cardModels
+            Dim productCard As New ProductCard(CardModel)
+            Wrappanelxd.Children.Add(productCard)
+        Next
+    End Sub
+
+    Private Sub All_Click(sender As Object, e As RoutedEventArgs) Handles All.Click
+        Wrappanelxd.Children.Clear()
+        Update()
+    End Sub
+
+    Private Sub Lens_Click(sender As Object, e As RoutedEventArgs) Handles Lens.Click
+        Wrappanelxd.Children.Clear()
+
+        Dim cardModels As New List(Of CardModel)()
+
+        Dim dTable As DataTable = BaseProduct.LensQuery()
+
+        For Each row As DataRow In dTable.Rows
+            Dim cardModel As New CardModel()
+            cardModel.Id = row.Field(Of Integer)("id")
+            cardModel.Title = row.Field(Of String)("product_name")
+            cardModel.Description = If(row.IsNull("product_description"), "None", row.Field(Of String)("product_description"))
+            cardModel.Price = row.Field(Of Double)("product_price")
+            If Not row.IsNull("product_image") Then
+                Try
+                    Dim imageData As Byte() = DirectCast(row("product_image"), Byte())
+                    Dim ms As New System.IO.MemoryStream(imageData)
+                    Dim bitmap As New BitmapImage()
+                    bitmap.BeginInit()
+                    bitmap.StreamSource = ms
+                    bitmap.EndInit()
+                    cardModel.ImageSourceProperty = bitmap
+                Catch ex As Exception
+                    cardModel.TextImage = "No Image"
+                End Try
+            Else
+                cardModel.TextImage = "No Image"
+            End If
+            cardModels.Add(cardModel)
+        Next
+        For Each CardModel In cardModels
+            Dim productCard As New ProductCard(CardModel)
+            Wrappanelxd.Children.Add(productCard)
+        Next
     End Sub
 End Class
 

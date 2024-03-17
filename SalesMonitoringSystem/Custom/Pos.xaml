@@ -72,7 +72,7 @@
                             FontFamily="Arial"
                             BorderThickness="0"/>
 
-                        <Button x:Name="Asdsll"
+                        <Button x:Name="Lens"
                             Content="LENS"
                             Width="90"
                             Height="25"
