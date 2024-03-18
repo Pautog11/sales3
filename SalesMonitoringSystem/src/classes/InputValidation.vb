@@ -80,6 +80,12 @@ Public Class InputValidation
 
         control.BorderBrush = Brushes.Red
         Return {False, stringInput}
+
+
+
+
+
+
     End Function
 End Class
 

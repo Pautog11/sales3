@@ -75,7 +75,7 @@
                                FontSize="18"
                                Padding="0 0 0 5"
                                FontWeight="Bold"/>-->
-                    <hc:ComboBox Name="RoleComboBox"
+                    <hc:ComboBox x:Name="RoleComboBox"
                                  HorizontalAlignment="Stretch"
                                  hc:BorderElement.CornerRadius="0"
                                  Height="40"

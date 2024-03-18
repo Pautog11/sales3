@@ -1,4 +1,5 @@
 ﻿Imports System.Collections.ObjectModel
+Imports System.Text
 Imports System.Text.RegularExpressions
 Imports HandyControl.Controls
 
@@ -16,6 +17,16 @@ Public Class AccountDialog
         If _data Is Nothing Then
             DeleteButton.Visibility = Visibility.Collapsed
         Else
+            'If RoleComboBox.SelectedItem.ToString = "Super Admin" Then
+            '    RoleComboBox.IsEnabled = False
+            'End If
+
+            'If RoleComboBox.SelectedItem IsNot Nothing AndAlso RoleComboBox.SelectedItem.ToString() = "Super Admin" Then
+            '    RoleComboBox.IsEnabled = False
+            'End If
+            'If RoleComboBox.Text = Nothing Then
+            '    RoleComboBox.Text = "Super Admin"
+            'End If
             SaveButton.Content = "UPDATE"
         End If
 
@@ -48,7 +59,8 @@ Public Class AccountDialog
                     {"contact", result(4)(1)},
                     {"username", result(5)(1)},
                     {"password", result(6)(1)}
-                }
+            }
+
             Dim baseCommand As New BaseAccount(data)
             Dim invoker As ICommandInvoker = Nothing
             If BaseAccount.Exists(result(5)(1)) = 0 AndAlso _data Is Nothing Then
@@ -75,19 +87,20 @@ Public Class AccountDialog
             If _data.Item("id") <> My.Settings.userID Then
                 Dim baseCommand As New BaseAccount(_data)
                 Dim invoker As New DeleteCommand(baseCommand)
-
                 invoker.Execute()
                 _subject.NotifyObserver()
                 CloseDialog(Closebtn)
+                'RoleComboBox.Text = "Super Admin"
             Else
+                'RoleComboBox.Text = "Super Admin"
                 MessageBox.Info("You can't delete your account.")
             End If
+            'RoleComboBox.Text = "Super Admin"
         Else
+            'RoleComboBox.Text = "Super Admin"
             MessageBox.Info("Action can't be performed.")
         End If
     End Sub
-
-
 
     Private Sub AccountDialog_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
         RoleComboBox.ItemsSource = BaseAccount.FillByRoles().DefaultView
@@ -95,9 +108,15 @@ Public Class AccountDialog
         RoleComboBox.SelectedValuePath = "id"
 
         If _data Is Nothing Then
-            RoleComboBox.SelectedIndex = 2
+            RoleComboBox.SelectedIndex = 1
         Else
+            'If RoleComboBox.Text = _data("category_id") OrElse RoleComboBox.Text = "Super Admin" Then
+            'RoleComboBox.IsEnabled = False
+            'End If
             ' Would be a lot easier if I use a ViewModel here but yeah lesson learned.
+            If RoleComboBox.Text Is Nothing Then
+                RoleComboBox.Text = "Super Admin"
+            End If
             FirstNameTextBox.Text = _data.Item("first_name")
             LastNameTextBox.Text = _data.Item("last_name")
             RoleComboBox.SelectedValue = _data.Item("role_id")
@@ -105,7 +124,7 @@ Public Class AccountDialog
             UsernameTextBox.Text = _data.Item("username")
             ContactTextBox.Text = _data.Item("contact")
             PasswordTextBox.ShowEyeButton = False
-        End If
+            End If
     End Sub
 
     Private Sub RoleComboBox_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles RoleComboBox.SelectionChanged

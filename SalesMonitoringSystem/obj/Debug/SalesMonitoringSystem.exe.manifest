@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fyyyiiDv1MwXdVhPcMTJInDnErhRHhnUjJrJZGq8IRw=</dsig:DigestValue>
+        <dsig:DigestValue>5wph1fmd884gbBga20J39R0IcKhh6eAGxl2KC7u32r8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -198,7 +198,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3Awd7oKwZfD0kHoR4B9Nd7R0D8qaKhbd52ToX2+8gPY=</dsig:DigestValue>
+      <dsig:DigestValue>7/AwfylPH/s3YLMrYIPEEeavSSVfYp4WtqKYafhhg6M=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sgsmsdb_log.ldf" size="8388608" writeableType="applicationData">
@@ -207,7 +207,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ou9m+Kmr4sAAqisuzIQkqhu2XitbLzXwc1Mb4lKjlfU=</dsig:DigestValue>
+      <dsig:DigestValue>v821S9KaiB9E/Ro/t8xJG7X834LQXkztZqh7O70tOmo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

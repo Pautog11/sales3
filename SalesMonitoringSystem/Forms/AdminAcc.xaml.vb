@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Markup
 Imports HandyControl.Controls
+Imports HandyControl.Tools.Extension
 Public Class AdminAcc
     Private ReadOnly _data As Dictionary(Of String, String)
     Private ReadOnly _subject As IObservablePanel
@@ -48,11 +49,16 @@ Public Class AdminAcc
                     invoker.Execute()
                 End If
                 'Dim ask As MessageBoxResult = MessageBox.Ask("You will be directed to login page")
+                'Dialog.Show("You will be directed to login page")
                 MessageBox.Show("You will be directed to login page")
+                'Dialog.Show(New WelcomeDialog)
                 'If ask = MessageBoxResult.OK Then
                 Dim log As New Login
-                    log.Show()
-                    Me.Hide()
+                log.Show()
+                'Dialog.Show(New WelcomeDialog)
+                'Dim a As New WelcomeDialog
+                'a.Show
+                Me.Hide()
                 'End If
             End If
         End If

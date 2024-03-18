@@ -74,7 +74,7 @@ Public Class Login
                     Case 3 ' Admin
                         dash.BottomContainerProductsButton.Visibility = Visibility.Collapsed
                         dash.BottomContainerLogsButton.Visibility = Visibility.Collapsed
-                        dash.poss.Visibility = Visibility.Collapsed ' Not sure what this is
+                        'dash.poss.Visibility = Visibility.Collapsed ' Not sure what this is
 
                         'for removing uniform grid
                         dash.UniformGrid.Columns = 2

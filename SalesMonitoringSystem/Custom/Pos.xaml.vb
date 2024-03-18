@@ -156,13 +156,17 @@ Public Class Pos
         '    Receipt.SelectedIndex = -1
         'End If
 
-        If Receipt.SelectedItems.Count > 0 Then
-            ' Assuming _subject is accessible and YourItemType is the type of the selected item
-            Dim selectedObject As DataRowView = CType(Receipt.SelectedItems(0), DataRowView)
-            Dialog.Show(New QuantityDialog(_subject, selectedObject))
-            Receipt.SelectedIndex = -1
-        End If
+        Try
+            If Receipt.SelectedItems.Count > 0 Then
+                ' Assuming _subject is accessible and YourItemType is the type of the selected item
+                Dim selectedObject As DataRowView = CType(Receipt.SelectedItems(0), DataRowView)
+                Dialog.Show(New QuantityDialog(_subject, selectedObject))
+                Receipt.SelectedIndex = -1
+            End If
 
+        Catch ex As Exception
+            HandyControl.Controls.MessageBox.Show(ex.Message)
+        End Try
         'UpdateVisualData()
         'If Receipt.SelectedItems.Count > 0 Then
         '    '    Dim dialog As New QuantityDialog(_subject, Receipt.SelectedItems(0))
@@ -212,7 +216,7 @@ Public Class Pos
 
         _itemSource.Clear()
 
-        'Call CType(Receipt.ItemsSource, DataTable).Rows.Clear()
+        'Dialog.Show(New WelcomeDialog)
     End Sub
 
     Private Sub Frames_Click(sender As Object, e As RoutedEventArgs) Handles Frames.Click

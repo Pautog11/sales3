@@ -33,6 +33,7 @@ Public Class ProductDialog
         _data = data
         _subject = subject
         DataContext = data
+        ProductCostTextBox.Text = data.COST_PRICE
         If _data IsNot Nothing Then
             SaveButton.Content = "UPDATE"
         Else
