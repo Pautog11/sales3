@@ -51,7 +51,7 @@ Public Class AdminAcc
                 'Dim ask As MessageBoxResult = MessageBox.Ask("You will be directed to login page")
                 'Dialog.Show("You will be directed to login page")
                 MessageBox.Show("You will be directed to login page")
-                'Dialog.Show(New WelcomeDialog)
+                'Dialog.Show(New WelcomeDialog) 
                 'If ask = MessageBoxResult.OK Then
                 Dim log As New Login
                 log.Show()

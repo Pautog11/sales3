@@ -33,7 +33,7 @@ Public Class ProductDialog
         _data = data
         _subject = subject
         DataContext = data
-        ProductCostTextBox.Text = data.COST_PRICE
+        'ProductCostTextBox.Text = data.COST_PRICE
         If _data IsNot Nothing Then
             SaveButton.Content = "UPDATE"
         Else
@@ -92,7 +92,7 @@ Public Class ProductDialog
 
 
             ' ----------------------cosio -----------------
-            If ProductPriceTextBox.Text <= ProductCostTextBox.Text Then
+            If Val(ProductPriceTextBox.Text) <= Val(ProductCostTextBox.Text) Then
                 Growl.Info("Should not lessthan from the cost price")
                 Return
             End If
@@ -165,5 +165,4 @@ Public Class ProductDialog
         End If
         'selectedImage.Source = ImageSource
     End Sub
-
 End Class

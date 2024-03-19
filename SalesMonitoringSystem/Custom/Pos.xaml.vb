@@ -7,6 +7,8 @@ Imports HandyControl.Controls
 Imports Spire.Xls.Core.Spreadsheet
 Imports System.Windows.Controls
 Imports HandyControl.Tools.Extension
+Imports System.Drawing
+Imports System.Drawing.Printing
 
 Public Class Pos
     Implements IObserverPanel
@@ -201,24 +203,6 @@ Public Class Pos
         End If
     End Sub
 
-    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-        ''Receipt.ItemsSource = Nothing
-        'Dim a As New DataGridView
-        'a.DataSource = Nothing
-        'a.datas.Clear()
-        'Receipt.ItemsSource = New List(Of CardModel)()
-        'Receipt.Columns.Clear()
-        ''Receipt.Refresh()
-        'Receipt.ItemsSource = Nothing
-        'Receipt.Refresh()
-
-        'Receipt.Rows.Clear()
-
-        _itemSource.Clear()
-
-        'Dialog.Show(New WelcomeDialog)
-    End Sub
-
     Private Sub Frames_Click(sender As Object, e As RoutedEventArgs) Handles Frames.Click
         'Growl.Info(BaseProduct.FramesQuery)
         Wrappanelxd.Children.Clear()
@@ -256,11 +240,6 @@ Public Class Pos
         Next
     End Sub
 
-    Private Sub All_Click(sender As Object, e As RoutedEventArgs) Handles All.Click
-        Wrappanelxd.Children.Clear()
-        Update()
-    End Sub
-
     Private Sub Lens_Click(sender As Object, e As RoutedEventArgs) Handles Lens.Click
         Wrappanelxd.Children.Clear()
 
@@ -296,7 +275,26 @@ Public Class Pos
             Wrappanelxd.Children.Add(productCard)
         Next
     End Sub
+    Private Sub All_Click(sender As Object, e As RoutedEventArgs) Handles All.Click
+        Update()
+    End Sub
+
+    '===================================================================================================
+    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
+        '_itemSource.Clear()
+
+        Dim Doc As New Printing.PrintDocument()
+        Dim PaperSize As New Printing.PaperSize("MySize", 250, 600)
+        Doc.DefaultPageSettings.PaperSize = PaperSize
+
+        Dim PPD As New PrintPreviewDialog()
+        PPD.Document = Doc
+        PPD.WindowState = FormWindowState.Maximized
+        PPD.ShowDialog()
+    End Sub
 End Class
+
+
 
 Public Class CardModel
     Public Property Id As String

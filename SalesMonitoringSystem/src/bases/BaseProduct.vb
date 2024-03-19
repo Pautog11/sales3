@@ -49,6 +49,19 @@ Public Class BaseProduct
             _sqlCommand.Parameters.AddWithValue("@product_cost", _data.Item("product_cost"))
             _sqlCommand.Parameters.AddWithValue("@user_id", My.Settings.userID)
 
+            'Dim converter As New ImageConverter
+            'Dim byteArr As Byte() = converter.ConvertTo(img, GetType(Byte()))
+            '_sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
+
+            ''null image will be accepted as fuck
+            'If byteArr IsNot Nothing Then
+            '    _sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
+            'Else
+            '    'If the image Is null, you can add a DBNull.Value parameter
+            '    _sqlCommand.Parameters.AddWithValue("@product_image", DBNull.Value).SqlDbType = SqlDbType.Image
+            'End If
+
+
             Dim converter As New ImageConverter
             Dim byteArr As Byte() = converter.ConvertTo(img, GetType(Byte()))
             '_sqlCommand.Parameters.AddWithValue("@product_image", byteArr).SqlDbType = SqlDbType.Image
@@ -60,6 +73,7 @@ Public Class BaseProduct
                 'If the image Is null, you can add a DBNull.Value parameter
                 _sqlCommand.Parameters.AddWithValue("@product_image", DBNull.Value).SqlDbType = SqlDbType.Image
             End If
+
 
 
             If _sqlCommand.ExecuteNonQuery() > 0 Then

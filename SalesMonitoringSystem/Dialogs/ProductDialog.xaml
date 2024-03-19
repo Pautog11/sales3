@@ -45,7 +45,7 @@
                          HorizontalAlignment="Stretch"
                          hc:BorderElement.CornerRadius="0"
                          Height="40"
-                             hc:InfoElement.Placeholder="Select category"
+                         hc:InfoElement.Placeholder="Select category"
                          IsEditable="True"/>
             </StackPanel>
             <StackPanel Margin="0 15 0 0">
@@ -94,6 +94,7 @@
                            Padding="0 0 0 5"
                            FontWeight="Bold"/>-->
                 <hc:TextBox Name="ProductCostTextBox"
+                            Text="{Binding COST_PRICE}"
                          HorizontalAlignment="Stretch"
                          hc:BorderElement.CornerRadius="0"
                          hc:InfoElement.Placeholder="Cost price"
