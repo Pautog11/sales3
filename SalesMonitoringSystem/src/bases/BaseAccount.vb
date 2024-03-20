@@ -141,7 +141,6 @@ Public Class BaseAccount
         End Try
     End Function
 
-
     Public Shared Function Search(query As String) As sgsmsdb.viewtblusersDataTable
         Try
             Dim conn As SqlConnection = SqlConnectionSingleton.GetInstance
@@ -156,6 +155,4 @@ Public Class BaseAccount
             Return New sgsmsdb.viewtblusersDataTable
         End Try
     End Function
-
-
 End Class

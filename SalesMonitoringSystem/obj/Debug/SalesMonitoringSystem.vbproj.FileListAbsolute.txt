@@ -864,3 +864,4 @@ C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\bin\Debug\SalesMonitorin
 C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\bin\Debug\SalesMonitoringSystem.application
 C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.exe.manifest
 C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.application
+C:\Users\Christian\Desktop\sales3\SalesMonitoringSystem\obj\Debug\SalesMonitoringSystem.Form1.resources

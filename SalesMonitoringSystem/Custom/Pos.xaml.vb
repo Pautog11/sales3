@@ -9,6 +9,7 @@ Imports System.Windows.Controls
 Imports HandyControl.Tools.Extension
 Imports System.Drawing
 Imports System.Drawing.Printing
+Imports System.IO
 
 Public Class Pos
     Implements IObserverPanel
@@ -279,19 +280,250 @@ Public Class Pos
         Update()
     End Sub
 
-    '===================================================================================================
-    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
-        '_itemSource.Clear()
+    '0000000===================================================================================================00000000
+    ''Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
+    ''    '_itemSource.Clear()
 
-        Dim Doc As New Printing.PrintDocument()
-        Dim PaperSize As New Printing.PaperSize("MySize", 250, 600)
-        Doc.DefaultPageSettings.PaperSize = PaperSize
+    ''    Dim Doc As New Printing.PrintDocument()
+    ''    Dim PaperSize As New Printing.PaperSize("MySize", 250, 600)
+    ''    Doc.DefaultPageSettings.PaperSize = PaperSize
 
-        Dim PPD As New PrintPreviewDialog()
-        PPD.Document = Doc
-        PPD.WindowState = FormWindowState.Maximized
+    ''    AddHandler Doc.PrintPage, AddressOf PrintContent
+
+    ''    Dim PPD As New PrintPreviewDialog()
+    ''    PPD.Document = Doc
+    ''    PPD.WindowState = FormWindowState.Normal
+    ''    PPD.ShowDialog()
+
+    ''    'Dim a As New Form1
+    ''    'a.Show()
+    ''    'a.Button1.PerformClick()
+    ''End Sub
+
+    ''Private Sub PrintContent(sender As Object, e As Printing.PrintPageEventArgs)
+    ''    ' Define the content to be printed
+    ''    Dim printFont As New Font("Arial", 8)
+    ''    Dim printText As String = "Hello, this is a sample text to be printed."
+
+    ''    ' Draw the text on the print page
+    ''    e.Graphics.DrawString(printText, printFont, Brushes.Black, 10, 10)
+    ''End
+    ''
+
+    '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+
+    Dim WithEvents PD As New PrintDocument
+    Dim PPD As New PrintPreviewDialog
+    Dim longpaper As Integer
+
+    Sub changelongpaper()
+        Dim rowcount As Integer
+        longpaper = 0
+        rowcount = Receipt.Items.Count
+        longpaper = rowcount * 15
+        longpaper = longpaper + 240
+    End Sub
+
+    Private Sub Button_Click(sender As Object, e As EventArgs) ' Handles Button1.Click
+        'Growl.Info("klkld")
+        changelongpaper()
+        PPD.Document = PD
         PPD.ShowDialog()
     End Sub
+
+    Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
+        Dim pagesetup As New PageSettings
+        pagesetup.PaperSize = New PaperSize("Custom", 250, 500) 'fixed size
+        'pagesetup.PaperSize = New PaperSize("Custom", 250, longpaper)
+        PD.DefaultPageSettings = pagesetup
+    End Sub
+
+    Private Sub PD_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
+        Dim f8 As New Font("Calibri", 8)
+        Dim f10 As New Font("Calibri", 8)
+        Dim f10b As New Font("Calibri", 8)
+        Dim f14 As New Font("Calibri", 8)
+
+        Dim leftmargin As Integer = PD.DefaultPageSettings.Margins.Left
+        Dim centermargin As Integer = PD.DefaultPageSettings.PaperSize.Width / 2
+        Dim rightmargin As Integer = PD.DefaultPageSettings.PaperSize.Width
+
+        'font alignment
+        Dim right As New StringFormat
+        Dim center As New StringFormat
+
+        right.Alignment = StringAlignment.Far
+        center.Alignment = StringAlignment.Center
+
+        Dim line As String
+        line = "****************************************************************"
+
+        'range from top
+        'logo
+
+        'logo====================================================
+        'Dim logoImage As System.Drawing.Image = My.Resources.ResourceManager.GetObject("ic_icon")
+        'e.Graphics.DrawImage(logoImage, CInt((e.PageBounds.Width - 150) / 2), 5, 150, 35)
+
+        Dim ic_products As New BitmapImage()
+        ic_products.BeginInit()
+        ic_products.UriSource = New Uri("C:\Users\Christian\Desktop\ic_icon.png", UriKind.Relative)
+        ic_products.EndInit()
+
+        ' Convert the BitmapImage to a System.Drawing.Image
+        Dim logoImage As System.Drawing.Image
+
+        Using ms As New MemoryStream()
+            Dim encoder As New PngBitmapEncoder()
+            encoder.Frames.Add(BitmapFrame.Create(ic_products))
+            encoder.Save(ms)
+            logoImage = System.Drawing.Image.FromStream(ms)
+        End Using
+
+        ' Draw the image on the graphics object
+        e.Graphics.DrawImage(logoImage, CInt((e.PageBounds.Width - 150) / 2), 5, 150, 35)
+
+
+
+        'e.Graphics.DrawImage(logoImage, 0, 250, 150, 50)
+        'e.Graphics.DrawImage(logoImage, CInt((e.PageBounds.Width - logoImage.Width) / 2), CInt((e.PageBounds.Height - logoImage.Height) / 2), logoImage.Width, logoImage.Height)
+
+        'e.Graphics.DrawString("Store :", f14, Brushes.Black, centermargin, 5, center)
+        e.Graphics.DrawString("New York Street 15 Avenue", f10, Brushes.Black, centermargin, 40, center)
+        e.Graphics.DrawString("Tel +1763545473", f10, Brushes.Black, centermargin, 55, center)
+
+        e.Graphics.DrawString("Invoice ID", f8, Brushes.Black, 0, 75)
+        e.Graphics.DrawString(":", f8, Brushes.Black, 50, 75)
+        ' ReferenceNumberLabel.Text = GenInvoiceNumber(InvoiceType.Transaction)
+        'e.Graphics.DrawString("DRW8555RE", f8, Brushes.Black, 70, 75)
+        e.Graphics.DrawString(GenInvoiceNumber(InvoiceType.Transaction), f8, Brushes.Black, 70, 75)
+
+        e.Graphics.DrawString("Cashier", f8, Brushes.Black, 0, 85)
+        e.Graphics.DrawString(":", f8, Brushes.Black, 50, 85)
+        e.Graphics.DrawString("Steve Jobs", f8, Brushes.Black, 70, 85)
+
+        e.Graphics.DrawString("08/17/2021 | 15.34", f8, Brushes.Black, 0, 95)
+        'DetailHeader
+        e.Graphics.DrawString("Qty", f8, Brushes.Black, 0, 110)
+        e.Graphics.DrawString("Item", f8, Brushes.Black, 25, 110)
+        e.Graphics.DrawString("Price", f8, Brushes.Black, 180, 110, right)
+        e.Graphics.DrawString("Total", f8, Brushes.Black, rightmargin, 110, right)
+        '
+        e.Graphics.DrawString(line, f8, Brushes.Black, 0, 120)
+
+        Dim height As Integer 'DGV Position
+        Dim i As Long
+        'Receipt.AllowUserToAddRows = False
+        'If receiptDataGridView.CurrentCell.Value Is Nothing Then
+        '    Exit Sub
+        'Else
+        '    For row As Integer = 0 To Receipt.DataGridView.RowCount - 1
+        '        height += 15
+        '        e.Graphics.DrawString(Receipt.Items(row).Cells(1).Value.ToString, f8, Brushes.Black, 0, 115 + height)
+        '        e.Graphics.DrawString(Receipt.Items(row).Cells(0).Value.ToString, f8, Brushes.Black, 25, 115 + height)
+        '        i = Receipt.Items(row).Cells(2).Value
+        '        Receipt.Items(row).Cells(2).Value = Format(i, "##,##0")
+        '        e.Graphics.DrawString(Receipt.Items(row).Cells(2).Value.ToString, f8, Brushes.Black, 180, 115 + height, right)
+
+        '        'totalprice
+        '        Dim totalprice As Long
+        '        totalprice = Val(Receipt.Items(row).Cells(1).Value * Receipt.Items(row).Cells(2).Value)
+        '        e.Graphics.DrawString(totalprice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
+        '        '
+
+        '    Next
+        'End If
+
+        'Receipt.AllowUserToAddRows = False
+        'If Receipt Is Nothing Then
+        '    Exit Sub
+        'Else
+        '    For row As Integer = 0 To Receipt.Items.Count - 1
+        '        height += 15
+        '        e.Graphics.DrawString(Receipt.ItemsSource("Name").Cells(1).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
+        '        e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
+
+        '        'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
+        '        Receipt.ItemsSource(row).Cells(2).Value = i.ToString("##,##0")
+        '        e.Graphics.DrawString(i.ToString("##,##0"), f8, Brushes.Black, 180, 115 + height, right)
+
+        '        ' Total Price
+        '        Dim quantity As Integer = Convert.ToInt32(Receipt.ItemsSource(row).Cells(1).Value)
+        '        Dim unitPrice As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
+        '        Dim totalPrice As Decimal = quantity * unitPrice
+        '        e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
+        '        ' Total Price
+
+        '    Next
+        'End If
+
+        Dim columnNames As New List(Of String) From {"Name", "Quantity", "Price", "TotalPrice"}
+
+        For Each columnName As String In columnNames
+            Dim hasColumn As Boolean = Pos._itemSource.Columns.Contains(columnName)
+            If Not hasColumn Then
+                Pos._itemSource.Columns.Add(columnName)
+            End If
+        Next
+
+        ' Now that columns are ensured to exist, you can proceed with your data loop
+        If Receipt Is Nothing Then
+            Exit Sub
+        Else
+            For row As Integer = 0 To Receipt.Items.Count - 1
+                height += 15
+                e.Graphics.DrawString(Receipt.ItemsSource(row).cells(1).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
+                e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
+
+                'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
+                Receipt.ItemsSource(row).Cells(2).Value = i.ToString("##,##0")
+                e.Graphics.DrawString(i.ToString("##,##0"), f8, Brushes.Black, 180, 115 + height, right)
+
+                ' Total Price
+                Dim quantity As Integer = Convert.ToInt32(Receipt.ItemsSource(row).Cells(1).Value)
+                Dim unitPrice As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
+                Dim totalPrice As Decimal = quantity * unitPrice
+                e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
+                ' Total Price
+            Next
+        End If
+
+
+
+        Dim height2 As Integer
+        height2 = 145 + height
+        ' sumprice() 'call sub
+        e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
+        e.Graphics.DrawString("Total: " & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 10 + height2, right)
+        e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
+        'Barcode
+        'Dim gbarcode As New MessagingToolkit.Barcode.BarcodeEncoder
+        'Try
+        '    Dim barcodeimage As Image
+        '    barcodeimage = New Bitmap(gbarcode.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, "DRW8555RE"))
+        '    e.Graphics.DrawImage(barcodeimage, CInt((e.PageBounds.Width - 150) / 2), 35 + height2, 150, 35)
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'End Try
+        'e.Graphics.DrawString("~ Thanks for shopping ~", f10, Brushes.Black, centermargin, 70 + height2, center)
+        e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
+    End Sub
+
+    Dim t_price As Long
+    Dim t_qty As Long
+    'Sub sumprice()
+    '    Dim countprice As Long = 0
+    '    For rowitem As Long = 0 To DataGridView1.RowCount - 1
+    '        countprice = countprice + Val(Receipt.Items(rowitem).Cells(2).Value * Receipt.Items(rowitem).Cells(1).Value)
+    '    Next
+    '    t_price = countprice
+    '    Dim countqty As Long = 0
+    '    For rowitem As Long = 0 To DataGridView1.RowCount - 1
+    '        countqty = countqty + Receipt.ItemsSource(rowitem).Cells(1).Value
+    '    Next
+    '    t_qty = countqty
+    'End Sub
 End Class
 
 

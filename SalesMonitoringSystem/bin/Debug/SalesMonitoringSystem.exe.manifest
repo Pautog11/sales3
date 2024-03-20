@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SalesMonitoringSystem.exe" size="704504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SalesMonitoringSystem.exe" size="713208">
       <assemblyIdentity name="SalesMonitoringSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sp2NdOWSo/RuNaSXm9Agd6mwEwtuJKLAPGwqOeZqR5Y=</dsig:DigestValue>
+        <dsig:DigestValue>0p3gksACqi+eU3MHU9dKwL8R+mJk/TDDX47A3MUlBg4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -198,7 +198,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Sin9GRZNZeeS26R9xH8DgLzU4niAwQGGRz141YuAJDM=</dsig:DigestValue>
+      <dsig:DigestValue>60kDQl9V5BQJRyoroY8uG49KLfBS0UW9MRLxm6JtL88=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sgsmsdb_log.ldf" size="8388608" writeableType="applicationData">
@@ -207,7 +207,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QErsqbE8r+q4ojX4Ih7kai/mU1wszVT4ml3wFG4sFkY=</dsig:DigestValue>
+      <dsig:DigestValue>ukRc9rG/yv6RQulsdMN/oJlYdWB3RiPnt8C3lD7EV3Y=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
