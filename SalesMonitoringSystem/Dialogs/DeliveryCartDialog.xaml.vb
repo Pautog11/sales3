@@ -46,7 +46,7 @@ Public Class DeliveryCartDialog
             End Try
 
         End If
-        Growl.Info(Date.Now)
+        'Growl.Info(Date.Now)
     End Sub
 
     Private Sub AddItemButton_Click(sender As Object, e As RoutedEventArgs) Handles AddItemButton.Click

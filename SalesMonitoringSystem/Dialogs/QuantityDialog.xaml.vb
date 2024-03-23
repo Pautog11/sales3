@@ -105,6 +105,9 @@ Public Class QuantityDialog
                     Dim a As New Pos
                     a.UpdateVisualData()
 
+
+
+
                 End If
 
             End If

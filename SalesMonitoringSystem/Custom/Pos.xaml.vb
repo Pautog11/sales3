@@ -10,6 +10,7 @@ Imports HandyControl.Tools.Extension
 Imports System.Drawing
 Imports System.Drawing.Printing
 Imports System.IO
+Imports System.Text
 
 Public Class Pos
     Implements IObserverPanel
@@ -147,6 +148,7 @@ Public Class Pos
         newRow1("TotalPrice") = 100 ' Example calculation
         _itemSource.Rows.Add(newRow1)
         UpdateVisualData()
+
 
     End Sub
 
@@ -330,6 +332,24 @@ Public Class Pos
         changelongpaper()
         PPD.Document = PD
         PPD.ShowDialog()
+        'Growl.Info(_itemSource.ToString
+        '
+
+        Dim dataBuilder As New StringBuilder()
+
+        For Each row As DataRowView In Receipt.Items
+            ' Get values from each column in the row
+            Dim name As String = row("Name").ToString()
+            Dim price As String = row("Price").ToString()
+            Dim quantity As String = row("Quantity").ToString()
+            Dim totalPrice As String = row("TotalPrice").ToString()
+
+            ' Append the values to the StringBuilder
+            dataBuilder.AppendLine($"Name: {name}, Price: {price}, Quantity: {quantity}, Total Price: {totalPrice}")
+        Next
+
+        ' Display the data in a message box
+        Windows.MessageBox.Show(dataBuilder.ToString(), "Data from DataGrid", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
@@ -340,10 +360,10 @@ Public Class Pos
     End Sub
 
     Private Sub PD_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
-        Dim f8 As New Font("Calibri", 8)
-        Dim f10 As New Font("Calibri", 8)
-        Dim f10b As New Font("Calibri", 8)
-        Dim f14 As New Font("Calibri", 8)
+        Dim f8 As New Font("Calibri", 6)
+        Dim f10 As New Font("Calibri", 6)
+        Dim f10b As New Font("Calibri", 6)
+        Dim f14 As New Font("Calibri", 6)
 
         Dim leftmargin As Integer = PD.DefaultPageSettings.Margins.Left
         Dim centermargin As Integer = PD.DefaultPageSettings.PaperSize.Width / 2
@@ -385,7 +405,6 @@ Public Class Pos
         e.Graphics.DrawImage(logoImage, CInt((e.PageBounds.Width - 150) / 2), 5, 150, 35)
 
 
-
         'e.Graphics.DrawImage(logoImage, 0, 250, 150, 50)
         'e.Graphics.DrawImage(logoImage, CInt((e.PageBounds.Width - logoImage.Width) / 2), CInt((e.PageBounds.Height - logoImage.Height) / 2), logoImage.Width, logoImage.Height)
 
@@ -403,7 +422,9 @@ Public Class Pos
         e.Graphics.DrawString(":", f8, Brushes.Black, 50, 85)
         e.Graphics.DrawString("Steve Jobs", f8, Brushes.Black, 70, 85)
 
-        e.Graphics.DrawString("08/17/2021 | 15.34", f8, Brushes.Black, 0, 95)
+        e.Graphics.DrawString("Date", f8, Brushes.Black, 0, 95)
+        e.Graphics.DrawString(":", f8, Brushes.Black, 50, 95)
+        e.Graphics.DrawString(Date.Now, f8, Brushes.Black, 70, 95)
         'DetailHeader
         e.Graphics.DrawString("Qty", f8, Brushes.Black, 0, 110)
         e.Graphics.DrawString("Item", f8, Brushes.Black, 25, 110)
@@ -412,8 +433,30 @@ Public Class Pos
         '
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, 120)
 
-        Dim height As Integer 'DGV Position
-        Dim i As Long
+
+
+        e.Graphics.DrawString("Invoice ID", f8, Brushes.Black, 200, 200)
+        'Dim a As Controls.DataGrid = Receipt
+        'MsgBox(a.CurrentRow.Cells(0).Value.ToString)
+
+
+        '''Dim a As Controls.DataGrid = Receipt
+
+        '''' Check if the DataTable has any rows
+        '''If a.Rows.Count > 0 Then
+        '''    ' Assuming you want to access the first row and the first column
+        '''    Dim cellValue As String = a.Rows(0)(0).ToString()
+        '''    MsgBox(cellValue)
+        '''Else
+        '''    MsgBox("The DataTable is empty.")
+        '''End If
+
+        ' Assuming Receipt is a DataGrid control
+        ' Assuming Receipt is a DataTable
+
+
+        'Dim height As Integer 'DGV Position
+        ' Dim i As Long
         'Receipt.AllowUserToAddRows = False
         'If receiptDataGridView.CurrentCell.Value Is Nothing Then
         '    Exit Sub
@@ -436,12 +479,108 @@ Public Class Pos
         'End If
 
         'Receipt.AllowUserToAddRows = False
+
+
+
         'If Receipt Is Nothing Then
         '    Exit Sub
         'Else
-        '    For row As Integer = 0 To Receipt.Items.Count - 1
+        'For row As Integer = 0 To Receipt.Items.Count - 1
+        '    height += 15
+        '    e.Graphics.DrawString(Receipt.DataContext(row).Cells(2).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
+        '    e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
+
+        '    'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
+        '    Receipt.ItemsSource(row).Cells(2).Value = i.ToString("##,##0")
+        '    e.Graphics.DrawString(i.ToString("##,##0"), f8, Brushes.Black, 180, 115 + height, right)
+
+        '    ' Total Price
+        '    Dim quantity As Integer = Convert.ToInt32(Receipt.ItemsSource(row).Cells(1).Value)
+        '    Dim unitPrice As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
+        '    Dim totalPrice As Decimal = quantity * unitPrice
+        '    e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
+        '    ' Total Price
+
+
+
+        'For Each rows As Object In Receipt.Items
+        '    If (Receipt.Items(i).columns("Name").ToString) Then
+        '        Double.Parse(Receipt.Items(i).cells("Name").value.ToString)
+        '    End If
+
+        'Next
+
+        ' Assuming Receipt is a class or object that contains the Items collection
+        'For Each row As Object In Receipt.Items
+        '    Dim nameValue As String = row("Name").ToString()
+        '    If Not String.IsNullOrEmpty(nameValue) Then
+        '        '    Dim parsedName As Double
+        '        '    If Double.TryParse(nameValue, parsedName) Then
+        '        '        ' Use parsedName as needed (e.g., store it in a list, perform calculations, etc.)
+        '        '        ' Example: myList.Add(parsedName)
+        '        e.Graphics.DrawString(Receipt.Items(row).Value.ToString, f8, Brushes.Black, 0, 115 + height)
+        '        '    Else
+        '        '        ' Handle the case where the value couldn't be parsed as a double
+        '        '        ' For example, display an error message or log the issue
+        '        '    End If
+        '    End If
+        'Next
+        ' Assuming Receipt is a class or object that contains the Items collection
+        '    For Each item As Object In Receipt.Items
+        '        ' Check if the current item has a valid "Name" field
+        '        'If TypeOf item Is DataRow AndAlso Not String.IsNullOrEmpty(DirectCast(item, DataRow)("Name").ToString()) Then'
+        '        'If TypeOf item Is DataRow AndAlso DirectCast(item, DataRow).Table.Columns.Contains("Name") AndAlso Not IsDBNull(DirectCast(item, DataRow)("Name")) AndAlso Not String.IsNullOrEmpty(DirectCast(item, DataRow)("Name").ToString()) Then
+
+        '        ' Extract the name value from the current item
+        '        Dim nameValue As String = DirectCast(item, DataRow)("Name").ToString()
+
+        '            ' Check if the name value can be parsed as a Double (optional)
+        '            ' Dim parsedName As Double
+        '            ' If Double.TryParse(nameValue, parsedName) Then
+        '            '     ' Use parsedName as needed (e.g., store it in a list, perform calculations, etc.)
+        '            '     ' Example: myList.Add(parsedName)
+
+        '            ' Draw the value from the current item using Graphics.DrawString
+        '            Dim valueToDraw As String = item("Value").ToString()
+        '        e.Graphics.DrawString(nameValue, f8, Brushes.Black, 0, 115 + height)
+        '        e.Graphics.DrawString("ddsds", f8, Brushes.Black, 0, 115 + height)
+        '        Dim ff As String = "dsdsd"
+        '        e.Graphics.DrawString(ff, f8, Brushes.Black, 50, 120)
+
+
+        '        ' Else
+        '        '     ' Handle the case where the value couldn't be parsed as a double
+        '        '     ' For example, display an error message or log the issue
+        '        ' End If
+        '        'Dim printText As String = "Hello, this is a sample text to be printed."
+        '        'e.Graphics.DrawString(printText, f8, Brushes.Black, 10, 10)
+        '        'End If
+
+        '    Next
+
+        '    Dim printText As String = "Hello, this is a sample text to be printed."
+        '    e.Graphics.DrawString(printText, f8, Brushes.Black, 10, 10)
+
+        'End If
+
+
+
+        'Dim columnNames As New List(Of String) From {"Name", "Quantity", "Price", "TotalPrice"}
+
+        'For Each columnName As String In columnNames
+        '    Dim hasColumn As Boolean = Pos._itemSource.Columns.Contains(columnName)
+        '    If Not hasColumn Then
+        '        Pos._itemSource.Columns.Add(columnName)
+        '    End If
+        'Next
+
+        '' Now that columns are ensured to exist, you can proceed with your data loop
+        'If Receipt Is Nothing Then
+        '    Exit Sub
+        'Else
+        '    For row As Integer = 0 To Receipt.SelectedItems.Count - 1
         '        height += 15
-        '        e.Graphics.DrawString(Receipt.ItemsSource("Name").Cells(1).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
+        '        e.Graphics.DrawString(Receipt.ItemsSource(row).cells(1).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
         '        e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
 
         '        'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
@@ -454,49 +593,26 @@ Public Class Pos
         '        Dim totalPrice As Decimal = quantity * unitPrice
         '        e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
         '        ' Total Price
-
         '    Next
         'End If
 
-        Dim columnNames As New List(Of String) From {"Name", "Quantity", "Price", "TotalPrice"}
+        'Windows.MessageBox.Show(Receipt.CurrentItem(1).Cells(1).Value)
 
-        For Each columnName As String In columnNames
-            Dim hasColumn As Boolean = Pos._itemSource.Columns.Contains(columnName)
-            If Not hasColumn Then
-                Pos._itemSource.Columns.Add(columnName)
-            End If
-        Next
+        ' Check if Receipt.ItemsSource is not null and has items
+        ' Check if Receipt.ItemsSource is not null and has items
 
-        ' Now that columns are ensured to exist, you can proceed with your data loop
-        If Receipt Is Nothing Then
-            Exit Sub
-        Else
-            For row As Integer = 0 To Receipt.Items.Count - 1
-                height += 15
-                e.Graphics.DrawString(Receipt.ItemsSource(row).cells(1).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
-                e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
-
-                'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
-                Receipt.ItemsSource(row).Cells(2).Value = i.ToString("##,##0")
-                e.Graphics.DrawString(i.ToString("##,##0"), f8, Brushes.Black, 180, 115 + height, right)
-
-                ' Total Price
-                Dim quantity As Integer = Convert.ToInt32(Receipt.ItemsSource(row).Cells(1).Value)
-                Dim unitPrice As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
-                Dim totalPrice As Decimal = quantity * unitPrice
-                e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
-                ' Total Price
-            Next
-        End If
+        ' Check if Receipt.ItemsSource is not null and has items
 
 
+        ' Check if Receipt.ItemsSource is not null and implements IEnumerable
 
-        Dim height2 As Integer
-        height2 = 145 + height
-        ' sumprice() 'call sub
-        e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
-        e.Graphics.DrawString("Total: " & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 10 + height2, right)
-        e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
+
+        'Dim height2 As Integer
+        'height2 = 145 + height
+        '' sumprice() 'call sub
+        'e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
+        'e.Graphics.DrawString("Total: " & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 10 + height2, right)
+        'e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
         'Barcode
         'Dim gbarcode As New MessagingToolkit.Barcode.BarcodeEncoder
         'Try
@@ -507,11 +623,11 @@ Public Class Pos
         '    MsgBox(ex.Message)
         'End Try
         'e.Graphics.DrawString("~ Thanks for shopping ~", f10, Brushes.Black, centermargin, 70 + height2, center)
-        e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
+        'e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
     End Sub
 
-    Dim t_price As Long
-    Dim t_qty As Long
+    'Dim t_price As Long
+    'Dim t_qty As Long
     'Sub sumprice()
     '    Dim countprice As Long = 0
     '    For rowitem As Long = 0 To DataGridView1.RowCount - 1
