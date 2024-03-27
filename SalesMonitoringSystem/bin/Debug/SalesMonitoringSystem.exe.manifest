@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SalesMonitoringSystem.exe" size="712184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SalesMonitoringSystem.exe" size="712696">
       <assemblyIdentity name="SalesMonitoringSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nZmKuAhGtF36D3LdglrrgvdwxBTg1e2/XYao0ItLntI=</dsig:DigestValue>
+        <dsig:DigestValue>y9GDOhluLGqFHfN1G2WZx98ZXSgw3RRkoc4CIcbe4TQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

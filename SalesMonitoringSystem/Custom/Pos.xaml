@@ -127,7 +127,6 @@
                                   ColumnHeaderStyle="{DynamicResource CustomDataGridColumnHeaderStyle}"
                                   CellStyle="{DynamicResource CustomDataGridCellStyle}"
                                   hc:Empty.ShowEmpty="True"
-                                  ItemsSource="{Binding DataTable}"
                                   Padding="0"
                                   IsReadOnly="True"
                                   CanUserResizeColumns="False"

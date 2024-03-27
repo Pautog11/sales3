@@ -335,21 +335,21 @@ Public Class Pos
         'Growl.Info(_itemSource.ToString
         '
 
-        Dim dataBuilder As New StringBuilder()
+        'Dim dataBuilder As New StringBuilder()
 
-        For Each row As DataRowView In Receipt.Items
-            ' Get values from each column in the row
-            Dim name As String = row("Name").ToString()
-            Dim price As String = row("Price").ToString()
-            Dim quantity As String = row("Quantity").ToString()
-            Dim totalPrice As String = row("TotalPrice").ToString()
+        'For Each row As DataRowView In Receipt.Items
+        '    ' Get values from each column in the row
+        '    Dim name As String = row("Name").ToString()
+        '    Dim price As String = row("Price").ToString()
+        '    Dim quantity As String = row("Quantity").ToString()
+        '    Dim totalPrice As String = row("TotalPrice").ToString()
 
-            ' Append the values to the StringBuilder
-            dataBuilder.AppendLine($"Name: {name}, Price: {price}, Quantity: {quantity}, Total Price: {totalPrice}")
-        Next
+        '    ' Append the values to the StringBuilder
+        '    dataBuilder.AppendLine($"Name: {name}, Price: {price}, Quantity: {quantity}, Total Price: {totalPrice}")
+        'Next
 
-        ' Display the data in a message box
-        Windows.MessageBox.Show(dataBuilder.ToString(), "Data from DataGrid", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '' Display the data in a message box
+        'Windows.MessageBox.Show(dataBuilder.ToString(), "Data from DataGrid", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
@@ -434,212 +434,84 @@ Public Class Pos
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, 120)
 
 
-
-        e.Graphics.DrawString("Invoice ID", f8, Brushes.Black, 200, 200)
-        'Dim a As Controls.DataGrid = Receipt
-        'MsgBox(a.CurrentRow.Cells(0).Value.ToString)
-
-
-        '''Dim a As Controls.DataGrid = Receipt
-
-        '''' Check if the DataTable has any rows
-        '''If a.Rows.Count > 0 Then
-        '''    ' Assuming you want to access the first row and the first column
-        '''    Dim cellValue As String = a.Rows(0)(0).ToString()
-        '''    MsgBox(cellValue)
-        '''Else
-        '''    MsgBox("The DataTable is empty.")
-        '''End If
-
-        ' Assuming Receipt is a DataGrid control
-        ' Assuming Receipt is a DataTable
-
-
-        'Dim height As Integer 'DGV Position
-        ' Dim i As Long
-        'Receipt.AllowUserToAddRows = False
-        'If receiptDataGridView.CurrentCell.Value Is Nothing Then
-        '    Exit Sub
-        'Else
-        '    For row As Integer = 0 To Receipt.DataGridView.RowCount - 1
-        '        height += 15
-        '        e.Graphics.DrawString(Receipt.Items(row).Cells(1).Value.ToString, f8, Brushes.Black, 0, 115 + height)
-        '        e.Graphics.DrawString(Receipt.Items(row).Cells(0).Value.ToString, f8, Brushes.Black, 25, 115 + height)
-        '        i = Receipt.Items(row).Cells(2).Value
-        '        Receipt.Items(row).Cells(2).Value = Format(i, "##,##0")
-        '        e.Graphics.DrawString(Receipt.Items(row).Cells(2).Value.ToString, f8, Brushes.Black, 180, 115 + height, right)
-
-        '        'totalprice
-        '        Dim totalprice As Long
-        '        totalprice = Val(Receipt.Items(row).Cells(1).Value * Receipt.Items(row).Cells(2).Value)
-        '        e.Graphics.DrawString(totalprice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
-        '        '
-
-        '    Next
-        'End If
-
+        Dim height As Integer 'DGV Position
+        Dim i As Long
         'Receipt.AllowUserToAddRows = False
 
 
 
-        'If Receipt Is Nothing Then
-        '    Exit Sub
-        'Else
-        'For row As Integer = 0 To Receipt.Items.Count - 1
-        '    height += 15
-        '    e.Graphics.DrawString(Receipt.DataContext(row).Cells(2).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
-        '    e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
 
-        '    'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
-        '    Receipt.ItemsSource(row).Cells(2).Value = i.ToString("##,##0")
-        '    e.Graphics.DrawString(i.ToString("##,##0"), f8, Brushes.Black, 180, 115 + height, right)
+        'For row As Integer = 0 To Receipt.AlternationCount - 1
+        '    Height += 15
+        '    e.Graphics.DrawString(Receipt.Items(row).Cells(0).Value.ToString, f8, Brushes.Black, 0, 115 + height)
+        '    e.Graphics.DrawString(Receipt.Items(row).Cells(0).Value.ToString, f8, Brushes.Black, 25, 115 + height)
+        '    i = Receipt.Items(row).Cells(2).Value
+        '    Receipt.Items(row).Cells(2).Value = Format(i, "##,##0")
+        '    e.Graphics.DrawString(Receipt.Items(row).Cells(2).Value.ToString, f8, Brushes.Black, 180, 115 + height, right)
 
-        '    ' Total Price
-        '    Dim quantity As Integer = Convert.ToInt32(Receipt.ItemsSource(row).Cells(1).Value)
-        '    Dim unitPrice As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
-        '    Dim totalPrice As Decimal = quantity * unitPrice
-        '    e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
-        '    ' Total Price
-
-
-
-        'For Each rows As Object In Receipt.Items
-        '    If (Receipt.Items(i).columns("Name").ToString) Then
-        '        Double.Parse(Receipt.Items(i).cells("Name").value.ToString)
-        '    End If
-
+        '    'totalprice
+        '    Dim totalprice As Long
+        '    totalprice = Val(Receipt.Items(row).Cells(1).Value * Receipt.Items(row).Cells(2).Value)
+        '    e.Graphics.DrawString(totalprice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + Height, right)
         'Next
 
-        ' Assuming Receipt is a class or object that contains the Items collection
-        'For Each row As Object In Receipt.Items
-        '    Dim nameValue As String = row("Name").ToString()
-        '    If Not String.IsNullOrEmpty(nameValue) Then
-        '        '    Dim parsedName As Double
-        '        '    If Double.TryParse(nameValue, parsedName) Then
-        '        '        ' Use parsedName as needed (e.g., store it in a list, perform calculations, etc.)
-        '        '        ' Example: myList.Add(parsedName)
-        '        e.Graphics.DrawString(Receipt.Items(row).Value.ToString, f8, Brushes.Black, 0, 115 + height)
-        '        '    Else
-        '        '        ' Handle the case where the value couldn't be parsed as a double
-        '        '        ' For example, display an error message or log the issue
-        '        '    End If
-        '    End If
-        'Next
-        ' Assuming Receipt is a class or object that contains the Items collection
-        '    For Each item As Object In Receipt.Items
-        '        ' Check if the current item has a valid "Name" field
-        '        'If TypeOf item Is DataRow AndAlso Not String.IsNullOrEmpty(DirectCast(item, DataRow)("Name").ToString()) Then'
-        '        'If TypeOf item Is DataRow AndAlso DirectCast(item, DataRow).Table.Columns.Contains("Name") AndAlso Not IsDBNull(DirectCast(item, DataRow)("Name")) AndAlso Not String.IsNullOrEmpty(DirectCast(item, DataRow)("Name").ToString()) Then
+        'For row As Integer = 0 To Receipt.AlternationCount - 1
+        For Each rowView As DataRowView In CType(Receipt.ItemsSource, DataView)
+            Dim row As DataRow = rowView.Row
+            height += 15
+            e.Graphics.DrawString(row(0).ToString(), f8, Brushes.Black, 0, 115 + height)
+            e.Graphics.DrawString(row(1).ToString(), f8, Brushes.Black, 25, 115 + height)
 
-        '        ' Extract the name value from the current item
-        '        Dim nameValue As String = DirectCast(item, DataRow)("Name").ToString()
+            Dim s As Double = CDbl(row(2))
+            row(2) = Format(s, "##,##0")
 
-        '            ' Check if the name value can be parsed as a Double (optional)
-        '            ' Dim parsedName As Double
-        '            ' If Double.TryParse(nameValue, parsedName) Then
-        '            '     ' Use parsedName as needed (e.g., store it in a list, perform calculations, etc.)
-        '            '     ' Example: myList.Add(parsedName)
+            e.Graphics.DrawString(row(2).ToString(), f8, Brushes.Black, 180, 115 + height, New StringFormat() With {.Alignment = StringAlignment.Far})
 
-        '            ' Draw the value from the current item using Graphics.DrawString
-        '            Dim valueToDraw As String = item("Value").ToString()
-        '        e.Graphics.DrawString(nameValue, f8, Brushes.Black, 0, 115 + height)
-        '        e.Graphics.DrawString("ddsds", f8, Brushes.Black, 0, 115 + height)
-        '        Dim ff As String = "dsdsd"
-        '        e.Graphics.DrawString(ff, f8, Brushes.Black, 50, 120)
+            'totalprice
+            Dim totalPrice As Long = CLng(row(1)) * CLng(row(2))
+            e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, New StringFormat() With {.Alignment = StringAlignment.Far})
+        Next
 
 
-        '        ' Else
-        '        '     ' Handle the case where the value couldn't be parsed as a double
-        '        '     ' For example, display an error message or log the issue
-        '        ' End If
-        '        'Dim printText As String = "Hello, this is a sample text to be printed."
-        '        'e.Graphics.DrawString(printText, f8, Brushes.Black, 10, 10)
-        '        'End If
+        Dim height2 As Integer
+        height2 = 145 + height
+        sumprice() 'call sub
+        e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
+        e.Graphics.DrawString("Total: " & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 10 + height2, right)
+        e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
+        e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
 
-        '    Next
+        'Dim dataBuilder As New StringBuilder()
+        'For Each row As DataRowView In Receipt.Items
+        '    ' Get values from each column in the row
+        '    Dim name As String = row("Name").ToString()
+        '    Dim price As String = row("Price").ToString()
+        '    Dim quantity As String = row("Quantity").ToString()
+        '    Dim totalPrice As String = row("TotalPrice").ToString()
 
-        '    Dim printText As String = "Hello, this is a sample text to be printed."
-        '    e.Graphics.DrawString(printText, f8, Brushes.Black, 10, 10)
-
-        'End If
-
-
-
-        'Dim columnNames As New List(Of String) From {"Name", "Quantity", "Price", "TotalPrice"}
-
-        'For Each columnName As String In columnNames
-        '    Dim hasColumn As Boolean = Pos._itemSource.Columns.Contains(columnName)
-        '    If Not hasColumn Then
-        '        Pos._itemSource.Columns.Add(columnName)
-        '    End If
+        '    ' Append the values to the StringBuilder
+        '    dataBuilder.AppendLine($"Name: {name}, Price: {price}, Quantity: {quantity}, Total Price: {totalPrice}")
         'Next
 
-        '' Now that columns are ensured to exist, you can proceed with your data loop
-        'If Receipt Is Nothing Then
-        '    Exit Sub
-        'Else
-        '    For row As Integer = 0 To Receipt.SelectedItems.Count - 1
-        '        height += 15
-        '        e.Graphics.DrawString(Receipt.ItemsSource(row).cells(1).Value.ToString(), f8, Brushes.Black, 0, 115 + height)
-        '        e.Graphics.DrawString(Receipt.ItemsSource(row).Cells(0).Value.ToString(), f8, Brushes.Black, 25, 115 + height)
 
-        '        'Dim i As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
-        '        Receipt.ItemsSource(row).Cells(2).Value = i.ToString("##,##0")
-        '        e.Graphics.DrawString(i.ToString("##,##0"), f8, Brushes.Black, 180, 115 + height, right)
+        'e.Graphics.DrawString(dataBuilder.ToString(), f8, Brushes.Black, 20, 200)
 
-        '        ' Total Price
-        '        Dim quantity As Integer = Convert.ToInt32(Receipt.ItemsSource(row).Cells(1).Value)
-        '        Dim unitPrice As Decimal = Convert.ToDecimal(Receipt.ItemsSource(row).Cells(2).Value)
-        '        Dim totalPrice As Decimal = quantity * unitPrice
-        '        e.Graphics.DrawString(totalPrice.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + height, right)
-        '        ' Total Price
-        '    Next
-        'End If
-
-        'Windows.MessageBox.Show(Receipt.CurrentItem(1).Cells(1).Value)
-
-        ' Check if Receipt.ItemsSource is not null and has items
-        ' Check if Receipt.ItemsSource is not null and has items
-
-        ' Check if Receipt.ItemsSource is not null and has items
-
-
-        ' Check if Receipt.ItemsSource is not null and implements IEnumerable
-
-
-        'Dim height2 As Integer
-        'height2 = 145 + height
-        '' sumprice() 'call sub
-        'e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
-        'e.Graphics.DrawString("Total: " & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 10 + height2, right)
-        'e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
-        'Barcode
-        'Dim gbarcode As New MessagingToolkit.Barcode.BarcodeEncoder
-        'Try
-        '    Dim barcodeimage As Image
-        '    barcodeimage = New Bitmap(gbarcode.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, "DRW8555RE"))
-        '    e.Graphics.DrawImage(barcodeimage, CInt((e.PageBounds.Width - 150) / 2), 35 + height2, 150, 35)
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
-        'e.Graphics.DrawString("~ Thanks for shopping ~", f10, Brushes.Black, centermargin, 70 + height2, center)
-        'e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
     End Sub
 
-    'Dim t_price As Long
-    'Dim t_qty As Long
-    'Sub sumprice()
-    '    Dim countprice As Long = 0
-    '    For rowitem As Long = 0 To DataGridView1.RowCount - 1
-    '        countprice = countprice + Val(Receipt.Items(rowitem).Cells(2).Value * Receipt.Items(rowitem).Cells(1).Value)
-    '    Next
-    '    t_price = countprice
-    '    Dim countqty As Long = 0
-    '    For rowitem As Long = 0 To DataGridView1.RowCount - 1
-    '        countqty = countqty + Receipt.ItemsSource(rowitem).Cells(1).Value
-    '    Next
-    '    t_qty = countqty
-    'End Sub
+    Dim t_price As Long
+    Dim t_qty As Long
+    Sub sumprice()
+        Dim countprice As Long = 0
+        For rowitem As Long = 0 To Receipt.AlternationCount - 1
+            countprice = countprice + Val(Receipt.Items(rowitem).Cells(2).Value * Receipt.Items(rowitem).Cells(1).Value)
+        Next
+        t_price = countprice
+        Dim countqty As Long = 0
+        For rowitem As Long = 0 To Receipt.AlternationCount - 1
+            countqty = countqty + Receipt.Items(rowitem).Cells(1).Value
+        Next
+        t_qty = countqty
+    End Sub
 End Class
 
 
