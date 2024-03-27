@@ -353,6 +353,7 @@ Public Class Pos
     End Sub
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
+
         Dim pagesetup As New PageSettings
         pagesetup.PaperSize = New PaperSize("Custom", 250, 500) 'fixed size
         'pagesetup.PaperSize = New PaperSize("Custom", 250, longpaper)
@@ -389,6 +390,11 @@ Public Class Pos
         Dim ic_products As New BitmapImage()
         ic_products.BeginInit()
         ic_products.UriSource = New Uri("C:\Users\Christian\Desktop\ic_icon.png", UriKind.Relative)
+        'Source = "{StaticResource ic_transaction}"
+        'UriKind Uri = New Uri("pack://application:,,,/YourAssemblyName;component/Resources/ic_icon.png");
+        'ic_products.UriSource = Uri;
+
+
         ic_products.EndInit()
 
         ' Convert the BitmapImage to a System.Drawing.Image
@@ -435,7 +441,7 @@ Public Class Pos
 
 
         Dim height As Integer 'DGV Position
-        Dim i As Long
+        'Dim i As Long
         'Receipt.AllowUserToAddRows = False
 
 
@@ -459,8 +465,8 @@ Public Class Pos
         For Each rowView As DataRowView In CType(Receipt.ItemsSource, DataView)
             Dim row As DataRow = rowView.Row
             height += 15
-            e.Graphics.DrawString(row(0).ToString(), f8, Brushes.Black, 0, 115 + height)
-            e.Graphics.DrawString(row(1).ToString(), f8, Brushes.Black, 25, 115 + height)
+            e.Graphics.DrawString(row(1).ToString(), f8, Brushes.Black, 0, 115 + height)
+            e.Graphics.DrawString(row(0).ToString(), f8, Brushes.Black, 25, 115 + height)
 
             Dim s As Double = CDbl(row(2))
             row(2) = Format(s, "##,##0")
@@ -477,8 +483,11 @@ Public Class Pos
         height2 = 145 + height
         sumprice() 'call sub
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
-        e.Graphics.DrawString("Total: " & Format(t_price, "##,##0"), f10b, Brushes.Black, rightmargin, 10 + height2, right)
+        e.Graphics.DrawString("Subtotal: " & Format(Subtotal.Text), f10b, Brushes.Black, rightmargin, 10 + height2, right)
+        e.Graphics.DrawString("Discounted: " & Format(Discount.Text), f10b, Brushes.Black, rightmargin, 20 + height2, right)
+        e.Graphics.DrawString("Total: " & Format(Total.Text), f10b, Brushes.Black, rightmargin, 30 + height2, right)
         e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
+        'e.Graphics.DrawString(t_qty, f10b, Brushes.Black, rightmargin, 20 + height2, right)
         e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
 
         'Dim dataBuilder As New StringBuilder()
@@ -501,17 +510,33 @@ Public Class Pos
     Dim t_price As Long
     Dim t_qty As Long
     Sub sumprice()
-        Dim countprice As Long = 0
-        For rowitem As Long = 0 To Receipt.AlternationCount - 1
-            countprice = countprice + Val(Receipt.Items(rowitem).Cells(2).Value * Receipt.Items(rowitem).Cells(1).Value)
-        Next
-        t_price = countprice
+        'Dim countprice As Long = 0
+        'For Each rowView As DataRowView In CType(Receipt.ItemsSource, DataView)
+        '    Dim row As DataRow = rowView.Row
+        '    'For rowitem As Long = 0 To Receipt.AlternationCount - 1
+        '    countprice = countprice + Val(Receipt.ItemsSource(row).Cells(2).Value * Receipt.ItemsSource(row).Cells(1).Value)
+        'countprice = countprice + 2 * 2
+        'Next
+
+        'Dim countprice As Long = 0
+        'For Each rowView As DataRowView In CType(Receipt.ItemsSource, DataView)
+        '    Dim row As DataRow = rowView.Row
+        '    countprice += CLng(row.Item(2)) * CLng(row.Item(1))
+        'Next
+        't_price = countprice
+
         Dim countqty As Long = 0
-        For rowitem As Long = 0 To Receipt.AlternationCount - 1
-            countqty = countqty + Receipt.Items(rowitem).Cells(1).Value
+        For Each rowView As DataRowView In CType(Receipt.ItemsSource, DataView)
+            'For rowitem As Long = 0 To Receipt.AlternationCount - 1
+            countqty = countqty + CLng(rowView.Item(1)) 'Receipt.Items(rowitem).Cells(1).Value
         Next
         t_qty = countqty
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As RoutedEventArgs)
+        _itemSource.Clear()
+    End Sub
+
 End Class
 
 

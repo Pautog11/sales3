@@ -135,21 +135,21 @@
                                   Margin="0 0 0 0" RowHeight="30">
                             <DataGrid.Columns>
                                 <DataGridTextColumn FontSize="13"
-                                                        Header="NAME"
-                                                        Binding="{Binding Name}"
-                                                        Width="*"/>
+                                                    Header="Quantity"
+                                                    Binding="{Binding Quantity}"
+                                                    Width="*"/>
                                 <DataGridTextColumn FontSize="13"
-                                                        Header="PRICE"
-                                                        Binding="{Binding Price}"
-                                                        Width="*"/>
+                                                    Header="Name"
+                                                    Binding="{Binding Name}"
+                                                    Width="*"/>
                                 <DataGridTextColumn FontSize="13"
-                                                        Header="QUANTITY"
-                                                        Binding="{Binding Quantity}"
-                                                        Width="*"/>
+                                                    Header="Price"
+                                                    Binding="{Binding Price}"
+                                                    Width="*"/>
                                 <DataGridTextColumn FontSize="13"
-                                                        Header="TOTAL PRICE"
-                                                        Binding="{Binding TotalPrice}"
-                                                        Width="*"/>
+                                                    Header="Total Price"
+                                                    Binding="{Binding TotalPrice}"
+                                                    Width="*"/>
                             </DataGrid.Columns>
 
                         </DataGrid>
@@ -185,6 +185,12 @@
                                              ItemsSource="{StaticResource DiscountOptions}"/>
                                 </Grid>
                             </StackPanel>
+                            <Button Width="69"
+                                    Background="{StaticResource ApplicationPrimaryDark}"
+                                    HorizontalAlignment="Right"
+                                    Foreground="White"
+                                    VerticalAlignment="Bottom"
+                                    Content="Purchase" Click="Button1_Click"/>      
                         </Grid>
 
                         <!--Right Panel-->
