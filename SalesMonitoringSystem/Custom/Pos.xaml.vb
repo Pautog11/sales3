@@ -153,33 +153,45 @@ Public Class Pos
     End Sub
 
     Private Sub Receipt_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Receipt.SelectionChanged
-        'If e.VerticalChange <> 0 AndAlso TypeOf e.OriginalSource Is ScrollBar Then
-        '    StackedHeaderPanel.Margin = New Thickness(0, -e.VerticalOffset, 0, 0)
-        'End If
+        'Private Sub Receipt_SelectionChanged(sender As Object, e As SelectionChangedEventArgs)
+        ' Private Sub Receipt_MouseLeftButtonUp(sender As Object, e As MouseButtonEventArgs)
+        ' Growl.Info("dd")
         'If Receipt.SelectedItems.Count > 0 Then
-        '    Dialog.Show(New QuantityDialog(_subject, Receipt.SelectedItems(0)))
-        '    Receipt.SelectedIndex = -1
+        '    Windows.MessageBox.Show(Receipt.SelectedItems(0))
         'End If
 
-        Try
-            If Receipt.SelectedItems.Count > 0 Then
-                ' Assuming _subject is accessible and YourItemType is the type of the selected item
-                Dim selectedObject As DataRowView = CType(Receipt.SelectedItems(0), DataRowView)
-                Dialog.Show(New QuantityDialog(_subject, selectedObject))
-                Receipt.SelectedIndex = -1
+        'If Receipt.SelectedItems.Count > 0 Then
+        '    Dim selectedItem As DataRowView = CType(Receipt.SelectedItems(0), DataRowView)
+        '    Dim subject As String = selectedItem("Name").ToString() ' Assuming "Subject" is the column name
+        '    Dim message As String = $"Name item: {subject}"
+        '    Windows.MessageBox.Show(message, "Name Item")
+        'End If
+
+        Dim message As New StringBuilder()
+
+        If Receipt.SelectedItems.Count > 0 Then
+            For Each selectedItem As DataRowView In Receipt.SelectedItems
+                Dim quantity As Integer = Convert.ToInt32(selectedItem("Quantity")) ' Assuming "Quantity" is an integer column
+                Dim name As String = selectedItem("Name").ToString() ' Assuming "Name" is a string column
+                Dim price As Decimal = Convert.ToDecimal(selectedItem("Price")) ' Assuming "Price" is a decimal column
+                Dim totalPrice As Decimal = Convert.ToDecimal(selectedItem("TotalPrice")) ' Assuming "TotalPrice" is a decimal column
+
+                message.AppendLine($"Quantity: {quantity}, Name: {name}, Price: {price}, Total Price: {totalPrice}")
+            Next
+
+            'Dim r As DialogResult = ("Do you want to delete this data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            'Dim confirmDialog As New msgbox("Do you want to delete this data?", "Confirmation", HandyMessageBoxButtons.YesNo)
+            Dim a As DialogResult = Windows.MessageBox.Show("Do you want to delete these?", "Title", MessageBoxButton.YesNo, MessageBoxImage.Question)
+
+            If a = DialogResult.Yes Then
+                Dim index As Object
+                index = Receipt.CurrentCell.Item
+                Receipt.Items.RemoveAt(index)
             End If
 
-        Catch ex As Exception
-            HandyControl.Controls.MessageBox.Show(ex.Message)
-        End Try
-        'UpdateVisualData()
-        'If Receipt.SelectedItems.Count > 0 Then
-        '    '    Dim dialog As New QuantityDialog(_subject, Receipt.SelectedItems(0))
-        '    '    dialog.Show()
-        '    '    Receipt.SelectedIndex = -1
-        '    Dim dialog As New QuantityDialog
-        '    dialog.Show()
-        'End If
+            'Windows.MessageBox.Show(message.ToString(), "Selected Items Details")
+            Receipt.UnselectAllCells()
+        End If
     End Sub
 
     Private Sub Discount_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles Discount.SelectionChanged
@@ -332,24 +344,6 @@ Public Class Pos
         changelongpaper()
         PPD.Document = PD
         PPD.ShowDialog()
-        'Growl.Info(_itemSource.ToString
-        '
-
-        'Dim dataBuilder As New StringBuilder()
-
-        'For Each row As DataRowView In Receipt.Items
-        '    ' Get values from each column in the row
-        '    Dim name As String = row("Name").ToString()
-        '    Dim price As String = row("Price").ToString()
-        '    Dim quantity As String = row("Quantity").ToString()
-        '    Dim totalPrice As String = row("TotalPrice").ToString()
-
-        '    ' Append the values to the StringBuilder
-        '    dataBuilder.AppendLine($"Name: {name}, Price: {price}, Quantity: {quantity}, Total Price: {totalPrice}")
-        'Next
-
-        '' Display the data in a message box
-        'Windows.MessageBox.Show(dataBuilder.ToString(), "Data from DataGrid", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
@@ -391,7 +385,7 @@ Public Class Pos
         ic_products.BeginInit()
         ic_products.UriSource = New Uri("C:\Users\Christian\Desktop\ic_icon.png", UriKind.Relative)
         'Source = "{StaticResource ic_transaction}"
-        'UriKind Uri = New Uri("pack://application:,,,/YourAssemblyName;component/Resources/ic_icon.png");
+        'ic_products.UriSource = New Uri("pack://application:,,,/YourAssemblyName;component/Resources/ic_icon.png");
         'ic_products.UriSource = Uri;
 
 
@@ -426,7 +420,7 @@ Public Class Pos
 
         e.Graphics.DrawString("Cashier", f8, Brushes.Black, 0, 85)
         e.Graphics.DrawString(":", f8, Brushes.Black, 50, 85)
-        e.Graphics.DrawString("Steve Jobs", f8, Brushes.Black, 70, 85)
+        e.Graphics.DrawString(My.Settings.userRole, f8, Brushes.Black, 70, 85)
 
         e.Graphics.DrawString("Date", f8, Brushes.Black, 0, 95)
         e.Graphics.DrawString(":", f8, Brushes.Black, 50, 95)
@@ -485,7 +479,10 @@ Public Class Pos
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, height2)
         e.Graphics.DrawString("Subtotal: " & Format(Subtotal.Text), f10b, Brushes.Black, rightmargin, 10 + height2, right)
         e.Graphics.DrawString("Discounted: " & Format(Discount.Text), f10b, Brushes.Black, rightmargin, 20 + height2, right)
-        e.Graphics.DrawString("Total: " & Format(Total.Text), f10b, Brushes.Black, rightmargin, 30 + height2, right)
+        e.Graphics.DrawString("Total: " & (Total.Text), f10b, Brushes.Black, rightmargin, 30 + height2, right)
+        'e.Graphics.DrawString("Total: " & Format(Total.Text, "##,###,###"), f10b, Brushes.Black, rightmargin, 30 + height2, right)
+
+
         e.Graphics.DrawString(t_qty, f10b, Brushes.Black, 0, 10 + height2)
         'e.Graphics.DrawString(t_qty, f10b, Brushes.Black, rightmargin, 20 + height2, right)
         e.Graphics.DrawString("~ Nosware Store ~", f10, Brushes.Black, centermargin, 85 + height2, center)
